@@ -60,7 +60,7 @@ export default class App extends Component<{}> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native Threads!
+          Welcome to Peer-to-Peer Boilerplate
         </Text>
 
         {/* <Button title="Send Message To Worker Thread" onPress={() => {
