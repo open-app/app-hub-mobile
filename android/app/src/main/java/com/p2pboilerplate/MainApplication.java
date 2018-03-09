@@ -3,11 +3,12 @@ package com.p2pboilerplate;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.staltz.reactnativenode.RNNodePackage;
 import com.peel.react.TcpSocketsModule;
-import com.rnfs.RNFSPackage;
 import com.peel.react.rnos.RNOSModule;
+import com.rnfs.RNFSPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
+import com.staltz.react.workers.WorkersPackage;
+import com.staltz.reactnativenode.RNNodePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -32,7 +33,13 @@ public class MainApplication extends Application implements ReactApplication {
             new RNOSModule(),
             new TcpSocketsModule(),
             new RNFSPackage(),
-            new RandomBytesPackage()
+            new RandomBytesPackage(),
+            new WorkersPackage(
+              new TcpSocketsModule(),
+              new RNOSModule(),
+              new RNFSPackage(),
+              new RandomBytesPackage()
+            )
       );
     }
 

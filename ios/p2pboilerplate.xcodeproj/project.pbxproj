@@ -40,6 +40,7 @@
 		26098B9C981E481299E5E4C6 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E58EF110D04B36903507A7 /* libRNFS.a */; };
 		4F4EF2D3446448D4AAEFD083 /* libTcpSockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A3124295FF463389FE5FEC /* libTcpSockets.a */; };
 		D60B01EEFD214FB3A7EC5A16 /* libRNOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C69F04A0E4A70B2E72E72 /* libRNOS.a */; };
+		98A17FFEEA7A4E109A8F59E2 /* libRNWorkers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 825B60A778EB4CDC9B44B652 /* libRNWorkers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +298,8 @@
 		28A3124295FF463389FE5FEC /* libTcpSockets.a */ = {isa = PBXFileReference; name = "libTcpSockets.a"; path = "libTcpSockets.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		16B83783ECE44022A06978C5 /* RNOS.xcodeproj */ = {isa = PBXFileReference; name = "RNOS.xcodeproj"; path = "../node_modules/@staltz/react-native-os/ios/RNOS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		0A4C69F04A0E4A70B2E72E72 /* libRNOS.a */ = {isa = PBXFileReference; name = "libRNOS.a"; path = "libRNOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		878CAE3723924E868BFC0C86 /* RNWorkers.xcodeproj */ = {isa = PBXFileReference; name = "RNWorkers.xcodeproj"; path = "../node_modules/@staltz/react-native-workers/ios/RNWorkers.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		825B60A778EB4CDC9B44B652 /* libRNWorkers.a */ = {isa = PBXFileReference; name = "libRNWorkers.a"; path = "libRNWorkers.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,7 @@
 				26098B9C981E481299E5E4C6 /* libRNFS.a in Frameworks */,
 				4F4EF2D3446448D4AAEFD083 /* libTcpSockets.a in Frameworks */,
 				D60B01EEFD214FB3A7EC5A16 /* libRNOS.a in Frameworks */,
+				98A17FFEEA7A4E109A8F59E2 /* libRNWorkers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +514,7 @@
 				44CF5FF3A6734DEC9A5180D9 /* RNFS.xcodeproj */,
 				4BF9A1F74E7C4F9E9D0A9347 /* TcpSockets.xcodeproj */,
 				16B83783ECE44022A06978C5 /* RNOS.xcodeproj */,
+				878CAE3723924E868BFC0C86 /* RNWorkers.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1084,6 +1089,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1091,6 +1097,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Debug;
@@ -1115,6 +1122,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1122,6 +1130,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Release;
@@ -1147,6 +1156,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Debug;
@@ -1171,6 +1181,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Release;
@@ -1204,6 +1215,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1211,6 +1223,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Debug;
@@ -1244,6 +1257,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1251,6 +1265,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/@staltz/react-native-os/ios",
+					"$(SRCROOT)/../node_modules/@staltz/react-native-workers/ios/**",
 				);
 			};
 			name = Release;
@@ -1279,6 +1294,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1303,6 +1319,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

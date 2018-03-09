@@ -19149,6 +19149,62 @@ module.exports = function flatmap (fn) {
 }
 
 },
+"4koRkOY/N368QhsV+nrRPlo/PQDqxdjbhT/1Cz5R3WI=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "level-sublevel",
+  "description": "partition levelup databases",
+  "version": "6.6.1",
+  "homepage": "https://github.com/dominictarr/level-sublevel",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/level-sublevel.git"
+  },
+  "dependencies": {
+    "bytewise": "~1.1.0",
+    "levelup": "~0.19.0",
+    "ltgt": "~2.1.1",
+    "pull-level": "^2.0.3",
+    "pull-stream": "^3.4.5",
+    "typewiselite": "~1.0.0",
+    "xtend": "~4.0.0"
+  },
+  "devDependencies": {
+    "level": "^1.4.0",
+    "level-test": "^2.0.1",
+    "monotonic-timestamp": "0.0.8",
+    "pull-level": "~1.1.1",
+    "rimraf": "~2.1.4",
+    "shasum": "0.0.2",
+    "stream-to-pull-stream": "~1.2.0",
+    "tape": "~2.14.0",
+    "through": "~2.3.4"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT",
+  "stability": "unstable",
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
+
+},
 "4z6gmKkdLEG+iG+7zsrLl5n+GD2KRG8TikeGyz2AmAI=":
 function (require, module, exports, __dirname, __filename) {
 var wrappy = require('wrappy')
@@ -21739,6 +21795,83 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
 };
 
 },
+"7lG63FRiLJtpfbLPx0L7iETrthlq+J1guShXpjseWMw=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "levelup",
+  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
+  "version": "1.3.9",
+  "contributors": [
+    "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
+    "John Chesley <john@chesl.es> (https://github.com/chesles/)",
+    "Jake Verbaten <raynos2@gmail.com> (https://github.com/raynos)",
+    "Dominic Tarr <dominic.tarr@gmail.com> (https://github.com/dominictarr)",
+    "Max Ogden <max@maxogden.com> (https://github.com/maxogden)",
+    "Lars-Magnus Skog <ralphtheninja@riseup.net> (https://github.com/ralphtheninja)",
+    "David Björklund <david.bjorklund@gmail.com> (https://github.com/kesla)",
+    "Julian Gruber <julian@juliangruber.com> (https://github.com/juliangruber)",
+    "Paolo Fragomeni <paolo@async.ly> (https://github.com/0x00a)",
+    "Anton Whalley <anton.whalley@nearform.com> (https://github.com/No9)",
+    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
+    "Pedro Teixeira <pedro.teixeira@gmail.com> (https://github.com/pgte)",
+    "James Halliday <mail@substack.net> (https://github.com/substack)",
+    "Jarrett Cruger <jcrugzz@gmail.com> (https://github.com/jcrugzz)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/level/levelup.git"
+  },
+  "homepage": "https://github.com/level/levelup",
+  "keywords": [
+    "leveldb",
+    "stream",
+    "database",
+    "db",
+    "store",
+    "storage",
+    "json"
+  ],
+  "main": "lib/levelup.js",
+  "dependencies": {
+    "deferred-leveldown": "~1.2.1",
+    "level-codec": "~7.0.0",
+    "level-errors": "~1.0.3",
+    "level-iterator-stream": "~1.3.0",
+    "prr": "~1.0.1",
+    "semver": "~5.4.1",
+    "xtend": "~4.0.0"
+  },
+  "devDependencies": {
+    "after": "^0.8.2",
+    "async": "^2.5.0",
+    "bl": "^1.2.1",
+    "browserify": "^14.3.0",
+    "bustermove": "~1.0.0",
+    "delayed": "~1.0.1",
+    "faucet": "~0.0.1",
+    "leveldown": "^1.1.0",
+    "memdown": "^1.2.4",
+    "msgpack-js": "~0.3.0",
+    "referee": "~1.2.0",
+    "rimraf": "^2.6.1",
+    "safe-buffer": "^5.1.0",
+    "slow-stream": "0.0.4",
+    "standard": "^10.0.2",
+    "tape": "^4.7.0"
+  },
+  "browser": {
+    "./lib/leveldown.js": false,
+    "leveldown": false,
+    "leveldown/package": false,
+    "semver": false
+  },
+  "scripts": {
+    "test": "standard && tape test/*-test.js | faucet"
+  },
+  "license": "MIT"
+}
+
+},
 "80oni8E7XQVmPv9naZRczHQpr8XnI6m1f7ZJ8SI/qb0=":
 function (require, module, exports, __dirname, __filename) {
 'use strict';
@@ -23860,55 +23993,31 @@ module.exports = abortable
 
 
 },
-"8iSC0EqOQoYCXsCVxkPv04EYrx/TnPCsVknklErJZOU=":
+"8io8SRoCeNLYau34tXhkpakPvkOH1SMICBD59dtaa4M=":
 function (require, module, exports, __dirname, __filename) {
 module.exports = {
-  "_from": "ssb-about@0.1.x",
-  "_id": "ssb-about@0.1.2",
-  "_inBundle": false,
-  "_integrity": "sha512-/dvDJZdvukOHTjWDAUDdi5euG3fHIgW0z8xIWI+n+C3ugDCPad24josbRBMtgJ6e5piKOzstTlumIqfekvv8YQ==",
-  "_location": "/ssb-about",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ssb-about@0.1.x",
-    "name": "ssb-about",
-    "escapedName": "ssb-about",
-    "rawSpec": "0.1.x",
-    "saveSpec": null,
-    "fetchSpec": "0.1.x"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-about/-/ssb-about-0.1.2.tgz",
-  "_shasum": "b1a1946065f7559528cebf1601957a183d4544c3",
-  "_spec": "ssb-about@0.1.x",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Secure Scuttlebutt Consortium"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/ssb-about/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "flumeview-reduce": "^1.3.9",
-    "ssb-ref": "^2.7.1"
-  },
-  "deprecated": false,
-  "description": "scuttlebot plugin for getting reduced 'about' state",
-  "devDependencies": {},
-  "homepage": "https://github.com/ssbc/ssb-about",
-  "license": "MIT",
-  "name": "ssb-about",
+  "name": "ssb-private",
+  "description": "scuttlebot plugin for indexed private messages",
+  "version": "0.1.4",
+  "homepage": "https://github.com/ssbc/ssb-private",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ssbc/ssb-about.git"
+    "url": "git://github.com/ssbc/ssb-private.git"
   },
+  "dependencies": {
+    "base64-url": "^1.3.3",
+    "explain-error": "^1.0.4",
+    "flumeview-level": "^2.0.2",
+    "flumeview-query": "^3.0.3",
+    "map-filter-reduce": "^3.0.3",
+    "pull-flatmap": "0.0.1",
+    "pull-stream": "^3.6.0",
+    "ssb-keys": "^7.0.9"
+  },
+  "devDependencies": {},
   "scripts": {},
-  "version": "0.1.2"
+  "author": "Secure Scuttlebutt Consortium",
+  "license": "MIT"
 }
 
 },
@@ -30016,6 +30125,84 @@ proto.namespace = namespace;
 module.exports = VFile;
 
 },
+"CkwWEPpKbfBmBEahz8yImNemGqR/G4MhElCloHDle4M=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "levelup",
+  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
+  "version": "0.19.1",
+  "contributors": [
+    "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
+    "John Chesley <john@chesl.es> (https://github.com/chesles/)",
+    "Jake Verbaten <raynos2@gmail.com> (https://github.com/raynos)",
+    "Dominic Tarr <dominic.tarr@gmail.com> (https://github.com/dominictarr)",
+    "Max Ogden <max@maxogden.com> (https://github.com/maxogden)",
+    "Lars-Magnus Skog <lars.magnus.skog@gmail.com> (https://github.com/ralphtheninja)",
+    "David Björklund <david.bjorklund@gmail.com> (https://github.com/kesla)",
+    "Julian Gruber <julian@juliangruber.com> (https://github.com/juliangruber)",
+    "Paolo Fragomeni <paolo@async.ly> (https://github.com/hij1nx)",
+    "Anton Whalley <anton.whalley@nearform.com> (https://github.com/No9)",
+    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
+    "Pedro Teixeira <pedro.teixeira@gmail.com> (https://github.com/pgte)",
+    "James Halliday <mail@substack.net> (https://github.com/substack)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvagg/node-levelup.git"
+  },
+  "homepage": "https://github.com/rvagg/node-levelup",
+  "keywords": [
+    "leveldb",
+    "stream",
+    "database",
+    "db",
+    "store",
+    "storage",
+    "json"
+  ],
+  "main": "lib/levelup.js",
+  "dependencies": {
+    "bl": "~0.8.1",
+    "deferred-leveldown": "~0.2.0",
+    "errno": "~0.1.1",
+    "prr": "~0.0.0",
+    "readable-stream": "~1.0.26",
+    "semver": "~5.1.0",
+    "xtend": "~3.0.0"
+  },
+  "devDependencies": {
+    "async": "*",
+    "boganipsum": "*",
+    "bustermove": "~1.0.1",
+    "delayed": "*",
+    "du": "*",
+    "fstream": "*",
+    "leveldown": "~0.10.0",
+    "memdown": "^0.11.0",
+    "mkfiletree": "*",
+    "msgpack-js": "*",
+    "readfiletree": "*",
+    "referee": "*",
+    "rimraf": "*",
+    "slow-stream": ">=0.0.4",
+    "tap": "2.x.x",
+    "tape": "4.x.x",
+    "tar": "*"
+  },
+  "browser": {
+    "leveldown": false,
+    "leveldown/package": false,
+    "semver": false
+  },
+  "scripts": {
+    "test": "tap test/*-test.js",
+    "functionaltests": "node ./test/functional/fstream-test.js && node ./test/functional/binary-data-test.js && node ./test/functional/compat-test.js",
+    "alltests": "npm test && npm run-script functionaltests"
+  },
+  "license": "MIT"
+}
+
+},
 "CtWy/tu9YqMIWJKPyOA1FmDrkPaIeBdZ3E9xctz6NSU=":
 function (require, module, exports, __dirname, __filename) {
 'use strict'
@@ -31776,6 +31963,43 @@ module.exports = function (blocks, frame, codec, file, cache) {
   }
 }
 
+
+},
+"FB3i2wnkeNq38j/XT6kxrEwvkXA/U4qtyUw0vPgnn+E=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "ssb-blobs",
+  "description": "blobs and blob replication for ssb",
+  "version": "1.1.4",
+  "homepage": "https://github.com/dominictarr/ssb-blobs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/ssb-blobs.git"
+  },
+  "dependencies": {
+    "cont": "^1.0.3",
+    "level": "^1.4.0",
+    "multiblob": "^1.12.0",
+    "pull-level": "^1.5.2",
+    "pull-notify": "^0.1.0",
+    "pull-stream": "^3.3.0",
+    "ssb-ref": "^2.3.0"
+  },
+  "devDependencies": {
+    "interleavings": "^0.3.1",
+    "mkdirp": "^0.5.1",
+    "osenv": "^0.1.3",
+    "pull-bitflipper": "^0.1.0",
+    "rimraf": "^2.5.2",
+    "secret-stack": "^2.5.1",
+    "tape": "^4.5.1"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
 
 },
 "FTRTxNhKPC8TWJw3BVp9r/YdSEddzOVU9+7a0V/Hs+U=":
@@ -34251,6 +34475,36 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 },
+"Jru1uGhxhbgkK5FDu8towk32D9VbGboxF0oxMtvCOEk=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "ssb-backlinks",
+  "description": "scuttlebot plugin for indexing all link mentions of messages",
+  "version": "0.4.1",
+  "homepage": "https://github.com/ssbc/ssb-backlinks",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/ssb-backlinks.git"
+  },
+  "dependencies": {
+    "base64-url": "^1.3.3",
+    "deep-equal": "^1.0.1",
+    "flumeview-level": "^2.0.3",
+    "flumeview-query": "^3.0.3",
+    "map-filter-reduce": "^3.0.3",
+    "pull-flatmap": "0.0.1",
+    "pull-stream": "^3.6.0",
+    "ssb-keys": "^7.0.9",
+    "ssb-ref": "^2.7.1",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Secure Scuttlebutt Consortium",
+  "license": "MIT"
+}
+
+},
 "JvdeBnGiKFCkxwvDg4MoKfECTATtRzfSEVcGNeIq5FA=":
 function (require, module, exports, __dirname, __filename) {
 'use strict';
@@ -34591,58 +34845,6 @@ module.exports = function (map, width, inOrder) {
   }
 }
 
-
-},
-"Kb1jaA6fHvuqUT4QEno7yOMSwVwEF6SRlLYtbinQ7LA=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "ssb-contacts@0.0.x",
-  "_id": "ssb-contacts@0.0.2",
-  "_inBundle": false,
-  "_integrity": "sha1-2UUVYYOMzDWNMjF8DpnvhPNEmHA=",
-  "_location": "/ssb-contacts",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ssb-contacts@0.0.x",
-    "name": "ssb-contacts",
-    "escapedName": "ssb-contacts",
-    "rawSpec": "0.0.x",
-    "saveSpec": null,
-    "fetchSpec": "0.0.x"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-contacts/-/ssb-contacts-0.0.2.tgz",
-  "_shasum": "d9451561838ccc358d32317c0e99ef84f3449870",
-  "_spec": "ssb-contacts@0.0.x",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Secure Scuttlebutt Consortium"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/ssb-contacts/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "flumeview-reduce": "^1.1.0",
-    "ssb-ref": "^2.7.1"
-  },
-  "deprecated": false,
-  "description": "scuttlebot plugin for getting reduced 'contacts' state",
-  "devDependencies": {},
-  "homepage": "https://github.com/ssbc/ssb-contacts",
-  "license": "MIT",
-  "name": "ssb-contacts",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ssbc/ssb-contacts.git"
-  },
-  "scripts": {},
-  "version": "0.0.2"
-}
 
 },
 "Knn7IowxsKp1dxlbII9R4xiRFXbhs1ezAZ5iVnsXbfo=":
@@ -35522,75 +35724,6 @@ module.exports = function(filename, opts) {
 
 
 
-
-},
-"M2ZqM/IdFyPNdKEKlFjtmslNLTMDpzllJT/0DmGbcmo=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "ssb-backlinks@0.4.x",
-  "_id": "ssb-backlinks@0.4.1",
-  "_inBundle": false,
-  "_integrity": "sha1-Xe4PMBTREQ6Gy4VN+CRzz3gaErc=",
-  "_location": "/ssb-backlinks",
-  "_phantomChildren": {
-    "binary-search": "1.3.3",
-    "explain-error": "1.0.4",
-    "flumeview-level": "2.1.1",
-    "pull-flatmap": "0.0.1",
-    "pull-paramap": "1.2.2",
-    "pull-sink-through": "0.0.0",
-    "pull-stream": "3.6.2",
-    "typewiselite": "1.0.0"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ssb-backlinks@0.4.x",
-    "name": "ssb-backlinks",
-    "escapedName": "ssb-backlinks",
-    "rawSpec": "0.4.x",
-    "saveSpec": null,
-    "fetchSpec": "0.4.x"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-backlinks/-/ssb-backlinks-0.4.1.tgz",
-  "_shasum": "5dee0f3014d1110e86cb854df82473cf781a12b7",
-  "_spec": "ssb-backlinks@0.4.x",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Secure Scuttlebutt Consortium"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/ssb-backlinks/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "base64-url": "^1.3.3",
-    "deep-equal": "^1.0.1",
-    "flumeview-level": "^2.0.3",
-    "flumeview-query": "^3.0.3",
-    "map-filter-reduce": "^3.0.3",
-    "pull-flatmap": "0.0.1",
-    "pull-stream": "^3.6.0",
-    "ssb-keys": "^7.0.9",
-    "ssb-ref": "^2.7.1",
-    "xtend": "^4.0.1"
-  },
-  "deprecated": false,
-  "description": "scuttlebot plugin for indexing all link mentions of messages",
-  "devDependencies": {},
-  "homepage": "https://github.com/ssbc/ssb-backlinks",
-  "license": "MIT",
-  "name": "ssb-backlinks",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ssbc/ssb-backlinks.git"
-  },
-  "scripts": {},
-  "version": "0.4.1"
-}
 
 },
 "M2waEw6vcov0DK2BRKoWlCliMH8ZJJjGMyHW/1nZqqw=":
@@ -47739,95 +47872,6 @@ try {
 module.exports = bufferUtil.BufferUtil || bufferUtil;
 
 },
-"X1s3bjRIDv8R9P1lA6o2XwP/NfNjwHL4egBJV3AE8AQ=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "level-sublevel@^6.6.1",
-  "_id": "level-sublevel@6.6.1",
-  "_inBundle": false,
-  "_integrity": "sha1-+ad/dSGrcKj46S7VbyGjx4hqRIU=",
-  "_location": "/level-sublevel",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "level-sublevel@^6.6.1",
-    "name": "level-sublevel",
-    "escapedName": "level-sublevel",
-    "rawSpec": "^6.6.1",
-    "saveSpec": null,
-    "fetchSpec": "^6.6.1"
-  },
-  "_requiredBy": [
-    "/level-live-stream",
-    "/secure-scuttlebutt"
-  ],
-  "_resolved": "https://registry.npmjs.org/level-sublevel/-/level-sublevel-6.6.1.tgz",
-  "_shasum": "f9a77f7521ab70a8f8e92ed56f21a3c7886a4485",
-  "_spec": "level-sublevel@^6.6.1",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp/node_modules/level-live-stream",
-  "author": {
-    "name": "Dominic Tarr",
-    "email": "dominic.tarr@gmail.com",
-    "url": "http://dominictarr.com"
-  },
-  "bugs": {
-    "url": "https://github.com/dominictarr/level-sublevel/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "bytewise": "~1.1.0",
-    "levelup": "~0.19.0",
-    "ltgt": "~2.1.1",
-    "pull-level": "^2.0.3",
-    "pull-stream": "^3.4.5",
-    "typewiselite": "~1.0.0",
-    "xtend": "~4.0.0"
-  },
-  "deprecated": false,
-  "description": "partition levelup databases",
-  "devDependencies": {
-    "level": "^1.4.0",
-    "level-test": "^2.0.1",
-    "monotonic-timestamp": "0.0.8",
-    "pull-level": "~1.1.1",
-    "rimraf": "~2.1.4",
-    "shasum": "0.0.2",
-    "stream-to-pull-stream": "~1.2.0",
-    "tape": "~2.14.0",
-    "through": "~2.3.4"
-  },
-  "homepage": "https://github.com/dominictarr/level-sublevel",
-  "license": "MIT",
-  "name": "level-sublevel",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dominictarr/level-sublevel.git"
-  },
-  "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
-  },
-  "stability": "unstable",
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/8..latest",
-      "firefox/17..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
-    ]
-  },
-  "version": "6.6.1"
-}
-
-},
 "XC4OLRd/OAzztR25n7mdLXTuMI7irpLLHwoOFC/FbLo=":
 function (require, module, exports, __dirname, __filename) {
 var ip = exports,
@@ -48431,165 +48475,6 @@ function either(cont, left, right) {
             }
         })
     }
-}
-
-},
-"Y+9UorEPEAwJa7UkbeNzbqzbKjHDKRdFwXe53G6kHD0=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "leveldown@~1.7.0",
-  "_id": "leveldown@1.7.2",
-  "_inBundle": false,
-  "_integrity": "sha1-XjRnuyfuJGpKe429j7KxYgam64s=",
-  "_location": "/leveldown",
-  "_phantomChildren": {
-    "xtend": "4.0.1"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "leveldown@~1.7.0",
-    "name": "leveldown",
-    "escapedName": "leveldown",
-    "rawSpec": "~1.7.0",
-    "saveSpec": null,
-    "fetchSpec": "~1.7.0"
-  },
-  "_requiredBy": [
-    "/level"
-  ],
-  "_resolved": "https://registry.npmjs.org/leveldown/-/leveldown-1.7.2.tgz",
-  "_shasum": "5e3467bb27ee246a4a7b8dbd8fb2b16206a6eb8b",
-  "_spec": "leveldown@~1.7.0",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp/node_modules/level",
-  "bugs": {
-    "url": "https://github.com/level/leveldown/issues"
-  },
-  "bundleDependencies": false,
-  "contributors": [
-    {
-      "name": "Rod Vagg",
-      "email": "r@va.gg",
-      "url": "https://github.com/rvagg"
-    },
-    {
-      "name": "John Chesley",
-      "email": "john@chesl.es",
-      "url": "https://github.com/chesles/"
-    },
-    {
-      "name": "Jake Verbaten",
-      "email": "raynos2@gmail.com",
-      "url": "https://github.com/raynos"
-    },
-    {
-      "name": "Dominic Tarr",
-      "email": "dominic.tarr@gmail.com",
-      "url": "https://github.com/dominictarr"
-    },
-    {
-      "name": "Max Ogden",
-      "email": "max@maxogden.com",
-      "url": "https://github.com/maxogden"
-    },
-    {
-      "name": "Lars-Magnus Skog",
-      "email": "ralphtheninja@riseup.net",
-      "url": "https://github.com/ralphtheninja"
-    },
-    {
-      "name": "David Björklund",
-      "email": "david.bjorklund@gmail.com",
-      "url": "https://github.com/kesla"
-    },
-    {
-      "name": "Julian Gruber",
-      "email": "julian@juliangruber.com",
-      "url": "https://github.com/juliangruber"
-    },
-    {
-      "name": "Paolo Fragomeni",
-      "email": "paolo@async.ly",
-      "url": "https://github.com/hij1nx"
-    },
-    {
-      "name": "Anton Whalley",
-      "email": "anton.whalley@nearform.com",
-      "url": "https://github.com/No9"
-    },
-    {
-      "name": "Matteo Collina",
-      "email": "matteo.collina@gmail.com",
-      "url": "https://github.com/mcollina"
-    },
-    {
-      "name": "Pedro Teixeira",
-      "email": "pedro.teixeira@gmail.com",
-      "url": "https://github.com/pgte"
-    },
-    {
-      "name": "James Halliday",
-      "email": "mail@substack.net",
-      "url": "https://github.com/substack"
-    },
-    {
-      "name": "Gordon Hall",
-      "email": "gordonh@member.fsf.org",
-      "url": "https://github.com/bookchin"
-    },
-    {
-      "name": "Yichao 'Peak' Ji",
-      "email": "peakji@gmail.com",
-      "url": "https://github.com/peakji"
-    }
-  ],
-  "dependencies": {
-    "abstract-leveldown": "~2.6.1",
-    "bindings": "~1.2.1",
-    "fast-future": "~1.0.2",
-    "nan": "~2.6.1",
-    "prebuild-install": "^2.1.0"
-  },
-  "deprecated": false,
-  "description": "A Node.js LevelDB binding, primary backend for LevelUP",
-  "devDependencies": {
-    "async": "^2.0.1",
-    "delayed": "~1.0.1",
-    "du": "~0.1.0",
-    "faucet": "0.0.1",
-    "iota-array": "~1.0.0",
-    "lexicographic-integer": "~1.1.0",
-    "mkfiletree": "~1.0.1",
-    "monotonic-timestamp": "~0.0.8",
-    "node-uuid": "~1.4.3",
-    "optimist": "~0.6.1",
-    "prebuild": "^6.0.2",
-    "prebuild-ci": "^2.0.0",
-    "readfiletree": "~0.0.1",
-    "rimraf": "^2.6.1",
-    "slump": "~2.0.0",
-    "tape": "^4.5.1"
-  },
-  "gypfile": true,
-  "homepage": "https://github.com/level/leveldown",
-  "keywords": [
-    "leveldb",
-    "level"
-  ],
-  "license": "MIT",
-  "main": "leveldown.js",
-  "name": "leveldown",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/level/leveldown.git"
-  },
-  "scripts": {
-    "install": "prebuild-install || node-gyp rebuild",
-    "prebuild": "prebuild --all --strip --verbose",
-    "rebuild": "prebuild --compile",
-    "test": "(tape test/*-test.js | faucet) && prebuild-ci"
-  },
-  "version": "1.7.2"
 }
 
 },
@@ -51604,73 +51489,6 @@ module.exports = valid({
 
 
 },
-"bJRXQ8jL0VFg5EOksLNycAj0eN+y4C72pNoYEEFFAwU=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "ssb-private@0.1.x",
-  "_id": "ssb-private@0.1.4",
-  "_inBundle": false,
-  "_integrity": "sha1-pIywB7QeBtoGomy5ud4yoZj8I9M=",
-  "_location": "/ssb-private",
-  "_phantomChildren": {
-    "binary-search": "1.3.3",
-    "explain-error": "1.0.4",
-    "flumeview-level": "2.1.1",
-    "pull-flatmap": "0.0.1",
-    "pull-paramap": "1.2.2",
-    "pull-sink-through": "0.0.0",
-    "pull-stream": "3.6.2",
-    "typewiselite": "1.0.0"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ssb-private@0.1.x",
-    "name": "ssb-private",
-    "escapedName": "ssb-private",
-    "rawSpec": "0.1.x",
-    "saveSpec": null,
-    "fetchSpec": "0.1.x"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-private/-/ssb-private-0.1.4.tgz",
-  "_shasum": "a48cb007b41e06da06a26cb9b9de32a198fc23d3",
-  "_spec": "ssb-private@0.1.x",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Secure Scuttlebutt Consortium"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/ssb-private/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "base64-url": "^1.3.3",
-    "explain-error": "^1.0.4",
-    "flumeview-level": "^2.0.2",
-    "flumeview-query": "^3.0.3",
-    "map-filter-reduce": "^3.0.3",
-    "pull-flatmap": "0.0.1",
-    "pull-stream": "^3.6.0",
-    "ssb-keys": "^7.0.9"
-  },
-  "deprecated": false,
-  "description": "scuttlebot plugin for indexed private messages",
-  "devDependencies": {},
-  "homepage": "https://github.com/ssbc/ssb-private",
-  "license": "MIT",
-  "name": "ssb-private",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ssbc/ssb-private.git"
-  },
-  "scripts": {},
-  "version": "0.1.4"
-}
-
-},
 "bKI0eNsNLhFfRf0MFtbmtMi9SptpCLlgx+I/QIeAeWA=":
 function (require, module, exports, __dirname, __filename) {
 'use strict';
@@ -54430,6 +54248,28 @@ module.exports = function nonUnique (field) {
 }
 
 },
+"e0C5nf8wzpPuv0rbdlm144K5IkAksUhhZbo/Rk9w8UU=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "ssb-about",
+  "description": "scuttlebot plugin for getting reduced 'about' state",
+  "version": "0.1.2",
+  "homepage": "https://github.com/ssbc/ssb-about",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/ssb-about.git"
+  },
+  "dependencies": {
+    "flumeview-reduce": "^1.3.9",
+    "ssb-ref": "^2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Secure Scuttlebutt Consortium",
+  "license": "MIT"
+}
+
+},
 "eLWi1wF6LMpwPZvUEjmYZt0J/usGF+60mhQnICYPezU=":
 function (require, module, exports, __dirname, __filename) {
 var G = require('graphreduce')
@@ -56421,6 +56261,75 @@ function walk (obj, fn, prefix) {
   } else {
     fn(prefix, obj)
   }
+}
+
+},
+"iQF1Sr2U5y01/SjtzdMxrKEsm9yIUPR6NTXsScuQXZM=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "leveldown",
+  "description": "A Node.js LevelDB binding, primary backend for LevelUP",
+  "version": "1.7.2",
+  "contributors": [
+    "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
+    "John Chesley <john@chesl.es> (https://github.com/chesles/)",
+    "Jake Verbaten <raynos2@gmail.com> (https://github.com/raynos)",
+    "Dominic Tarr <dominic.tarr@gmail.com> (https://github.com/dominictarr)",
+    "Max Ogden <max@maxogden.com> (https://github.com/maxogden)",
+    "Lars-Magnus Skog <ralphtheninja@riseup.net> (https://github.com/ralphtheninja)",
+    "David Björklund <david.bjorklund@gmail.com> (https://github.com/kesla)",
+    "Julian Gruber <julian@juliangruber.com> (https://github.com/juliangruber)",
+    "Paolo Fragomeni <paolo@async.ly> (https://github.com/hij1nx)",
+    "Anton Whalley <anton.whalley@nearform.com> (https://github.com/No9)",
+    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
+    "Pedro Teixeira <pedro.teixeira@gmail.com> (https://github.com/pgte)",
+    "James Halliday <mail@substack.net> (https://github.com/substack)",
+    "Gordon Hall <gordonh@member.fsf.org> (https://github.com/bookchin)",
+    "Yichao 'Peak' Ji <peakji@gmail.com> (https://github.com/peakji)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/level/leveldown.git"
+  },
+  "homepage": "https://github.com/level/leveldown",
+  "keywords": [
+    "leveldb",
+    "level"
+  ],
+  "main": "leveldown.js",
+  "dependencies": {
+    "abstract-leveldown": "~2.6.1",
+    "bindings": "~1.2.1",
+    "fast-future": "~1.0.2",
+    "nan": "~2.6.1",
+    "prebuild-install": "^2.1.0"
+  },
+  "devDependencies": {
+    "async": "^2.0.1",
+    "delayed": "~1.0.1",
+    "du": "~0.1.0",
+    "faucet": "0.0.1",
+    "iota-array": "~1.0.0",
+    "lexicographic-integer": "~1.1.0",
+    "mkfiletree": "~1.0.1",
+    "monotonic-timestamp": "~0.0.8",
+    "node-uuid": "~1.4.3",
+    "optimist": "~0.6.1",
+    "prebuild": "^6.0.2",
+    "prebuild-ci": "^2.0.0",
+    "readfiletree": "~0.0.1",
+    "rimraf": "^2.6.1",
+    "slump": "~2.0.0",
+    "tape": "^4.5.1"
+  },
+  "scripts": {
+    "install": "prebuild-install || node-gyp rebuild",
+    "test": "(tape test/*-test.js | faucet) && prebuild-ci",
+    "rebuild": "prebuild --compile",
+    "prebuild": "prebuild --all --strip --verbose"
+  },
+  "license": "MIT",
+  "gypfile": true
 }
 
 },
@@ -60602,83 +60511,6 @@ if(!module.parent && process.title === 'node')  {
 
 
 },
-"lLomAphoh62Qls+4y4HUBAxJTSo/BU2LjhR2aqwdX8Q=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "ssb-blobs@1.1.4",
-  "_id": "ssb-blobs@1.1.4",
-  "_inBundle": false,
-  "_integrity": "sha1-2T8pYLSU4QZXhp/zu59y32lxXck=",
-  "_location": "/ssb-blobs",
-  "_phantomChildren": {
-    "level-post": "1.0.7",
-    "pull-cat": "1.1.11",
-    "pull-pushable": "2.2.0",
-    "pull-stream": "3.6.2",
-    "pull-window": "2.1.4",
-    "stream-to-pull-stream": "1.7.2"
-  },
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "ssb-blobs@1.1.4",
-    "name": "ssb-blobs",
-    "escapedName": "ssb-blobs",
-    "rawSpec": "1.1.4",
-    "saveSpec": null,
-    "fetchSpec": "1.1.4"
-  },
-  "_requiredBy": [
-    "/",
-    "/scuttlebot"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-blobs/-/ssb-blobs-1.1.4.tgz",
-  "_shasum": "d93f2960b494e10657869ff3bb9f72df69715dc9",
-  "_spec": "ssb-blobs@1.1.4",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Dominic Tarr",
-    "email": "dominic.tarr@gmail.com",
-    "url": "http://dominictarr.com"
-  },
-  "bugs": {
-    "url": "https://github.com/dominictarr/ssb-blobs/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "cont": "^1.0.3",
-    "level": "^1.4.0",
-    "multiblob": "^1.12.0",
-    "pull-level": "^1.5.2",
-    "pull-notify": "^0.1.0",
-    "pull-stream": "^3.3.0",
-    "ssb-ref": "^2.3.0"
-  },
-  "deprecated": false,
-  "description": "blobs and blob replication for ssb",
-  "devDependencies": {
-    "interleavings": "^0.3.1",
-    "mkdirp": "^0.5.1",
-    "osenv": "^0.1.3",
-    "pull-bitflipper": "^0.1.0",
-    "rimraf": "^2.5.2",
-    "secret-stack": "^2.5.1",
-    "tape": "^4.5.1"
-  },
-  "homepage": "https://github.com/dominictarr/ssb-blobs",
-  "license": "MIT",
-  "name": "ssb-blobs",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dominictarr/ssb-blobs.git"
-  },
-  "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
-  },
-  "version": "1.1.4"
-}
-
-},
 "lMswXBQii9P/pfGzapgmMzlnSatBGkUCqq/dH5aFfr0=":
 function (require, module, exports, __dirname, __filename) {
 /**
@@ -60834,115 +60666,6 @@ function patch(Ware) {
 }
 
 module.exports = patch;
-
-},
-"lTTMwf9oZv/QZSaY/sWHakCAC0Gg/apHI5NaSgT8w7M=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "secure-scuttlebutt@^17.0.0",
-  "_id": "secure-scuttlebutt@17.1.1",
-  "_inBundle": false,
-  "_integrity": "sha1-3jcVeDxA3zTfaj25mt6GN7oPHLI=",
-  "_location": "/secure-scuttlebutt",
-  "_phantomChildren": {
-    "level-codec": "6.2.0"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "secure-scuttlebutt@^17.0.0",
-    "name": "secure-scuttlebutt",
-    "escapedName": "secure-scuttlebutt",
-    "rawSpec": "^17.0.0",
-    "saveSpec": null,
-    "fetchSpec": "^17.0.0"
-  },
-  "_requiredBy": [
-    "/scuttlebot"
-  ],
-  "_resolved": "https://registry.npmjs.org/secure-scuttlebutt/-/secure-scuttlebutt-17.1.1.tgz",
-  "_shasum": "de3715783c40df34df6a3db99ade8637ba0f1cb2",
-  "_spec": "secure-scuttlebutt@^17.0.0",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp/node_modules/scuttlebot",
-  "author": {
-    "name": "Dominic Tarr",
-    "email": "dominic.tarr@gmail.com",
-    "url": "http://dominictarr.com"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/secure-scuttlebutt/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "async-write": "^2.1.0",
-    "cont": "~1.0.0",
-    "deep-equal": "~0.2.1",
-    "explain-error": "~1.0.1",
-    "flumecodec": "0.0.1",
-    "flumedb": "^0.4.2",
-    "flumelog-offset": "^3.2.5",
-    "flumeview-hashtable": "^1.0.3",
-    "flumeview-level": "^2.1.0",
-    "flumeview-reduce": "^1.3.9",
-    "level": "^1.7.0",
-    "level-sublevel": "^6.6.1",
-    "ltgt": "^2.2.0",
-    "monotonic-timestamp": "~0.0.8",
-    "obv": "0.0.1",
-    "pull-cont": "0.0.0",
-    "pull-level": "^2.0.3",
-    "pull-live": "^1.0.1",
-    "pull-notify": "^0.1.0",
-    "pull-paramap": "^1.1.6",
-    "pull-stream": "^3.4.0",
-    "ssb-keys": "^7.0.0",
-    "ssb-msgs": "^5.0.0",
-    "ssb-ref": "^2.0.0",
-    "ssb-validate": "^3.0.0",
-    "typewiselite": "^1.0.0"
-  },
-  "deprecated": false,
-  "description": "a secure, replicatable database",
-  "devDependencies": {
-    "deep-equal": "^0.2.1",
-    "hexpp": "~1.1.3",
-    "level-test": "^2.0.3",
-    "multicb": "~0.0.2",
-    "pull-abortable": "~4.1.0",
-    "pull-randomly-split": "~1.0.4",
-    "rimraf": "~2.2.8",
-    "ssb-feed": "^2.2.1",
-    "tape": "^4.8.0",
-    "typewiselite": "~1.0.0"
-  },
-  "homepage": "https://github.com/ssbc/secure-scuttlebutt",
-  "license": "MIT",
-  "name": "secure-scuttlebutt",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ssbc/secure-scuttlebutt.git"
-  },
-  "scripts": {
-    "prepublishOnly": "npm ls && npm test",
-    "test": "set -e; for t in test/*.js; do node $t; done"
-  },
-  "testling": {
-    "browsers": [
-      "chrome/22..latest",
-      "chrome/canary",
-      "firefox/17..latest",
-      "firefox/nightly",
-      "ie/8..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest"
-    ],
-    "files": "test/defaults.js"
-  },
-  "version": "17.1.1"
-}
 
 },
 "mJ1Mb97wyF/JYKHtacPJzv4XFtJkBvQS68qNva21Y08=":
@@ -62132,6 +61855,28 @@ function createLocalCall(local, localApi, perms) {
 
 
 },
+"oCNyKfa+EFo3otkgqvc7uVuoowHwMQY58Z1G+JHx6WE=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "ssb-contacts",
+  "description": "scuttlebot plugin for getting reduced 'contacts' state",
+  "version": "0.0.2",
+  "homepage": "https://github.com/ssbc/ssb-contacts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/ssb-contacts.git"
+  },
+  "dependencies": {
+    "flumeview-reduce": "^1.1.0",
+    "ssb-ref": "^2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Secure Scuttlebutt Consortium",
+  "license": "MIT"
+}
+
+},
 "oHkDWghwnaZ/de95LP9aOHd5b0YNSmYLTmHW5w+ANwE=":
 function (require, module, exports, __dirname, __filename) {
 // Copyright Joyent, Inc. and other Node contributors.
@@ -62492,167 +62237,6 @@ module.exports = function (bytes) {
 }
 
 },
-"pXbr/MNJ3v7DWii0EMyHTNCGX5ujVO9S08YSDw0UUFU=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "levelup@~1.3.0",
-  "_id": "levelup@1.3.9",
-  "_inBundle": false,
-  "_integrity": "sha512-VVGHfKIlmw8w1XqpGOAGwq6sZm2WwWLmlDcULkKWQXEA5EopA8OBNJ2Ck2v6bdk8HeEZSbCSEgzXadyQFm76sQ==",
-  "_location": "/level-packager/levelup",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "levelup@~1.3.0",
-    "name": "levelup",
-    "escapedName": "levelup",
-    "rawSpec": "~1.3.0",
-    "saveSpec": null,
-    "fetchSpec": "~1.3.0"
-  },
-  "_requiredBy": [
-    "/level-packager"
-  ],
-  "_resolved": "https://registry.npmjs.org/levelup/-/levelup-1.3.9.tgz",
-  "_shasum": "2dbcae845b2bb2b6bea84df334c475533bbd82ab",
-  "_spec": "levelup@~1.3.0",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp/node_modules/level-packager",
-  "browser": {
-    "./lib/leveldown.js": false,
-    "leveldown": false,
-    "leveldown/package": false,
-    "semver": false
-  },
-  "bugs": {
-    "url": "https://github.com/level/levelup/issues"
-  },
-  "bundleDependencies": false,
-  "contributors": [
-    {
-      "name": "Rod Vagg",
-      "email": "r@va.gg",
-      "url": "https://github.com/rvagg"
-    },
-    {
-      "name": "John Chesley",
-      "email": "john@chesl.es",
-      "url": "https://github.com/chesles/"
-    },
-    {
-      "name": "Jake Verbaten",
-      "email": "raynos2@gmail.com",
-      "url": "https://github.com/raynos"
-    },
-    {
-      "name": "Dominic Tarr",
-      "email": "dominic.tarr@gmail.com",
-      "url": "https://github.com/dominictarr"
-    },
-    {
-      "name": "Max Ogden",
-      "email": "max@maxogden.com",
-      "url": "https://github.com/maxogden"
-    },
-    {
-      "name": "Lars-Magnus Skog",
-      "email": "ralphtheninja@riseup.net",
-      "url": "https://github.com/ralphtheninja"
-    },
-    {
-      "name": "David Björklund",
-      "email": "david.bjorklund@gmail.com",
-      "url": "https://github.com/kesla"
-    },
-    {
-      "name": "Julian Gruber",
-      "email": "julian@juliangruber.com",
-      "url": "https://github.com/juliangruber"
-    },
-    {
-      "name": "Paolo Fragomeni",
-      "email": "paolo@async.ly",
-      "url": "https://github.com/0x00a"
-    },
-    {
-      "name": "Anton Whalley",
-      "email": "anton.whalley@nearform.com",
-      "url": "https://github.com/No9"
-    },
-    {
-      "name": "Matteo Collina",
-      "email": "matteo.collina@gmail.com",
-      "url": "https://github.com/mcollina"
-    },
-    {
-      "name": "Pedro Teixeira",
-      "email": "pedro.teixeira@gmail.com",
-      "url": "https://github.com/pgte"
-    },
-    {
-      "name": "James Halliday",
-      "email": "mail@substack.net",
-      "url": "https://github.com/substack"
-    },
-    {
-      "name": "Jarrett Cruger",
-      "email": "jcrugzz@gmail.com",
-      "url": "https://github.com/jcrugzz"
-    }
-  ],
-  "dependencies": {
-    "deferred-leveldown": "~1.2.1",
-    "level-codec": "~7.0.0",
-    "level-errors": "~1.0.3",
-    "level-iterator-stream": "~1.3.0",
-    "prr": "~1.0.1",
-    "semver": "~5.4.1",
-    "xtend": "~4.0.0"
-  },
-  "deprecated": false,
-  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
-  "devDependencies": {
-    "after": "^0.8.2",
-    "async": "^2.5.0",
-    "bl": "^1.2.1",
-    "browserify": "^14.3.0",
-    "bustermove": "~1.0.0",
-    "delayed": "~1.0.1",
-    "faucet": "~0.0.1",
-    "leveldown": "^1.1.0",
-    "memdown": "^1.2.4",
-    "msgpack-js": "~0.3.0",
-    "referee": "~1.2.0",
-    "rimraf": "^2.6.1",
-    "safe-buffer": "^5.1.0",
-    "slow-stream": "0.0.4",
-    "standard": "^10.0.2",
-    "tape": "^4.7.0"
-  },
-  "homepage": "https://github.com/level/levelup",
-  "keywords": [
-    "leveldb",
-    "stream",
-    "database",
-    "db",
-    "store",
-    "storage",
-    "json"
-  ],
-  "license": "MIT",
-  "main": "lib/levelup.js",
-  "name": "levelup",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/level/levelup.git"
-  },
-  "scripts": {
-    "test": "standard && tape test/*-test.js | faucet"
-  },
-  "version": "1.3.9"
-}
-
-},
 "pjFx2+wYIVwULebXxfR12YQ85Xvx/p/2eGBOVGZyYfY=":
 function (require, module, exports, __dirname, __filename) {
 /* Copyright (c) 2017 Rod Vagg, MIT License */
@@ -62926,63 +62510,6 @@ AbstractLevelDOWN.prototype._checkKey = function (obj, type) {
 }
 
 module.exports = AbstractLevelDOWN
-
-},
-"pofgE6PuABKsASj8FXXSKUbsURHkSjwnBdjrQoeUJWA=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "ssb-query@0.1.x",
-  "_id": "ssb-query@0.1.2",
-  "_inBundle": false,
-  "_integrity": "sha1-4o0OYlNozd8Hes7XaHKHkSueS18=",
-  "_location": "/ssb-query",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ssb-query@0.1.x",
-    "name": "ssb-query",
-    "escapedName": "ssb-query",
-    "rawSpec": "0.1.x",
-    "saveSpec": null,
-    "fetchSpec": "0.1.x"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ssb-query/-/ssb-query-0.1.2.tgz",
-  "_shasum": "e28d0e625368cddf077aced7687287912b9e4b5f",
-  "_spec": "ssb-query@0.1.x",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp",
-  "author": {
-    "name": "Dominic Tarr",
-    "email": "dominic.tarr@gmail.com",
-    "url": "http://dominictarr.com"
-  },
-  "bugs": {
-    "url": "https://github.com/dominictarr/ssb-query/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "explain-error": "^1.0.1",
-    "pull-stream": "^3.4.2",
-    "streamview-links": "^2.0.0"
-  },
-  "deprecated": false,
-  "description": "",
-  "devDependencies": {},
-  "homepage": "https://github.com/dominictarr/ssb-query",
-  "license": "MIT",
-  "name": "ssb-query",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dominictarr/ssb-query.git"
-  },
-  "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
-  },
-  "version": "0.1.2"
-}
 
 },
 "ppcW7pyB7xnxMxBRlZjwjbpLcyjAADh7ivcvd9Ib0zQ=":
@@ -66703,6 +66230,32 @@ module.exports = function (version, map) {
 }
 
 },
+"szqRRzkfI7r0lJz2O7XpPIvmA+jjl66VBbq493+FU4M=":
+function (require, module, exports, __dirname, __filename) {
+/* Copyright (c) 2012-2017 LevelUP contributors
+ * See list at <https://github.com/rvagg/node-levelup#contributing>
+ * MIT License
+ * <https://github.com/rvagg/node-levelup/blob/master/LICENSE.md>
+ */
+
+var createError = require('errno').create
+var LevelUPError = createError('LevelUPError')
+var NotFoundError = createError('NotFoundError', LevelUPError)
+
+NotFoundError.prototype.notFound = true
+NotFoundError.prototype.status = 404
+
+module.exports = {
+  LevelUPError: LevelUPError,
+  InitializationError: createError('InitializationError', LevelUPError),
+  OpenError: createError('OpenError', LevelUPError),
+  ReadError: createError('ReadError', LevelUPError),
+  WriteError: createError('WriteError', LevelUPError),
+  NotFoundError: NotFoundError,
+  EncodingError: createError('EncodingError', LevelUPError)
+}
+
+},
 "t3+zHM+EcU+IZ272vXDTGDwuaEGoh5LFIdpX38PjcYw=":
 function (require, module, exports, __dirname, __filename) {
 /* Copyright (c) 2012-2016 LevelUP contributors
@@ -67196,6 +66749,81 @@ exports.parse = function (s) {
     return value
   })
 }
+},
+"tq6UIcTdnCNeM3r8KNc89QWvJZw1U3uQdsZhUz1vfKg=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "secure-scuttlebutt",
+  "description": "a secure, replicatable database",
+  "version": "17.1.1",
+  "homepage": "https://github.com/ssbc/secure-scuttlebutt",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/secure-scuttlebutt.git"
+  },
+  "dependencies": {
+    "async-write": "^2.1.0",
+    "cont": "~1.0.0",
+    "deep-equal": "~0.2.1",
+    "explain-error": "~1.0.1",
+    "flumecodec": "0.0.1",
+    "flumedb": "^0.4.2",
+    "flumelog-offset": "^3.2.5",
+    "flumeview-hashtable": "^1.0.3",
+    "flumeview-level": "^2.1.0",
+    "flumeview-reduce": "^1.3.9",
+    "level": "^1.7.0",
+    "level-sublevel": "^6.6.1",
+    "ltgt": "^2.2.0",
+    "monotonic-timestamp": "~0.0.8",
+    "obv": "0.0.1",
+    "pull-cont": "0.0.0",
+    "pull-level": "^2.0.3",
+    "pull-live": "^1.0.1",
+    "pull-notify": "^0.1.0",
+    "pull-paramap": "^1.1.6",
+    "pull-stream": "^3.4.0",
+    "ssb-keys": "^7.0.0",
+    "ssb-msgs": "^5.0.0",
+    "ssb-ref": "^2.0.0",
+    "ssb-validate": "^3.0.0",
+    "typewiselite": "^1.0.0"
+  },
+  "devDependencies": {
+    "deep-equal": "^0.2.1",
+    "hexpp": "~1.1.3",
+    "level-test": "^2.0.3",
+    "multicb": "~0.0.2",
+    "pull-abortable": "~4.1.0",
+    "pull-randomly-split": "~1.0.4",
+    "rimraf": "~2.2.8",
+    "ssb-feed": "^2.2.1",
+    "tape": "^4.8.0",
+    "typewiselite": "~1.0.0"
+  },
+  "scripts": {
+    "prepublishOnly": "npm ls && npm test",
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT",
+  "testling": {
+    "browsers": [
+      "chrome/22..latest",
+      "chrome/canary",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "ie/8..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest"
+    ],
+    "files": "test/defaults.js"
+  }
+}
+
 },
 "u6VzRPYRvZnKk8A59I8ZigWFYjuHr9miOoXwwLkrMWU=":
 function (require, module, exports, __dirname, __filename) {
@@ -74357,167 +73985,6 @@ function (start, createStream) {
 
 
 },
-"yfcXu+TYMaLMLIZWq0/DSVCpkVA0dsrHC6y9phfqYTo=":
-function (require, module, exports, __dirname, __filename) {
-module.exports = {
-  "_from": "levelup@~0.19.0",
-  "_id": "levelup@0.19.1",
-  "_inBundle": false,
-  "_integrity": "sha1-86anIFJyxLXzXkEv8ASgOgrt9Qs=",
-  "_location": "/levelup",
-  "_phantomChildren": {
-    "core-util-is": "1.0.2",
-    "inherits": "2.0.3"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "levelup@~0.19.0",
-    "name": "levelup",
-    "escapedName": "levelup",
-    "rawSpec": "~0.19.0",
-    "saveSpec": null,
-    "fetchSpec": "~0.19.0"
-  },
-  "_requiredBy": [
-    "/level-sublevel"
-  ],
-  "_resolved": "https://registry.npmjs.org/levelup/-/levelup-0.19.1.tgz",
-  "_shasum": "f3a6a7205272c4b5f35e412ff004a03a0aedf50b",
-  "_spec": "levelup@~0.19.0",
-  "_where": "/Users/luandrovieira/Sites/swaraj/projects/p2pboilerplate/rnnodeapp/node_modules/level-sublevel",
-  "browser": {
-    "leveldown": false,
-    "leveldown/package": false,
-    "semver": false
-  },
-  "bugs": {
-    "url": "https://github.com/rvagg/node-levelup/issues"
-  },
-  "bundleDependencies": false,
-  "contributors": [
-    {
-      "name": "Rod Vagg",
-      "email": "r@va.gg",
-      "url": "https://github.com/rvagg"
-    },
-    {
-      "name": "John Chesley",
-      "email": "john@chesl.es",
-      "url": "https://github.com/chesles/"
-    },
-    {
-      "name": "Jake Verbaten",
-      "email": "raynos2@gmail.com",
-      "url": "https://github.com/raynos"
-    },
-    {
-      "name": "Dominic Tarr",
-      "email": "dominic.tarr@gmail.com",
-      "url": "https://github.com/dominictarr"
-    },
-    {
-      "name": "Max Ogden",
-      "email": "max@maxogden.com",
-      "url": "https://github.com/maxogden"
-    },
-    {
-      "name": "Lars-Magnus Skog",
-      "email": "lars.magnus.skog@gmail.com",
-      "url": "https://github.com/ralphtheninja"
-    },
-    {
-      "name": "David Björklund",
-      "email": "david.bjorklund@gmail.com",
-      "url": "https://github.com/kesla"
-    },
-    {
-      "name": "Julian Gruber",
-      "email": "julian@juliangruber.com",
-      "url": "https://github.com/juliangruber"
-    },
-    {
-      "name": "Paolo Fragomeni",
-      "email": "paolo@async.ly",
-      "url": "https://github.com/hij1nx"
-    },
-    {
-      "name": "Anton Whalley",
-      "email": "anton.whalley@nearform.com",
-      "url": "https://github.com/No9"
-    },
-    {
-      "name": "Matteo Collina",
-      "email": "matteo.collina@gmail.com",
-      "url": "https://github.com/mcollina"
-    },
-    {
-      "name": "Pedro Teixeira",
-      "email": "pedro.teixeira@gmail.com",
-      "url": "https://github.com/pgte"
-    },
-    {
-      "name": "James Halliday",
-      "email": "mail@substack.net",
-      "url": "https://github.com/substack"
-    }
-  ],
-  "dependencies": {
-    "bl": "~0.8.1",
-    "deferred-leveldown": "~0.2.0",
-    "errno": "~0.1.1",
-    "prr": "~0.0.0",
-    "readable-stream": "~1.0.26",
-    "semver": "~5.1.0",
-    "xtend": "~3.0.0"
-  },
-  "deprecated": false,
-  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
-  "devDependencies": {
-    "async": "*",
-    "boganipsum": "*",
-    "bustermove": "~1.0.1",
-    "delayed": "*",
-    "du": "*",
-    "fstream": "*",
-    "leveldown": "~0.10.0",
-    "memdown": "^0.11.0",
-    "mkfiletree": "*",
-    "msgpack-js": "*",
-    "readfiletree": "*",
-    "referee": "*",
-    "rimraf": "*",
-    "slow-stream": ">=0.0.4",
-    "tap": "2.x.x",
-    "tape": "4.x.x",
-    "tar": "*"
-  },
-  "homepage": "https://github.com/rvagg/node-levelup",
-  "keywords": [
-    "leveldb",
-    "stream",
-    "database",
-    "db",
-    "store",
-    "storage",
-    "json"
-  ],
-  "license": "MIT",
-  "main": "lib/levelup.js",
-  "name": "levelup",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rvagg/node-levelup.git"
-  },
-  "scripts": {
-    "alltests": "npm test && npm run-script functionaltests",
-    "functionaltests": "node ./test/functional/fstream-test.js && node ./test/functional/binary-data-test.js && node ./test/functional/compat-test.js",
-    "test": "tap test/*-test.js"
-  },
-  "version": "0.19.1"
-}
-
-},
 "ygMPXluo7BBlYtJFSOCqOVbFDicUpzn7/tAxiQSfgmg=":
 function (require, module, exports, __dirname, __filename) {
 var fs = require('fs')
@@ -75910,6 +75377,31 @@ module.exports = function (api, opts) {
 }
 
 },
+"zbLcxUgq8G6BGAfbxeGhpbhHeRzfwOVc8mLxVEMKBy4=":
+function (require, module, exports, __dirname, __filename) {
+module.exports = {
+  "name": "ssb-query",
+  "description": "",
+  "version": "0.1.2",
+  "homepage": "https://github.com/dominictarr/ssb-query",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/ssb-query.git"
+  },
+  "dependencies": {
+    "explain-error": "^1.0.1",
+    "pull-stream": "^3.4.2",
+    "streamview-links": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
+
+},
 "zuVoE4t34m5coV6Es21mxcFVbnZTKp/mrcK6IvYlDVA=":
 function (require, module, exports, __dirname, __filename) {
 'use strict';
@@ -76337,30 +75829,79 @@ module.exports = parse;
   "rnnodeapp/node_modules/cont/index.js": [
     "my3Mtk8msQFkFs5faZG4tS0EjwmtODFORzhSxcgleDM=",
     {
-      "continuable": "rnnodeapp/node_modules/continuable/index.js",
+      "continuable": "rnnodeapp/node_modules/cont/node_modules/continuable/index.js",
       "continuable-para": "rnnodeapp/node_modules/continuable-para/index.js",
       "continuable-series": "rnnodeapp/node_modules/continuable-series/index.js"
     }
   ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/both.js": [
+    "MjvLr/xOseyqvTTmpIHI8bgRJsCpKTL5QuFJFStCwCs=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/chain.js": [
+    "Yu76t+DKfnA75RFAqcScJ3XCdzDeuPe8X0/wXqLI3ak=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/either.js": [
+    "Xz71w1g5FDlgcpQB1RsYHmnE9+BZfKrwfQyi9hcFlUM=",
+    {
+      "./of": "rnnodeapp/node_modules/cont/node_modules/continuable/of.js"
+    }
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/error.js": [
+    "v1JJsvB84WMOaJeajnHp6rZ4y/7uHk4RMQQpWljccnM=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/index.js": [
+    "BPW+ohGOj+1TlKqaWFsfFn7zUbaW6USLAAF5Ln1+CLI=",
+    {
+      "./both.js": "rnnodeapp/node_modules/cont/node_modules/continuable/both.js",
+      "./chain.js": "rnnodeapp/node_modules/cont/node_modules/continuable/chain.js",
+      "./either.js": "rnnodeapp/node_modules/cont/node_modules/continuable/either.js",
+      "./error.js": "rnnodeapp/node_modules/cont/node_modules/continuable/error.js",
+      "./join.js": "rnnodeapp/node_modules/cont/node_modules/continuable/join.js",
+      "./map-async.js": "rnnodeapp/node_modules/cont/node_modules/continuable/map-async.js",
+      "./map.js": "rnnodeapp/node_modules/cont/node_modules/continuable/map.js",
+      "./maybe-callback.js": "rnnodeapp/node_modules/cont/node_modules/continuable/maybe-callback.js",
+      "./of.js": "rnnodeapp/node_modules/cont/node_modules/continuable/of.js",
+      "./to.js": "rnnodeapp/node_modules/cont/node_modules/continuable/to.js"
+    }
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/join.js": [
+    "D0nA59GBhKIX7Sc5Kwjc5GZ5UCdU/INt/J2cmRjCIAQ=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/map-async.js": [
+    "BAb8PtZjQg38fOfdP6kJel/Askmzk4LekGrQIq39Zbo=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/map.js": [
+    "8oVQAh3PHo5mQo4nNZARZxbXyIiufUbrNzi1vx0D53w=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/maybe-callback.js": [
+    "pN128HmfxJd3AhJuZ6vuPPgWw3XLAKVTqj/gX8bFlno=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/of.js": [
+    "AhGM13F38Ugmo+1/psfxxr/69gITlpyAFudfqUhCubg=",
+    {}
+  ],
+  "rnnodeapp/node_modules/cont/node_modules/continuable/to.js": [
+    "CYFjk0MA9cqunsqirN4JfopZp1rC3FTB21giVtLNJLQ=",
+    {}
+  ],
   "rnnodeapp/node_modules/continuable-hash/index.js": [
     "Ofp/3pHGnR/xhrB0q5TIvQrTtz5GW+A+PkWMdavBy0o=",
     {
-      "continuable/maybe-callback": "rnnodeapp/node_modules/continuable-hash/node_modules/continuable/maybe-callback.js"
+      "continuable/maybe-callback": "rnnodeapp/node_modules/continuable/maybe-callback.js"
     }
-  ],
-  "rnnodeapp/node_modules/continuable-hash/node_modules/continuable/maybe-callback.js": [
-    "pN128HmfxJd3AhJuZ6vuPPgWw3XLAKVTqj/gX8bFlno=",
-    {}
   ],
   "rnnodeapp/node_modules/continuable-list/index.js": [
     "MZNAuf/Vk6btL7qAEyf1tKcUS0ojiXtWJ1bT9eyhPic=",
     {
-      "continuable/maybe-callback": "rnnodeapp/node_modules/continuable-list/node_modules/continuable/maybe-callback.js"
+      "continuable/maybe-callback": "rnnodeapp/node_modules/continuable/maybe-callback.js"
     }
-  ],
-  "rnnodeapp/node_modules/continuable-list/node_modules/continuable/maybe-callback.js": [
-    "pN128HmfxJd3AhJuZ6vuPPgWw3XLAKVTqj/gX8bFlno=",
-    {}
   ],
   "rnnodeapp/node_modules/continuable-para/index.js": [
     "5cfvpgW0NF9XIpq727oLs8A9i4N5lZiBMtgMuvj2Ijk=",
@@ -76373,61 +75914,8 @@ module.exports = parse;
     "y9bu6ooSJ4eTo3qLTOYHiygPQzsC5cIrHuZVk9FGhw4=",
     {}
   ],
-  "rnnodeapp/node_modules/continuable/both.js": [
-    "MjvLr/xOseyqvTTmpIHI8bgRJsCpKTL5QuFJFStCwCs=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/chain.js": [
-    "Yu76t+DKfnA75RFAqcScJ3XCdzDeuPe8X0/wXqLI3ak=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/either.js": [
-    "Xz71w1g5FDlgcpQB1RsYHmnE9+BZfKrwfQyi9hcFlUM=",
-    {
-      "./of": "rnnodeapp/node_modules/continuable/of.js"
-    }
-  ],
-  "rnnodeapp/node_modules/continuable/error.js": [
-    "v1JJsvB84WMOaJeajnHp6rZ4y/7uHk4RMQQpWljccnM=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/index.js": [
-    "BPW+ohGOj+1TlKqaWFsfFn7zUbaW6USLAAF5Ln1+CLI=",
-    {
-      "./both.js": "rnnodeapp/node_modules/continuable/both.js",
-      "./chain.js": "rnnodeapp/node_modules/continuable/chain.js",
-      "./either.js": "rnnodeapp/node_modules/continuable/either.js",
-      "./error.js": "rnnodeapp/node_modules/continuable/error.js",
-      "./join.js": "rnnodeapp/node_modules/continuable/join.js",
-      "./map-async.js": "rnnodeapp/node_modules/continuable/map-async.js",
-      "./map.js": "rnnodeapp/node_modules/continuable/map.js",
-      "./maybe-callback.js": "rnnodeapp/node_modules/continuable/maybe-callback.js",
-      "./of.js": "rnnodeapp/node_modules/continuable/of.js",
-      "./to.js": "rnnodeapp/node_modules/continuable/to.js"
-    }
-  ],
-  "rnnodeapp/node_modules/continuable/join.js": [
-    "D0nA59GBhKIX7Sc5Kwjc5GZ5UCdU/INt/J2cmRjCIAQ=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/map-async.js": [
-    "BAb8PtZjQg38fOfdP6kJel/Askmzk4LekGrQIq39Zbo=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/map.js": [
-    "8oVQAh3PHo5mQo4nNZARZxbXyIiufUbrNzi1vx0D53w=",
-    {}
-  ],
   "rnnodeapp/node_modules/continuable/maybe-callback.js": [
     "pN128HmfxJd3AhJuZ6vuPPgWw3XLAKVTqj/gX8bFlno=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/of.js": [
-    "AhGM13F38Ugmo+1/psfxxr/69gITlpyAFudfqUhCubg=",
-    {}
-  ],
-  "rnnodeapp/node_modules/continuable/to.js": [
-    "CYFjk0MA9cqunsqirN4JfopZp1rC3FTB21giVtLNJLQ=",
     {}
   ],
   "rnnodeapp/node_modules/core-util-is/lib/util.js": [
@@ -76526,7 +76014,7 @@ module.exports = parse;
   "rnnodeapp/node_modules/errno/custom.js": [
     "LQrn+beMz9sSTqtT7mL/SXunAGHjhGQnZY0eip5XI+o=",
     {
-      "prr": "rnnodeapp/node_modules/errno/node_modules/prr/prr.js"
+      "prr": "rnnodeapp/node_modules/prr/prr.js"
     }
   ],
   "rnnodeapp/node_modules/errno/errno.js": [
@@ -76534,10 +76022,6 @@ module.exports = parse;
     {
       "./custom": "rnnodeapp/node_modules/errno/custom.js"
     }
-  ],
-  "rnnodeapp/node_modules/errno/node_modules/prr/prr.js": [
-    "M2waEw6vcov0DK2BRKoWlCliMH8ZJJjGMyHW/1nZqqw=",
-    {}
   ],
   "rnnodeapp/node_modules/explain-error/index.js": [
     "r7K2Ec87mTos7IN6ebWeulFVVA5l0tGjezcSIff0kEA=",
@@ -76568,19 +76052,15 @@ module.exports = parse;
       "cont": "rnnodeapp/node_modules/cont/index.js",
       "explain-error": "rnnodeapp/node_modules/explain-error/index.js",
       "obv": "rnnodeapp/node_modules/obv/index.js",
-      "pull-cont": "rnnodeapp/node_modules/flumedb/node_modules/pull-cont/index.js",
+      "pull-cont": "rnnodeapp/node_modules/pull-cont/index.js",
       "pull-looper": "rnnodeapp/node_modules/pull-looper/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
   ],
-  "rnnodeapp/node_modules/flumedb/node_modules/pull-cont/index.js": [
-    "rqwIhOjK14ppHLMhv6r7JKQ86nk8skJVNtKQIdyb/gs=",
-    {}
-  ],
   "rnnodeapp/node_modules/flumedb/wrap.js": [
     "jF//StvhRN3H+6ja1e/6KoLZyootkYCIcgFTAQMwAqo=",
     {
-      "pull-cont": "rnnodeapp/node_modules/flumedb/node_modules/pull-cont/index.js",
+      "pull-cont": "rnnodeapp/node_modules/pull-cont/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
   ],
@@ -76595,7 +76075,7 @@ module.exports = parse;
     "7EbSPbx66ortiAkKTsvhDyyH3V+DtNQrrNfAVirxgpw=",
     {
       "./offset-codecs": "rnnodeapp/node_modules/flumelog-offset/frame/offset-codecs.js",
-      "looper": "rnnodeapp/node_modules/flumelog-offset/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/looper/index.js"
     }
   ],
   "rnnodeapp/node_modules/flumelog-offset/index.js": [
@@ -76617,10 +76097,6 @@ module.exports = parse;
       "pull-looper": "rnnodeapp/node_modules/pull-looper/index.js",
       "pull-stream/throughs/map": "rnnodeapp/node_modules/pull-stream/throughs/map.js"
     }
-  ],
-  "rnnodeapp/node_modules/flumelog-offset/node_modules/looper/index.js": [
-    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
-    {}
   ],
   "rnnodeapp/node_modules/flumeview-hashtable/hashtable.js": [
     "KL4x9+y0jINj0qGgO+UXFoccWEfc6IbdSizrmrn2UtQ=",
@@ -76658,6 +76134,25 @@ module.exports = parse;
   ],
   "rnnodeapp/node_modules/flumeview-level/node_modules/obv/index.js": [
     "w7REqHJtqpwxIohOSPNmJafSunbDiGkGeO5KJEckd88=",
+    {}
+  ],
+  "rnnodeapp/node_modules/flumeview-query/query.js": [
+    "ihPQgRCOxRQGV0GPpYIw+TCzCaZJ8xbxjrm+fj8Ugk0=",
+    {
+      "./select": "rnnodeapp/node_modules/flumeview-query/select.js",
+      "./util": "rnnodeapp/node_modules/flumeview-query/util.js",
+      "map-filter-reduce/util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
+    }
+  ],
+  "rnnodeapp/node_modules/flumeview-query/select.js": [
+    "TYl+Ebs8UTGWiLjK4foMXaNbJk7Z5B7DfK2h0Xuaneg=",
+    {
+      "./util": "rnnodeapp/node_modules/flumeview-query/util.js",
+      "map-filter-reduce/util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
+    }
+  ],
+  "rnnodeapp/node_modules/flumeview-query/util.js": [
+    "/B9Epkm7JZK7XfM8sUopu5IyQB85fLirGhSgp7p9Pxc=",
     {}
   ],
   "rnnodeapp/node_modules/flumeview-reduce/index.js": [
@@ -76706,18 +76201,17 @@ module.exports = parse;
     {}
   ],
   "rnnodeapp/node_modules/glob/common.js": [
-    "6aXzeHgmb0QQaVVupBGmDWWL37FqqZ07KbU/1jmlqjo=",
+    "JJwGD3LMxvYF3erFxHgZ8LLYqdoLeSqU2pmJpTLuVtM=",
     {
       "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
       "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
     }
   ],
   "rnnodeapp/node_modules/glob/glob.js": [
-    "4/PR/VSqJBM6PVGK5+rybVy8G5SWOJ4Y3SS6Y+p2PtM=",
+    "ByKmO8ogu8MntE/2ntxLVMWy+AguOee1C+6WNKj2kQw=",
     {
       "./common.js": "rnnodeapp/node_modules/glob/common.js",
       "./sync.js": "rnnodeapp/node_modules/glob/sync.js",
-      "fs.realpath": "rnnodeapp/node_modules/fs.realpath/index.js",
       "inflight": "rnnodeapp/node_modules/inflight/inflight.js",
       "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
       "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
@@ -76726,11 +76220,10 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/glob/sync.js": [
-    "8EwE6eQOoa2peh5BStJthx+qB3jjsfsNX8Zuxqy8JD8=",
+    "6j44Iq/nqtoYmYJqooBjaqTTnxzOr5n3Hb6w1Wal8n0=",
     {
       "./common.js": "rnnodeapp/node_modules/glob/common.js",
       "./glob.js": "rnnodeapp/node_modules/glob/glob.js",
-      "fs.realpath": "rnnodeapp/node_modules/fs.realpath/index.js",
       "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
       "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
     }
@@ -76781,7 +76274,7 @@ module.exports = parse;
     {}
   ],
   "rnnodeapp/node_modules/ip/lib/ip.js": [
-    "5g9p49oc/65drSUpDWPyOm4FClhynavE9ZzCRG2W63U=",
+    "XC4OLRd/OAzztR25n7mdLXTuMI7irpLLHwoOFC/FbLo=",
     {}
   ],
   "rnnodeapp/node_modules/is-alphabetical/index.js": [
@@ -76805,6 +76298,10 @@ module.exports = parse;
   ],
   "rnnodeapp/node_modules/is-valid-domain/is-valid-domain.js": [
     "qdUH5XFlXZuvBJzNHX2Jk9i5HA8C6wg7ekmgwJzw+Ok=",
+    {}
+  ],
+  "rnnodeapp/node_modules/isarray/index.js": [
+    "dKtews1S4sHvaZhZ+ceqemQI9/cjFXbbOwtWrx2X2WY=",
     {}
   ],
   "rnnodeapp/node_modules/isexe/index.js": [
@@ -76836,14 +76333,16 @@ module.exports = parse;
     "5yGyriLdISAp9467ucTTENN7k3wvCwjPOjKh5ZKExkE=",
     {
       "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
-      "level-errors": "rnnodeapp/node_modules/level-errors/errors.js",
+      "level-errors": "rnnodeapp/node_modules/level-iterator-stream/node_modules/level-errors/errors.js",
       "readable-stream": "rnnodeapp/node_modules/level-iterator-stream/node_modules/readable-stream/readable.js",
       "xtend": "rnnodeapp/node_modules/xtend/immutable.js"
     }
   ],
-  "rnnodeapp/node_modules/level-iterator-stream/node_modules/isarray/index.js": [
-    "dKtews1S4sHvaZhZ+ceqemQI9/cjFXbbOwtWrx2X2WY=",
-    {}
+  "rnnodeapp/node_modules/level-iterator-stream/node_modules/level-errors/errors.js": [
+    "szqRRzkfI7r0lJz2O7XpPIvmA+jjl66VBbq493+FU4M=",
+    {
+      "errno": "rnnodeapp/node_modules/errno/errno.js"
+    }
   ],
   "rnnodeapp/node_modules/level-iterator-stream/node_modules/readable-stream/lib/_stream_duplex.js": [
     "3lJwn25LRrm78pI+sFAifvDAzp/AqgWWJN9GdwiVHmE=",
@@ -76868,8 +76367,8 @@ module.exports = parse;
       "./_stream_duplex": "rnnodeapp/node_modules/level-iterator-stream/node_modules/readable-stream/lib/_stream_duplex.js",
       "core-util-is": "rnnodeapp/node_modules/core-util-is/lib/util.js",
       "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
-      "isarray": "rnnodeapp/node_modules/level-iterator-stream/node_modules/isarray/index.js",
-      "string_decoder/": "rnnodeapp/node_modules/level-iterator-stream/node_modules/string_decoder/index.js"
+      "isarray": "rnnodeapp/node_modules/isarray/index.js",
+      "string_decoder/": "rnnodeapp/node_modules/string_decoder/index.js"
     }
   ],
   "rnnodeapp/node_modules/level-iterator-stream/node_modules/readable-stream/lib/_stream_transform.js": [
@@ -76898,58 +76397,23 @@ module.exports = parse;
       "./lib/_stream_writable.js": "rnnodeapp/node_modules/level-iterator-stream/node_modules/readable-stream/lib/_stream_writable.js"
     }
   ],
-  "rnnodeapp/node_modules/level-iterator-stream/node_modules/string_decoder/index.js": [
-    "gKIYnJimHqSYfOZjXfjIaFBUqidMZy30uxz/AjsG+3Q=",
-    {}
-  ],
   "rnnodeapp/node_modules/level-packager/level-packager.js": [
     "1NMiF4d3VSn1vGR25TOPKP81tu9/9wUCv/qXPAlCNdA=",
     {
       "levelup": "rnnodeapp/node_modules/level-packager/node_modules/levelup/lib/levelup.js"
     }
   ],
-  "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-chained-batch.js": [
-    "klh69XOQuuvjvlnbKOFw97pNA5pKsyRfOZBTGmyLp/E=",
-    {}
-  ],
-  "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-iterator.js": [
-    "odz7bWr1iTqmRMK+dcE90MDDKHoZYaXYpu2BW009/Vs=",
-    {}
-  ],
-  "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-leveldown.js": [
-    "pjFx2+wYIVwULebXxfR12YQ85Xvx/p/2eGBOVGZyYfY=",
-    {
-      "./abstract-chained-batch": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-chained-batch.js",
-      "./abstract-iterator": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-iterator.js",
-      "xtend": "rnnodeapp/node_modules/xtend/immutable.js"
-    }
-  ],
-  "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/index.js": [
-    "j6aP6LD2tdvlAd5NtAw/vSzcYqhGdFQxdP6xrfT00i4=",
-    {
-      "./abstract-chained-batch": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-chained-batch.js",
-      "./abstract-iterator": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-iterator.js",
-      "./abstract-leveldown": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-leveldown.js",
-      "./is-leveldown": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/is-leveldown.js"
-    }
-  ],
-  "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/is-leveldown.js": [
-    "sgrUsQaJii/+fVMF8OmANMsLjyzvxtngBdS2/y/fIUg=",
-    {
-      "./abstract-leveldown": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/abstract-leveldown.js"
-    }
-  ],
   "rnnodeapp/node_modules/level-packager/node_modules/deferred-leveldown/deferred-iterator.js": [
     "DCz7NWqxOekMbHRmpp8ctQet00Bwrg9RRODkTgsGm6E=",
     {
-      "abstract-leveldown": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/index.js"
+      "abstract-leveldown": "rnnodeapp/node_modules/abstract-leveldown/index.js"
     }
   ],
   "rnnodeapp/node_modules/level-packager/node_modules/deferred-leveldown/deferred-leveldown.js": [
     "4zZh2+OQI3I7yONWheo4F2moOtVJQSUZfVPZRC4BdrE=",
     {
       "./deferred-iterator": "rnnodeapp/node_modules/level-packager/node_modules/deferred-leveldown/deferred-iterator.js",
-      "abstract-leveldown": "rnnodeapp/node_modules/level-packager/node_modules/abstract-leveldown/index.js"
+      "abstract-leveldown": "rnnodeapp/node_modules/abstract-leveldown/index.js"
     }
   ],
   "rnnodeapp/node_modules/level-packager/node_modules/level-codec/index.js": [
@@ -76989,7 +76453,7 @@ module.exports = parse;
       "level-codec": "rnnodeapp/node_modules/level-packager/node_modules/level-codec/index.js",
       "level-errors": "rnnodeapp/node_modules/level-errors/errors.js",
       "level-iterator-stream": "rnnodeapp/node_modules/level-iterator-stream/index.js",
-      "prr": "rnnodeapp/node_modules/level-packager/node_modules/prr/prr.js",
+      "prr": "rnnodeapp/node_modules/prr/prr.js",
       "xtend": "rnnodeapp/node_modules/xtend/immutable.js"
     }
   ],
@@ -76998,11 +76462,7 @@ module.exports = parse;
     {}
   ],
   "rnnodeapp/node_modules/level-packager/node_modules/levelup/package.json": [
-    "pXbr/MNJ3v7DWii0EMyHTNCGX5ujVO9S08YSDw0UUFU=",
-    {}
-  ],
-  "rnnodeapp/node_modules/level-packager/node_modules/prr/prr.js": [
-    "M2waEw6vcov0DK2BRKoWlCliMH8ZJJjGMyHW/1nZqqw=",
+    "7lG63FRiLJtpfbLPx0L7iETrthlq+J1guShXpjseWMw=",
     {}
   ],
   "rnnodeapp/node_modules/level-packager/node_modules/semver/semver.js": [
@@ -77051,7 +76511,7 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/level-sublevel/package.json": [
-    "X1s3bjRIDv8R9P1lA6o2XwP/NfNjwHL4egBJV3AE8AQ=",
+    "4koRkOY/N368QhsV+nrRPlo/PQDqxdjbhT/1Cz5R3WI=",
     {}
   ],
   "rnnodeapp/node_modules/level-sublevel/range.js": [
@@ -77078,13 +76538,13 @@ module.exports = parse;
   "rnnodeapp/node_modules/leveldown-android-prebuilt/chained-batch.js": [
     "pq9tHWt9lgwKW6IMcb/tWbAOxzeLT9AXi/Ih8FRq/P0=",
     {
-      "abstract-leveldown": "rnnodeapp/node_modules/abstract-leveldown/index.js"
+      "abstract-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/index.js"
     }
   ],
   "rnnodeapp/node_modules/leveldown-android-prebuilt/iterator.js": [
     "d5phYPl9arcJSt1G087AN1VDUxw5XCwclCabDS2PS50=",
     {
-      "abstract-leveldown": "rnnodeapp/node_modules/abstract-leveldown/index.js",
+      "abstract-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/index.js",
       "fast-future": "rnnodeapp/node_modules/fast-future/fast-future.js"
     }
   ],
@@ -77093,8 +76553,39 @@ module.exports = parse;
     {
       "./chained-batch": "rnnodeapp/node_modules/leveldown-android-prebuilt/chained-batch.js",
       "./iterator": "rnnodeapp/node_modules/leveldown-android-prebuilt/iterator.js",
-      "abstract-leveldown": "rnnodeapp/node_modules/abstract-leveldown/index.js",
+      "abstract-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/index.js",
       "bindings": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/bindings/bindings.js"
+    }
+  ],
+  "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-chained-batch.js": [
+    "klh69XOQuuvjvlnbKOFw97pNA5pKsyRfOZBTGmyLp/E=",
+    {}
+  ],
+  "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-iterator.js": [
+    "odz7bWr1iTqmRMK+dcE90MDDKHoZYaXYpu2BW009/Vs=",
+    {}
+  ],
+  "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-leveldown.js": [
+    "pjFx2+wYIVwULebXxfR12YQ85Xvx/p/2eGBOVGZyYfY=",
+    {
+      "./abstract-chained-batch": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-chained-batch.js",
+      "./abstract-iterator": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-iterator.js",
+      "xtend": "rnnodeapp/node_modules/xtend/immutable.js"
+    }
+  ],
+  "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/index.js": [
+    "j6aP6LD2tdvlAd5NtAw/vSzcYqhGdFQxdP6xrfT00i4=",
+    {
+      "./abstract-chained-batch": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-chained-batch.js",
+      "./abstract-iterator": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-iterator.js",
+      "./abstract-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-leveldown.js",
+      "./is-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/is-leveldown.js"
+    }
+  ],
+  "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/is-leveldown.js": [
+    "sgrUsQaJii/+fVMF8OmANMsLjyzvxtngBdS2/y/fIUg=",
+    {
+      "./abstract-leveldown": "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/abstract-leveldown/abstract-leveldown.js"
     }
   ],
   "rnnodeapp/node_modules/leveldown-android-prebuilt/node_modules/bindings/bindings.js": [
@@ -77102,7 +76593,7 @@ module.exports = parse;
     {}
   ],
   "rnnodeapp/node_modules/leveldown/package.json": [
-    "Y+9UorEPEAwJa7UkbeNzbqzbKjHDKRdFwXe53G6kHD0=",
+    "iQF1Sr2U5y01/SjtzdMxrKEsm9yIUPR6NTXsScuQXZM=",
     {}
   ],
   "rnnodeapp/node_modules/levelup/lib/codec.js": [
@@ -77142,10 +76633,6 @@ module.exports = parse;
       "xtend": "rnnodeapp/node_modules/levelup/node_modules/xtend/index.js"
     }
   ],
-  "rnnodeapp/node_modules/levelup/node_modules/isarray/index.js": [
-    "dKtews1S4sHvaZhZ+ceqemQI9/cjFXbbOwtWrx2X2WY=",
-    {}
-  ],
   "rnnodeapp/node_modules/levelup/node_modules/readable-stream/lib/_stream_duplex.js": [
     "3lJwn25LRrm78pI+sFAifvDAzp/AqgWWJN9GdwiVHmE=",
     {
@@ -77168,8 +76655,8 @@ module.exports = parse;
     {
       "core-util-is": "rnnodeapp/node_modules/core-util-is/lib/util.js",
       "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
-      "isarray": "rnnodeapp/node_modules/levelup/node_modules/isarray/index.js",
-      "string_decoder/": "rnnodeapp/node_modules/levelup/node_modules/string_decoder/index.js"
+      "isarray": "rnnodeapp/node_modules/isarray/index.js",
+      "string_decoder/": "rnnodeapp/node_modules/string_decoder/index.js"
     }
   ],
   "rnnodeapp/node_modules/levelup/node_modules/readable-stream/lib/_stream_transform.js": [
@@ -77202,16 +76689,12 @@ module.exports = parse;
     "8OFWR4fB3XRvOSZJM9112Qs93XmFE/QWa06o8JfWprM=",
     {}
   ],
-  "rnnodeapp/node_modules/levelup/node_modules/string_decoder/index.js": [
-    "gKIYnJimHqSYfOZjXfjIaFBUqidMZy30uxz/AjsG+3Q=",
-    {}
-  ],
   "rnnodeapp/node_modules/levelup/node_modules/xtend/index.js": [
     "5a1nO6vLB7FxjnzEAWFmNITSM/FiOQy22MEJS+/lCNw=",
     {}
   ],
   "rnnodeapp/node_modules/levelup/package.json": [
-    "yfcXu+TYMaLMLIZWq0/DSVCpkVA0dsrHC6y9phfqYTo=",
+    "CkwWEPpKbfBmBEahz8yImNemGqR/G4MhElCloHDle4M=",
     {}
   ],
   "rnnodeapp/node_modules/libnested/index.js": [
@@ -77223,7 +76706,7 @@ module.exports = parse;
     {}
   ],
   "rnnodeapp/node_modules/looper/index.js": [
-    "cmcRqa+IsEsc2DIUeGXoK+grYAXQPGL4p7ftDNw4G6g=",
+    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
     {}
   ],
   "rnnodeapp/node_modules/lru-cache/index.js": [
@@ -77235,6 +76718,48 @@ module.exports = parse;
   ],
   "rnnodeapp/node_modules/ltgt/index.js": [
     "3eP7wBXOSittsvC06JTpMTJeo1bwmT158JiVHLmDjPQ=",
+    {}
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/index.js": [
+    "djroCqpXe/d0ZocuKK8Nt7uXw/4ihLGHHTcIdQcMKQY=",
+    {
+      "./make": "rnnodeapp/node_modules/map-filter-reduce/make.js",
+      "pull-sink-through": "rnnodeapp/node_modules/pull-sink-through/index.js",
+      "pull-stream/pull": "rnnodeapp/node_modules/pull-stream/pull.js",
+      "pull-stream/sinks/reduce": "rnnodeapp/node_modules/pull-stream/sinks/reduce.js",
+      "pull-stream/throughs/filter": "rnnodeapp/node_modules/pull-stream/throughs/filter.js",
+      "pull-stream/throughs/flatten": "rnnodeapp/node_modules/pull-stream/throughs/flatten.js",
+      "pull-stream/throughs/map": "rnnodeapp/node_modules/pull-stream/throughs/map.js"
+    }
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/keys.js": [
+    "3DqorJaBQarQxvC46mr89O08EJYiuTxNa8yIkh5XdmU=",
+    {
+      "./util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
+    }
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/make.js": [
+    "Nc3ILvEepISdM46rs3M9P1X3NdBpHc1gAIYZayWcP9k=",
+    {
+      "./simple/maps": "rnnodeapp/node_modules/map-filter-reduce/simple/maps.js",
+      "./simple/reduces": "rnnodeapp/node_modules/map-filter-reduce/simple/reduces.js",
+      "./util": "rnnodeapp/node_modules/map-filter-reduce/util.js",
+      "binary-search": "rnnodeapp/node_modules/binary-search/index.js",
+      "typewiselite": "rnnodeapp/node_modules/typewiselite/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/simple/maps.js": [
+    "s4mNMR9YxvbFz/gglFs2nHlM3zglqEvA9ft4/CUFpag=",
+    {
+      "../util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
+    }
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/simple/reduces.js": [
+    "6Zcyn+7MlIQHsd3Prg3hhLOl59zn4B9tDomAsva/Ysc=",
+    {}
+  ],
+  "rnnodeapp/node_modules/map-filter-reduce/util.js": [
+    "CdsKRb3xihM8a53NqbKduI03Jk14ljfDFAMPz7E26bw=",
     {}
   ],
   "rnnodeapp/node_modules/map-merge/index.js": [
@@ -77250,22 +76775,6 @@ module.exports = parse;
     {
       "remark": "rnnodeapp/node_modules/remark/index.js",
       "remark-html": "rnnodeapp/node_modules/remark-html/index.js"
-    }
-  ],
-  "rnnodeapp/node_modules/mime-db/db.json": [
-    "3YNpSqvoVCXofSpMV4It6PE23XZgJTYQigW7hY4/i8E=",
-    {}
-  ],
-  "rnnodeapp/node_modules/mime-db/index.js": [
-    "olMqzjJxGukN60rkZUxbxOVvCh4hvdFbomM0v3I9+wk=",
-    {
-      "./db.json": "rnnodeapp/node_modules/mime-db/db.json"
-    }
-  ],
-  "rnnodeapp/node_modules/mime-types/index.js": [
-    "jPzKrDBr62UNYMfwaa4PSznWSPHjkUaWsYwTOrM+ZBk=",
-    {
-      "mime-db": "rnnodeapp/node_modules/mime-db/index.js"
     }
   ],
   "rnnodeapp/node_modules/minimatch/minimatch.js": [
@@ -77295,7 +76804,7 @@ module.exports = parse;
       "mkdirp": "rnnodeapp/node_modules/mkdirp/index.js",
       "pull-cat": "rnnodeapp/node_modules/pull-cat/index.js",
       "pull-defer": "rnnodeapp/node_modules/pull-defer/index.js",
-      "pull-file": "rnnodeapp/node_modules/multiblob/node_modules/pull-file/index.js",
+      "pull-file": "rnnodeapp/node_modules/pull-file/index.js",
       "pull-glob": "rnnodeapp/node_modules/pull-glob/index.js",
       "pull-live": "rnnodeapp/node_modules/pull-live/index.js",
       "pull-notify": "rnnodeapp/node_modules/pull-notify/index.js",
@@ -77303,12 +76812,6 @@ module.exports = parse;
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
       "pull-write-file": "rnnodeapp/node_modules/pull-write-file/index.js",
       "rimraf": "rnnodeapp/node_modules/multiblob/node_modules/rimraf/rimraf.js"
-    }
-  ],
-  "rnnodeapp/node_modules/multiblob/node_modules/pull-file/index.js": [
-    "Lta3am9ceHN18sGtRfYsVM7JX7PYRPD85r4mnC6A61U=",
-    {
-      "pull-utf8-decoder": "rnnodeapp/node_modules/pull-utf8-decoder/index.js"
     }
   ],
   "rnnodeapp/node_modules/multiblob/node_modules/rimraf/rimraf.js": [
@@ -77466,38 +76969,10 @@ module.exports = parse;
       "rimraf": "rnnodeapp/node_modules/mv/node_modules/rimraf/rimraf.js"
     }
   ],
-  "rnnodeapp/node_modules/mv/node_modules/glob/common.js": [
-    "JJwGD3LMxvYF3erFxHgZ8LLYqdoLeSqU2pmJpTLuVtM=",
-    {
-      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
-      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
-    }
-  ],
-  "rnnodeapp/node_modules/mv/node_modules/glob/glob.js": [
-    "ByKmO8ogu8MntE/2ntxLVMWy+AguOee1C+6WNKj2kQw=",
-    {
-      "./common.js": "rnnodeapp/node_modules/mv/node_modules/glob/common.js",
-      "./sync.js": "rnnodeapp/node_modules/mv/node_modules/glob/sync.js",
-      "inflight": "rnnodeapp/node_modules/inflight/inflight.js",
-      "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
-      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
-      "once": "rnnodeapp/node_modules/once/once.js",
-      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
-    }
-  ],
-  "rnnodeapp/node_modules/mv/node_modules/glob/sync.js": [
-    "6j44Iq/nqtoYmYJqooBjaqTTnxzOr5n3Hb6w1Wal8n0=",
-    {
-      "./common.js": "rnnodeapp/node_modules/mv/node_modules/glob/common.js",
-      "./glob.js": "rnnodeapp/node_modules/mv/node_modules/glob/glob.js",
-      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
-      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
-    }
-  ],
   "rnnodeapp/node_modules/mv/node_modules/rimraf/rimraf.js": [
     "D6IYwrwmCNwpdkzqs+q2kkqwpGgDYbP/kHZo/LFbIOc=",
     {
-      "glob": "rnnodeapp/node_modules/mv/node_modules/glob/glob.js"
+      "glob": "rnnodeapp/node_modules/glob/glob.js"
     }
   ],
   "rnnodeapp/node_modules/ncp/lib/ncp.js": [
@@ -77507,12 +76982,8 @@ module.exports = parse;
   "rnnodeapp/node_modules/non-private-ip/index.js": [
     "XMffAkGIM8+IvUTHHZsxQfUyFRz4ccGvu+jkISGef2Q=",
     {
-      "ip": "rnnodeapp/node_modules/non-private-ip/node_modules/ip/lib/ip.js"
+      "ip": "rnnodeapp/node_modules/ip/lib/ip.js"
     }
-  ],
-  "rnnodeapp/node_modules/non-private-ip/node_modules/ip/lib/ip.js": [
-    "XC4OLRd/OAzztR25n7mdLXTuMI7irpLLHwoOFC/FbLo=",
-    {}
   ],
   "rnnodeapp/node_modules/normalize-uri/index.js": [
     "ulRNtLOXqkCJRF3sW8jqLzLiib5JXqhkivun7rAk8ao=",
@@ -77608,6 +77079,10 @@ module.exports = parse;
       "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
     }
   ],
+  "rnnodeapp/node_modules/prr/prr.js": [
+    "M2waEw6vcov0DK2BRKoWlCliMH8ZJJjGMyHW/1nZqqw=",
+    {}
+  ],
   "rnnodeapp/node_modules/pseudomap/map.js": [
     "xac20xDWMCezlqxa90O0WyEo/BIHos00be6DoviS96U=",
     {
@@ -77632,7 +77107,7 @@ module.exports = parse;
     "idd7qu25M925EN8jktnwp9Lp6QUaQ7d5lzrO+4WrzJ4=",
     {}
   ],
-  "rnnodeapp/node_modules/pull-cont/source.js": [
+  "rnnodeapp/node_modules/pull-cont/index.js": [
     "rqwIhOjK14ppHLMhv6r7JKQ86nk8skJVNtKQIdyb/gs=",
     {}
   ],
@@ -77653,10 +77128,6 @@ module.exports = parse;
       "pull-stream/throughs/take": "rnnodeapp/node_modules/pull-stream/throughs/take.js"
     }
   ],
-  "rnnodeapp/node_modules/pull-cursor/node_modules/looper/index.js": [
-    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
-    {}
-  ],
   "rnnodeapp/node_modules/pull-cursor/range.js": [
     "EkeTPJNJD1zZrp02FU9FHsxmYbUDdWMOzfRAwa2MJFE=",
     {
@@ -77666,7 +77137,7 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-cursor/skip.js": [
     "SuebAfIKqQBB1uxEahV1WftDO2rU0Qt4teNgrjRwMeg=",
     {
-      "looper": "rnnodeapp/node_modules/pull-cursor/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/looper/index.js"
     }
   ],
   "rnnodeapp/node_modules/pull-defer/duplex.js": [
@@ -77697,6 +77168,12 @@ module.exports = parse;
     "bDJXRfHwQQgCZLXZdgjYSo4HwvJzGOortTI8nFRPCeA=",
     {}
   ],
+  "rnnodeapp/node_modules/pull-file/index.js": [
+    "Lta3am9ceHN18sGtRfYsVM7JX7PYRPD85r4mnC6A61U=",
+    {
+      "pull-utf8-decoder": "rnnodeapp/node_modules/pull-utf8-decoder/index.js"
+    }
+  ],
   "rnnodeapp/node_modules/pull-flatmap/index.js": [
     "4jPVlhwjMIhLBNDG8rzYsJGpebhQZV7ZbVLT5DCWCE4=",
     {}
@@ -77704,7 +77181,7 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-fs/core.js": [
     "9+Nl4PO/Aeysg9Z/HWpXKn2CTtKNmBDCkgkl/lk0i3w=",
     {
-      "pull-file": "rnnodeapp/node_modules/pull-fs/node_modules/pull-file/index.js",
+      "pull-file": "rnnodeapp/node_modules/pull-file/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
       "pull-write-file": "rnnodeapp/node_modules/pull-write-file/index.js"
     }
@@ -77714,12 +77191,6 @@ module.exports = parse;
     {
       "./core": "rnnodeapp/node_modules/pull-fs/core.js",
       "./util": "rnnodeapp/node_modules/pull-fs/util.js"
-    }
-  ],
-  "rnnodeapp/node_modules/pull-fs/node_modules/pull-file/index.js": [
-    "Lta3am9ceHN18sGtRfYsVM7JX7PYRPD85r4mnC6A61U=",
-    {
-      "pull-utf8-decoder": "rnnodeapp/node_modules/pull-utf8-decoder/index.js"
     }
   ],
   "rnnodeapp/node_modules/pull-fs/util.js": [
@@ -78075,12 +77546,8 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-looper/index.js": [
     "unnOKzF5Ubb6CRwfvBY0tfhGPLN2FeveP9BOFVEdvNQ=",
     {
-      "looper": "rnnodeapp/node_modules/pull-looper/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/looper/index.js"
     }
-  ],
-  "rnnodeapp/node_modules/pull-looper/node_modules/looper/index.js": [
-    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
-    {}
   ],
   "rnnodeapp/node_modules/pull-many/index.js": [
     "pypnDHT31dfog1AFrqXz8xOQHgBglbiMO10JsdrAXi0=",
@@ -78103,12 +77570,8 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-paramap/index.js": [
     "KTuLg9BprAdeeu1VSnlH1oabcpcDJWgLTe3Zc/+2Mlc=",
     {
-      "looper": "rnnodeapp/node_modules/pull-paramap/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/looper/index.js"
     }
-  ],
-  "rnnodeapp/node_modules/pull-paramap/node_modules/looper/index.js": [
-    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
-    {}
   ],
   "rnnodeapp/node_modules/pull-ping/index.js": [
     "gP3g9VLKEJyQWuiNQ78ib7+rKUW8f84N8Dcxp3qR3Yc=",
@@ -78339,8 +77802,12 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-through/index.js": [
     "nE3FfVy09zeoqtOb2QPPhqMDmYweZPnssE1SJZU42xk=",
     {
-      "looper": "rnnodeapp/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/pull-through/node_modules/looper/index.js"
     }
+  ],
+  "rnnodeapp/node_modules/pull-through/node_modules/looper/index.js": [
+    "cmcRqa+IsEsc2DIUeGXoK+grYAXQPGL4p7ftDNw4G6g=",
+    {}
   ],
   "rnnodeapp/node_modules/pull-traverse/index.js": [
     "dVGMHXGHr0+GxeFblHAQzROahkySucGyG/RAHLAwgH8=",
@@ -78367,12 +77834,8 @@ module.exports = parse;
   "rnnodeapp/node_modules/pull-write/index.js": [
     "psl9ChY3zhkZDMMytYoYz0EWIbU/rgwdwPPP2+3jPEI=",
     {
-      "looper": "rnnodeapp/node_modules/pull-write/node_modules/looper/index.js"
+      "looper": "rnnodeapp/node_modules/looper/index.js"
     }
-  ],
-  "rnnodeapp/node_modules/pull-write/node_modules/looper/index.js": [
-    "KricQafdcfK9V/7mcHaPDtDxPjqNg+ipAtIcKJI7Du4=",
-    {}
   ],
   "rnnodeapp/node_modules/pull-ws/client.js": [
     "5t3rfA/2J7Ac6pY5J2pu4blMNng8RNnmy3rJwK75f/I=",
@@ -78542,10 +78005,40 @@ module.exports = parse;
     "UJohjIujzONidmZI7cwvGNk/q5X5YCFUEDAs639hA/o=",
     {}
   ],
+  "rnnodeapp/node_modules/rimraf/node_modules/glob/common.js": [
+    "6aXzeHgmb0QQaVVupBGmDWWL37FqqZ07KbU/1jmlqjo=",
+    {
+      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
+      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/rimraf/node_modules/glob/glob.js": [
+    "4/PR/VSqJBM6PVGK5+rybVy8G5SWOJ4Y3SS6Y+p2PtM=",
+    {
+      "./common.js": "rnnodeapp/node_modules/rimraf/node_modules/glob/common.js",
+      "./sync.js": "rnnodeapp/node_modules/rimraf/node_modules/glob/sync.js",
+      "fs.realpath": "rnnodeapp/node_modules/fs.realpath/index.js",
+      "inflight": "rnnodeapp/node_modules/inflight/inflight.js",
+      "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
+      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
+      "once": "rnnodeapp/node_modules/once/once.js",
+      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/rimraf/node_modules/glob/sync.js": [
+    "8EwE6eQOoa2peh5BStJthx+qB3jjsfsNX8Zuxqy8JD8=",
+    {
+      "./common.js": "rnnodeapp/node_modules/rimraf/node_modules/glob/common.js",
+      "./glob.js": "rnnodeapp/node_modules/rimraf/node_modules/glob/glob.js",
+      "fs.realpath": "rnnodeapp/node_modules/fs.realpath/index.js",
+      "minimatch": "rnnodeapp/node_modules/minimatch/minimatch.js",
+      "path-is-absolute": "rnnodeapp/node_modules/path-is-absolute/index.js"
+    }
+  ],
   "rnnodeapp/node_modules/rimraf/rimraf.js": [
     "SjCJb0HUc5FLmK65nS16LGw3IqwOh+JTKtyhiGKL74Q=",
     {
-      "glob": "rnnodeapp/node_modules/glob/glob.js"
+      "glob": "rnnodeapp/node_modules/rimraf/node_modules/glob/glob.js"
     }
   ],
   "rnnodeapp/node_modules/safe-buffer/index.js": [
@@ -78606,10 +78099,6 @@ module.exports = parse;
   ],
   "rnnodeapp/node_modules/scuttlebot/node_modules/atomic-file/index.js": [
     "GwmD/w9+Q60/I+mMixIOwVrK1DxdhnRGaQ2OxX5vAp4=",
-    {}
-  ],
-  "rnnodeapp/node_modules/scuttlebot/node_modules/ip/lib/ip.js": [
-    "XC4OLRd/OAzztR25n7mdLXTuMI7irpLLHwoOFC/FbLo=",
     {}
   ],
   "rnnodeapp/node_modules/scuttlebot/node_modules/ssb-keys/index.js": [
@@ -78684,7 +78173,7 @@ module.exports = parse;
     "yZ2j1pU/p0rVWfeVvocUok9OZ04lZhECjcM2Yof61lE=",
     {
       "../../lib/has-network-debounced": "rnnodeapp/node_modules/scuttlebot/lib/has-network-debounced.js",
-      "ip": "rnnodeapp/node_modules/scuttlebot/node_modules/ip/lib/ip.js",
+      "ip": "rnnodeapp/node_modules/ip/lib/ip.js",
       "on-change-network": "rnnodeapp/node_modules/on-change-network/index.js",
       "on-wakeup": "rnnodeapp/node_modules/on-wakeup/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
@@ -78698,7 +78187,7 @@ module.exports = parse;
       "../lib/validators": "rnnodeapp/node_modules/scuttlebot/lib/validators.js",
       "cont": "rnnodeapp/node_modules/cont/index.js",
       "explain-error": "rnnodeapp/node_modules/explain-error/index.js",
-      "ip": "rnnodeapp/node_modules/scuttlebot/node_modules/ip/lib/ip.js",
+      "ip": "rnnodeapp/node_modules/ip/lib/ip.js",
       "mdmanifest": "rnnodeapp/node_modules/mdmanifest/index.js",
       "ssb-client": "rnnodeapp/node_modules/ssb-client/index.js",
       "ssb-keys": "rnnodeapp/node_modules/scuttlebot/node_modules/ssb-keys/index.js",
@@ -78807,7 +78296,7 @@ module.exports = parse;
     {
       "./api": "rnnodeapp/node_modules/secret-stack/api.js",
       "./util": "rnnodeapp/node_modules/secret-stack/util.js",
-      "ip": "rnnodeapp/node_modules/ip/lib/ip.js",
+      "ip": "rnnodeapp/node_modules/secret-stack/node_modules/ip/lib/ip.js",
       "multiserver": "rnnodeapp/node_modules/multiserver/index.js",
       "multiserver/plugins/net": "rnnodeapp/node_modules/multiserver/plugins/net.js",
       "multiserver/plugins/onion": "rnnodeapp/node_modules/multiserver/plugins/onion.js",
@@ -78819,6 +78308,10 @@ module.exports = parse;
       "pull-rate": "rnnodeapp/node_modules/pull-rate/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
+  ],
+  "rnnodeapp/node_modules/secret-stack/node_modules/ip/lib/ip.js": [
+    "5g9p49oc/65drSUpDWPyOm4FClhynavE9ZzCRG2W63U=",
+    {}
   ],
   "rnnodeapp/node_modules/secret-stack/util.js": [
     "EY8v1o/+TvrcfwIMsMmLnhgGYs06G+gtDTeCSTgybV8=",
@@ -78876,7 +78369,7 @@ module.exports = parse;
       "monotonic-timestamp": "rnnodeapp/node_modules/monotonic-timestamp/index.js",
       "pull-notify": "rnnodeapp/node_modules/pull-notify/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
-      "ssb-keys": "rnnodeapp/node_modules/ssb-keys/index.js",
+      "ssb-keys": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/index.js",
       "ssb-ref": "rnnodeapp/node_modules/ssb-ref/index.js"
     }
   ],
@@ -78905,7 +78398,7 @@ module.exports = parse;
       "../util": "rnnodeapp/node_modules/secure-scuttlebutt/util.js",
       "flumeview-reduce": "rnnodeapp/node_modules/flumeview-reduce/index.js",
       "ltgt": "rnnodeapp/node_modules/ltgt/index.js",
-      "pull-cont": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/pull-cont/index.js",
+      "pull-cont": "rnnodeapp/node_modules/pull-cont/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
   ],
@@ -78917,7 +78410,7 @@ module.exports = parse;
       "ltgt": "rnnodeapp/node_modules/ltgt/index.js",
       "pull-paramap": "rnnodeapp/node_modules/pull-paramap/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
-      "ssb-keys": "rnnodeapp/node_modules/ssb-keys/index.js",
+      "ssb-keys": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/index.js",
       "ssb-msgs": "rnnodeapp/node_modules/ssb-msgs/index.js",
       "ssb-ref": "rnnodeapp/node_modules/ssb-ref/index.js"
     }
@@ -78952,12 +78445,44 @@ module.exports = parse;
       "level-codec/lib/encodings": "rnnodeapp/node_modules/level-codec/lib/encodings.js"
     }
   ],
-  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/pull-cont/index.js": [
-    "rqwIhOjK14ppHLMhv6r7JKQ86nk8skJVNtKQIdyb/gs=",
-    {}
+  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/index.js": [
+    "Lp4Om6Aj7KhDHVdgj9atmFHVXWGtNcHblNfZUiShukQ=",
+    {
+      "./sodium": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/sodium.js",
+      "./storage": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/storage.js",
+      "./util": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/util.js",
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js",
+      "private-box": "rnnodeapp/node_modules/private-box/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/local-storage.js": [
+    "ZI9Oa6k3hpldMoGPEeUr1o5qpB+ARJk/VupK3KDkxjU=",
+    {
+      "./util": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/util.js"
+    }
+  ],
+  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/sodium.js": [
+    "BGoUXsFeZ/QMApzPj6vXzlSWK8T9Ct00SBI62znz8q4=",
+    {
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/storage.js": [
+    "JNa5CuH2ML9LtnLK/RBrtYDjVQVKOu4KN0ztzQTLu/s=",
+    {
+      "./local-storage": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/local-storage.js",
+      "./util": "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/util.js",
+      "mkdirp": "rnnodeapp/node_modules/mkdirp/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/secure-scuttlebutt/node_modules/ssb-keys/util.js": [
+    "WyjioFcpyiW8EFE1OxQT5UDq3hfa+jota5O5vPTgchk=",
+    {
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
+    }
   ],
   "rnnodeapp/node_modules/secure-scuttlebutt/package.json": [
-    "lTTMwf9oZv/QZSaY/sWHakCAC0Gg/apHI5NaSgT8w7M=",
+    "tq6UIcTdnCNeM3r8KNc89QWvJZw1U3uQdsZhUz1vfKg=",
     {}
   ],
   "rnnodeapp/node_modules/secure-scuttlebutt/related.js": [
@@ -78976,6 +78501,20 @@ module.exports = parse;
   "rnnodeapp/node_modules/separator-escape/index.js": [
     "CRyudQ8wDJa8jiP2wBWpT+SnNA+O5hzorfLKwfL6fhI=",
     {}
+  ],
+  "rnnodeapp/node_modules/sha.js/hash.js": [
+    "TMhVOPdT6QNc7uA6keFyhYZQWB/Y/dpNOF+5/YV5X4U=",
+    {
+      "safe-buffer": "rnnodeapp/node_modules/safe-buffer/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/sha.js/sha256.js": [
+    "JifdTkLIb8qQqKpzQVWLkSE46v8iYPMgfzGUGzKoGrI=",
+    {
+      "./hash": "rnnodeapp/node_modules/sha.js/hash.js",
+      "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
+      "safe-buffer": "rnnodeapp/node_modules/safe-buffer/index.js"
+    }
   ],
   "rnnodeapp/node_modules/shebang-command/index.js": [
     "OSH8tRQ0U64Lk+bxCtGmYJOOJGj64aIVz4vF3FJBg1w=",
@@ -79007,31 +78546,21 @@ module.exports = parse;
   "rnnodeapp/node_modules/socks/lib/socks-client.js": [
     "s5hrcO/LM/bytQBzwCJj0rKW8mNzq3++pv9Gr9wJyvY=",
     {
-      "ip": "rnnodeapp/node_modules/ip/lib/ip.js",
+      "ip": "rnnodeapp/node_modules/socks/node_modules/ip/lib/ip.js",
       "smart-buffer": "rnnodeapp/node_modules/smart-buffer/lib/smart-buffer.js"
     }
+  ],
+  "rnnodeapp/node_modules/socks/node_modules/ip/lib/ip.js": [
+    "5g9p49oc/65drSUpDWPyOm4FClhynavE9ZzCRG2W63U=",
+    {}
   ],
   "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js": [
     "5CCuNNfb067o+wcc01T0+bjU4v/2PKmsKvfAy3aGNvo=",
     {
       "ed2curve": "rnnodeapp/node_modules/ed2curve/ed2curve.js",
-      "sha.js/sha256": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/node_modules/sha.js/sha256.js",
+      "sha.js/sha256": "rnnodeapp/node_modules/sha.js/sha256.js",
       "tweetnacl-auth": "rnnodeapp/node_modules/tweetnacl-auth/nacl-auth.js",
       "tweetnacl/nacl-fast": "rnnodeapp/node_modules/tweetnacl/nacl-fast.js"
-    }
-  ],
-  "rnnodeapp/node_modules/sodium-browserify-tweetnacl/node_modules/sha.js/hash.js": [
-    "TMhVOPdT6QNc7uA6keFyhYZQWB/Y/dpNOF+5/YV5X4U=",
-    {
-      "safe-buffer": "rnnodeapp/node_modules/safe-buffer/index.js"
-    }
-  ],
-  "rnnodeapp/node_modules/sodium-browserify-tweetnacl/node_modules/sha.js/sha256.js": [
-    "JifdTkLIb8qQqKpzQVWLkSE46v8iYPMgfzGUGzKoGrI=",
-    {
-      "./hash": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/node_modules/sha.js/hash.js",
-      "inherits": "rnnodeapp/node_modules/inherits/inherits.js",
-      "safe-buffer": "rnnodeapp/node_modules/safe-buffer/index.js"
     }
   ],
   "rnnodeapp/node_modules/split-buffer/index.js": [
@@ -79047,7 +78576,7 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/ssb-about/package.json": [
-    "8iSC0EqOQoYCXsCVxkPv04EYrx/TnPCsVknklErJZOU=",
+    "e0C5nf8wzpPuv0rbdlm144K5IkAksUhhZbo/Rk9w8UU=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-backlinks/index.js": [
@@ -79057,7 +78586,7 @@ module.exports = parse;
       "./package.json": "rnnodeapp/node_modules/ssb-backlinks/package.json",
       "base64-url": "rnnodeapp/node_modules/base64-url/index.js",
       "deep-equal": "rnnodeapp/node_modules/deep-equal/index.js",
-      "ssb-keys": "rnnodeapp/node_modules/ssb-keys/index.js",
+      "ssb-keys": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/index.js",
       "ssb-ref": "rnnodeapp/node_modules/ssb-ref/index.js",
       "xtend": "rnnodeapp/node_modules/xtend/immutable.js"
     }
@@ -79066,71 +78595,52 @@ module.exports = parse;
     "M9H15eDSiMJsjRz1txDcetAJ8H/Lq+r5qP2SUU+/LFw=",
     {
       "flumeview-level": "rnnodeapp/node_modules/flumeview-level/index.js",
-      "flumeview-query/query": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/query.js",
-      "flumeview-query/select": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/select.js",
-      "flumeview-query/util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/util.js",
-      "map-filter-reduce": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/index.js",
+      "flumeview-query/query": "rnnodeapp/node_modules/flumeview-query/query.js",
+      "flumeview-query/select": "rnnodeapp/node_modules/flumeview-query/select.js",
+      "flumeview-query/util": "rnnodeapp/node_modules/flumeview-query/util.js",
+      "map-filter-reduce": "rnnodeapp/node_modules/map-filter-reduce/index.js",
       "pull-flatmap": "rnnodeapp/node_modules/pull-flatmap/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/query.js": [
-    "ihPQgRCOxRQGV0GPpYIw+TCzCaZJ8xbxjrm+fj8Ugk0=",
+  "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/index.js": [
+    "Lp4Om6Aj7KhDHVdgj9atmFHVXWGtNcHblNfZUiShukQ=",
     {
-      "./select": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/select.js",
-      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/util.js"
+      "./sodium": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/sodium.js",
+      "./storage": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/storage.js",
+      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/util.js",
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js",
+      "private-box": "rnnodeapp/node_modules/private-box/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/select.js": [
-    "TYl+Ebs8UTGWiLjK4foMXaNbJk7Z5B7DfK2h0Xuaneg=",
+  "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/local-storage.js": [
+    "ZI9Oa6k3hpldMoGPEeUr1o5qpB+ARJk/VupK3KDkxjU=",
     {
-      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/util.js"
+      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/util.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/flumeview-query/util.js": [
-    "/B9Epkm7JZK7XfM8sUopu5IyQB85fLirGhSgp7p9Pxc=",
-    {}
-  ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/index.js": [
-    "djroCqpXe/d0ZocuKK8Nt7uXw/4ihLGHHTcIdQcMKQY=",
+  "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/sodium.js": [
+    "BGoUXsFeZ/QMApzPj6vXzlSWK8T9Ct00SBI62znz8q4=",
     {
-      "./make": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/make.js",
-      "pull-sink-through": "rnnodeapp/node_modules/pull-sink-through/index.js",
-      "pull-stream/pull": "rnnodeapp/node_modules/pull-stream/pull.js",
-      "pull-stream/sinks/reduce": "rnnodeapp/node_modules/pull-stream/sinks/reduce.js",
-      "pull-stream/throughs/filter": "rnnodeapp/node_modules/pull-stream/throughs/filter.js",
-      "pull-stream/throughs/flatten": "rnnodeapp/node_modules/pull-stream/throughs/flatten.js",
-      "pull-stream/throughs/map": "rnnodeapp/node_modules/pull-stream/throughs/map.js"
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/make.js": [
-    "Nc3ILvEepISdM46rs3M9P1X3NdBpHc1gAIYZayWcP9k=",
+  "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/storage.js": [
+    "JNa5CuH2ML9LtnLK/RBrtYDjVQVKOu4KN0ztzQTLu/s=",
     {
-      "./simple/maps": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/simple/maps.js",
-      "./simple/reduces": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/simple/reduces.js",
-      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/util.js",
-      "binary-search": "rnnodeapp/node_modules/binary-search/index.js",
-      "typewiselite": "rnnodeapp/node_modules/typewiselite/index.js"
+      "./local-storage": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/local-storage.js",
+      "./util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/util.js",
+      "mkdirp": "rnnodeapp/node_modules/mkdirp/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/simple/maps.js": [
-    "s4mNMR9YxvbFz/gglFs2nHlM3zglqEvA9ft4/CUFpag=",
+  "rnnodeapp/node_modules/ssb-backlinks/node_modules/ssb-keys/util.js": [
+    "WyjioFcpyiW8EFE1OxQT5UDq3hfa+jota5O5vPTgchk=",
     {
-      "../util": "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/util.js"
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
     }
-  ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/simple/reduces.js": [
-    "6Zcyn+7MlIQHsd3Prg3hhLOl59zn4B9tDomAsva/Ysc=",
-    {}
-  ],
-  "rnnodeapp/node_modules/ssb-backlinks/node_modules/map-filter-reduce/util.js": [
-    "CdsKRb3xihM8a53NqbKduI03Jk14ljfDFAMPz7E26bw=",
-    {}
   ],
   "rnnodeapp/node_modules/ssb-backlinks/package.json": [
-    "M2ZqM/IdFyPNdKEKlFjtmslNLTMDpzllJT/0DmGbcmo=",
+    "Jru1uGhxhbgkK5FDu8towk32D9VbGboxF0oxMtvCOEk=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-blobs/create.js": [
@@ -79174,7 +78684,7 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/ssb-blobs/package.json": [
-    "lLomAphoh62Qls+4y4HUBAxJTSo/BU2LjhR2aqwdX8Q=",
+    "FB3i2wnkeNq38j/XT6kxrEwvkXA/U4qtyUw0vPgnn+E=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-blobs/set.js": [
@@ -79262,7 +78772,7 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/ssb-contacts/package.json": [
-    "Kb1jaA6fHvuqUT4QEno7yOMSwVwEF6SRlLYtbinQ7LA=",
+    "oCNyKfa+EFo3otkgqvc7uVuoowHwMQY58Z1G+JHx6WE=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-friends/alg.js": [
@@ -79283,11 +78793,15 @@ module.exports = parse;
       "flumeview-reduce": "rnnodeapp/node_modules/flumeview-reduce/index.js",
       "graphreduce": "rnnodeapp/node_modules/graphreduce/index.js",
       "obv": "rnnodeapp/node_modules/obv/index.js",
-      "pull-cont/source": "rnnodeapp/node_modules/pull-cont/source.js",
+      "pull-cont/source": "rnnodeapp/node_modules/ssb-friends/node_modules/pull-cont/source.js",
       "pull-flatmap": "rnnodeapp/node_modules/pull-flatmap/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
       "ssb-ref": "rnnodeapp/node_modules/ssb-ref/index.js"
     }
+  ],
+  "rnnodeapp/node_modules/ssb-friends/node_modules/pull-cont/source.js": [
+    "rqwIhOjK14ppHLMhv6r7JKQ86nk8skJVNtKQIdyb/gs=",
+    {}
   ],
   "rnnodeapp/node_modules/ssb-keys/index.js": [
     "CtWy/tu9YqMIWJKPyOA1FmDrkPaIeBdZ3E9xctz6NSU=",
@@ -79339,78 +78853,59 @@ module.exports = parse;
       "base64-url": "rnnodeapp/node_modules/base64-url/index.js",
       "explain-error": "rnnodeapp/node_modules/explain-error/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
-      "ssb-keys": "rnnodeapp/node_modules/ssb-keys/index.js"
+      "ssb-keys": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/index.js"
     }
   ],
   "rnnodeapp/node_modules/ssb-private/lib/flumeview-links-raw.js": [
     "yu7mNP9k7QPatlEwl/Q3vec7ya9X4GhnLW6g5tmz+1A=",
     {
       "flumeview-level": "rnnodeapp/node_modules/flumeview-level/index.js",
-      "flumeview-query/query": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/query.js",
-      "flumeview-query/select": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/select.js",
-      "flumeview-query/util": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/util.js",
-      "map-filter-reduce": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/index.js",
+      "flumeview-query/query": "rnnodeapp/node_modules/flumeview-query/query.js",
+      "flumeview-query/select": "rnnodeapp/node_modules/flumeview-query/select.js",
+      "flumeview-query/util": "rnnodeapp/node_modules/flumeview-query/util.js",
+      "map-filter-reduce": "rnnodeapp/node_modules/map-filter-reduce/index.js",
       "pull-flatmap": "rnnodeapp/node_modules/pull-flatmap/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/query.js": [
-    "ihPQgRCOxRQGV0GPpYIw+TCzCaZJ8xbxjrm+fj8Ugk0=",
+  "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/index.js": [
+    "Lp4Om6Aj7KhDHVdgj9atmFHVXWGtNcHblNfZUiShukQ=",
     {
-      "./select": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/select.js",
-      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/util.js"
+      "./sodium": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/sodium.js",
+      "./storage": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/storage.js",
+      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/util.js",
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js",
+      "private-box": "rnnodeapp/node_modules/private-box/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/select.js": [
-    "TYl+Ebs8UTGWiLjK4foMXaNbJk7Z5B7DfK2h0Xuaneg=",
+  "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/local-storage.js": [
+    "ZI9Oa6k3hpldMoGPEeUr1o5qpB+ARJk/VupK3KDkxjU=",
     {
-      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/util.js"
+      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/util.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/flumeview-query/util.js": [
-    "/B9Epkm7JZK7XfM8sUopu5IyQB85fLirGhSgp7p9Pxc=",
-    {}
-  ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/index.js": [
-    "djroCqpXe/d0ZocuKK8Nt7uXw/4ihLGHHTcIdQcMKQY=",
+  "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/sodium.js": [
+    "BGoUXsFeZ/QMApzPj6vXzlSWK8T9Ct00SBI62znz8q4=",
     {
-      "./make": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/make.js",
-      "pull-sink-through": "rnnodeapp/node_modules/pull-sink-through/index.js",
-      "pull-stream/pull": "rnnodeapp/node_modules/pull-stream/pull.js",
-      "pull-stream/sinks/reduce": "rnnodeapp/node_modules/pull-stream/sinks/reduce.js",
-      "pull-stream/throughs/filter": "rnnodeapp/node_modules/pull-stream/throughs/filter.js",
-      "pull-stream/throughs/flatten": "rnnodeapp/node_modules/pull-stream/throughs/flatten.js",
-      "pull-stream/throughs/map": "rnnodeapp/node_modules/pull-stream/throughs/map.js"
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/make.js": [
-    "Nc3ILvEepISdM46rs3M9P1X3NdBpHc1gAIYZayWcP9k=",
+  "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/storage.js": [
+    "JNa5CuH2ML9LtnLK/RBrtYDjVQVKOu4KN0ztzQTLu/s=",
     {
-      "./simple/maps": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/simple/maps.js",
-      "./simple/reduces": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/simple/reduces.js",
-      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/util.js",
-      "binary-search": "rnnodeapp/node_modules/binary-search/index.js",
-      "typewiselite": "rnnodeapp/node_modules/typewiselite/index.js"
+      "./local-storage": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/local-storage.js",
+      "./util": "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/util.js",
+      "mkdirp": "rnnodeapp/node_modules/mkdirp/index.js"
     }
   ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/simple/maps.js": [
-    "s4mNMR9YxvbFz/gglFs2nHlM3zglqEvA9ft4/CUFpag=",
+  "rnnodeapp/node_modules/ssb-private/node_modules/ssb-keys/util.js": [
+    "WyjioFcpyiW8EFE1OxQT5UDq3hfa+jota5O5vPTgchk=",
     {
-      "../util": "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/util.js"
+      "chloride": "rnnodeapp/node_modules/sodium-browserify-tweetnacl/index.js"
     }
-  ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/simple/reduces.js": [
-    "6Zcyn+7MlIQHsd3Prg3hhLOl59zn4B9tDomAsva/Ysc=",
-    {}
-  ],
-  "rnnodeapp/node_modules/ssb-private/node_modules/map-filter-reduce/util.js": [
-    "CdsKRb3xihM8a53NqbKduI03Jk14ljfDFAMPz7E26bw=",
-    {}
   ],
   "rnnodeapp/node_modules/ssb-private/package.json": [
-    "bJRXQ8jL0VFg5EOksLNycAj0eN+y4C72pNoYEEFFAwU=",
+    "8io8SRoCeNLYau34tXhkpakPvkOH1SMICBD59dtaa4M=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-query/index.js": [
@@ -79423,24 +78918,44 @@ module.exports = parse;
     }
   ],
   "rnnodeapp/node_modules/ssb-query/package.json": [
-    "pofgE6PuABKsASj8FXXSKUbsURHkSjwnBdjrQoeUJWA=",
+    "zbLcxUgq8G6BGAfbxeGhpbhHeRzfwOVc8mLxVEMKBy4=",
     {}
   ],
   "rnnodeapp/node_modules/ssb-ref/index.js": [
     "SEsbJxiFmncKuypyvkbr6yOoPTQon5fGccXNLvzVn+M=",
     {
-      "ip": "rnnodeapp/node_modules/ip/lib/ip.js",
+      "ip": "rnnodeapp/node_modules/ssb-ref/node_modules/ip/lib/ip.js",
       "is-valid-domain": "rnnodeapp/node_modules/is-valid-domain/is-valid-domain.js"
     }
+  ],
+  "rnnodeapp/node_modules/ssb-ref/node_modules/ip/lib/ip.js": [
+    "5g9p49oc/65drSUpDWPyOm4FClhynavE9ZzCRG2W63U=",
+    {}
   ],
   "rnnodeapp/node_modules/ssb-serve-blobs/index.js": [
     "3NkgT54Nf9iBc8vQV5R/rBuWbnZTzbLox4OnoZYmrWw=",
     {
-      "mime-types": "rnnodeapp/node_modules/mime-types/index.js",
+      "mime-types": "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-types/index.js",
       "pull-cat": "rnnodeapp/node_modules/pull-cat/index.js",
       "pull-identify-filetype": "rnnodeapp/node_modules/pull-identify-filetype/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
       "stream-to-pull-stream": "rnnodeapp/node_modules/stream-to-pull-stream/index.js"
+    }
+  ],
+  "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-db/db.json": [
+    "3YNpSqvoVCXofSpMV4It6PE23XZgJTYQigW7hY4/i8E=",
+    {}
+  ],
+  "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-db/index.js": [
+    "olMqzjJxGukN60rkZUxbxOVvCh4hvdFbomM0v3I9+wk=",
+    {
+      "./db.json": "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-db/db.json"
+    }
+  ],
+  "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-types/index.js": [
+    "jPzKrDBr62UNYMfwaa4PSznWSPHjkUaWsYwTOrM+ZBk=",
+    {
+      "mime-db": "rnnodeapp/node_modules/ssb-serve-blobs/node_modules/mime-db/index.js"
     }
   ],
   "rnnodeapp/node_modules/ssb-validate/index.js": [
@@ -79469,9 +78984,13 @@ module.exports = parse;
   "rnnodeapp/node_modules/stream-to-pull-stream/index.js": [
     "rwJqA1tzwdsUvKLPRW0niNmWlwTSbKlRwIhbcX8j224=",
     {
-      "looper": "rnnodeapp/node_modules/looper/index.js",
+      "looper": "rnnodeapp/node_modules/stream-to-pull-stream/node_modules/looper/index.js",
       "pull-stream/pull": "rnnodeapp/node_modules/pull-stream/pull.js"
     }
+  ],
+  "rnnodeapp/node_modules/stream-to-pull-stream/node_modules/looper/index.js": [
+    "cmcRqa+IsEsc2DIUeGXoK+grYAXQPGL4p7ftDNw4G6g=",
+    {}
   ],
   "rnnodeapp/node_modules/streamview-links/index.js": [
     "Hk43dEefecDI+S5Bze8ItKIQCIzR9iixSatlzyGHiTU=",
@@ -79482,73 +79001,35 @@ module.exports = parse;
       "bytewise": "rnnodeapp/node_modules/bytewise/index.js",
       "explain-error": "rnnodeapp/node_modules/explain-error/index.js",
       "level": "rnnodeapp/node_modules/level/level.js",
-      "map-filter-reduce": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/index.js",
-      "map-filter-reduce/keys": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/keys.js",
+      "map-filter-reduce": "rnnodeapp/node_modules/map-filter-reduce/index.js",
+      "map-filter-reduce/keys": "rnnodeapp/node_modules/map-filter-reduce/keys.js",
       "pull-level": "rnnodeapp/node_modules/pull-level/index.js",
       "pull-paramap": "rnnodeapp/node_modules/pull-paramap/index.js",
       "pull-stream": "rnnodeapp/node_modules/pull-stream/index.js",
       "pull-write": "rnnodeapp/node_modules/pull-write/index.js"
     }
   ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/index.js": [
-    "djroCqpXe/d0ZocuKK8Nt7uXw/4ihLGHHTcIdQcMKQY=",
-    {
-      "./make": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/make.js",
-      "pull-sink-through": "rnnodeapp/node_modules/pull-sink-through/index.js",
-      "pull-stream/pull": "rnnodeapp/node_modules/pull-stream/pull.js",
-      "pull-stream/sinks/reduce": "rnnodeapp/node_modules/pull-stream/sinks/reduce.js",
-      "pull-stream/throughs/filter": "rnnodeapp/node_modules/pull-stream/throughs/filter.js",
-      "pull-stream/throughs/flatten": "rnnodeapp/node_modules/pull-stream/throughs/flatten.js",
-      "pull-stream/throughs/map": "rnnodeapp/node_modules/pull-stream/throughs/map.js"
-    }
-  ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/keys.js": [
-    "3DqorJaBQarQxvC46mr89O08EJYiuTxNa8yIkh5XdmU=",
-    {
-      "./util": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js"
-    }
-  ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/make.js": [
-    "Nc3ILvEepISdM46rs3M9P1X3NdBpHc1gAIYZayWcP9k=",
-    {
-      "./simple/maps": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/simple/maps.js",
-      "./simple/reduces": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/simple/reduces.js",
-      "./util": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js",
-      "binary-search": "rnnodeapp/node_modules/binary-search/index.js",
-      "typewiselite": "rnnodeapp/node_modules/typewiselite/index.js"
-    }
-  ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/simple/maps.js": [
-    "s4mNMR9YxvbFz/gglFs2nHlM3zglqEvA9ft4/CUFpag=",
-    {
-      "../util": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js"
-    }
-  ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/simple/reduces.js": [
-    "6Zcyn+7MlIQHsd3Prg3hhLOl59zn4B9tDomAsva/Ysc=",
-    {}
-  ],
-  "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js": [
-    "CdsKRb3xihM8a53NqbKduI03Jk14ljfDFAMPz7E26bw=",
-    {}
-  ],
   "rnnodeapp/node_modules/streamview-links/query.js": [
     "971bC+ziTb7qCB2iyzLCa7zm9NBse9sTm9HneXOKDS0=",
     {
       "./select": "rnnodeapp/node_modules/streamview-links/select.js",
       "./util": "rnnodeapp/node_modules/streamview-links/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js"
+      "map-filter-reduce/util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
     }
   ],
   "rnnodeapp/node_modules/streamview-links/select.js": [
     "GN1pC+UzjBTSvJY0nbJHR6MehQ8hduwej5i1QbAsOTE=",
     {
       "./util": "rnnodeapp/node_modules/streamview-links/util.js",
-      "map-filter-reduce/util": "rnnodeapp/node_modules/streamview-links/node_modules/map-filter-reduce/util.js"
+      "map-filter-reduce/util": "rnnodeapp/node_modules/map-filter-reduce/util.js"
     }
   ],
   "rnnodeapp/node_modules/streamview-links/util.js": [
     "/B9Epkm7JZK7XfM8sUopu5IyQB85fLirGhSgp7p9Pxc=",
+    {}
+  ],
+  "rnnodeapp/node_modules/string_decoder/index.js": [
+    "gKIYnJimHqSYfOZjXfjIaFBUqidMZy30uxz/AjsG+3Q=",
     {}
   ],
   "rnnodeapp/node_modules/stringify-entities/dangerous.json": [

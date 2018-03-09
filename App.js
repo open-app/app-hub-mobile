@@ -1,38 +1,77 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  Platform,
+  Button,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import MultiServer from 'multiserver';
+const workerPlugin = require('multiserver-worker');
+const pull = require('pull-stream');
+import { Worker } from '@staltz/react-native-workers';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+export default class App extends Component<{}> {
+  state = { messages: [] }
 
-type Props = {};
-export default class App extends Component<Props> {
+  worker = null;
+
+  componentDidMount() {
+    // We need this because react-native-workers constructor
+    // is non-standard and uses 3 arguments.
+    // function OneArgWorker() {
+    //   Worker.call(this, path, path, 8091);
+    // }
+    // OneArgWorker.prototype = Object.create(Worker.prototype);
+    // OneArgWorker.prototype.constructor = OneArgWorker;
+    // var ms = MultiServer([
+    //   workerPlugin({ path: 'worker', ctor: OneArgWorker })
+    // ]);
+    
+    // ms.client('worker:worker', (err, stream) => {
+    //   if (err) console.log('Error', err)
+    //   console.log(stream)
+      // pull(
+      //   pull.values(['alice', 'bob']),
+      //   stream,
+      //   pull.drain(x => {
+      //     console.log(x); // ALICE
+      //                     // BOB
+      //   })
+      // );
+    // });
+    // this.worker = new Worker('worker.thread', 'worker.thread', 8082);
+    // this.worker.onmessage = this.handleMessage;
+  }
+
+  // componentWillUnmount() {
+  //   this.worker.terminate();
+  //   this.worker = null;
+  // }
+
+  handleMessage = message => {
+    console.log(`APP: got message ${message}`);
+
+    // this.setState(state => {
+    //   return { messages: [...state.messages, message] };
+    // });
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React Native Threads!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+
+        {/* <Button title="Send Message To Worker Thread" onPress={() => {
+          console.log('posting hello!')
+          this.worker.postMessage('Hello')
+        }} /> */}
+
+        {/* <View>
+          <Text>Messages:</Text>
+          {this.state.messages.map((message, i) => <Text key={i}>{message}</Text>)}
+        </View> */}
       </View>
     );
   }
@@ -49,10 +88,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
