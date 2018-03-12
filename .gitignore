@@ -1,4 +1,6 @@
 # OSX
+lib/
+rnnodeapp
 #
 .DS_Store
 .history/
@@ -30,6 +32,16 @@ build/
 local.properties
 *.iml
 
+# End-to-end tests
+#
+/e2e/.calabash_settings
+/e2e/test_servers
+/e2e/screenshot*.png
+
+# Visual Studio Code
+#
+.vscode
+
 # node.js
 #
 node_modules/
@@ -51,3 +63,14 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
+
+# Generated Code
+#
+/lib/
+/rnnodeapp
+/android/app/src/main/res/raw/rnnodebundle
+/android/app/src/main/assets/worker.bundle*
+
+# Misc
+#
+/gitignored/

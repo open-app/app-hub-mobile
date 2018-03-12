@@ -3,10 +3,10 @@ package com.p2pboilerplate;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.peel.react.TcpSocketsModule;
-import com.peel.react.rnos.RNOSModule;
 import com.rnfs.RNFSPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
+import com.peel.react.TcpSocketsModule;
+import com.peel.react.rnos.RNOSModule;
 import com.staltz.react.workers.WorkersPackage;
 import com.staltz.reactnativenode.RNNodePackage;
 import com.facebook.react.ReactNativeHost;
