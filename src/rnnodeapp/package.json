@@ -7,6 +7,7 @@
     "graphql-yoga": "^1.5.2",
     "leveldown-android-prebuilt": "2.0.3",
     "patchcore": "1.23.3",
+    "promise": "^8.0.1",
     "scuttlebot": "10.5.0",
     "sodium-browserify-tweetnacl": "0.2.3",
     "ssb-about": "0.1.x",

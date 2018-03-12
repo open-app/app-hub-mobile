@@ -14,6 +14,7 @@
     "android": "react-native run-android",
     "dev": "npm run android && npm run log",
     "rebuild": "npm run clean && npm run propagate-replacements && npm run build-rnnodeapp && npm run build-worker-android && npm run android && npm run log",
+    "node": "node src/rnnodeapp",
     "test": "jest",
     "clean-up-bundler": "watchman watch-del-all && rm -rf $TMPDIR/react-*"
   },
