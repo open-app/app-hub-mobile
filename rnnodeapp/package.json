@@ -1,23 +1,42 @@
 {
-  "name": "rnnodeapp",
+  "name": "ssb-graphql",
   "version": "0.0.0",
-  "main": "index.js",
+  "description": "GraphQL server for Scuttlebot",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "preserve": "babel src -d dist --presets es2015,stage-2",
+    "start": "nodemon src --exec babel-node",
+    "serve": "node dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "bufferutil": "3.0.1",
-    "graphql-yoga": "^1.5.2",
-    "leveldown-android-prebuilt": "2.0.3",
-    "patchcore": "1.23.3",
-    "promise": "^8.0.1",
-    "scuttlebot": "10.5.0",
-    "sodium-browserify-tweetnacl": "0.2.3",
-    "ssb-about": "0.1.x",
-    "ssb-backlinks": "0.4.x",
-    "ssb-blobs": "1.1.4",
-    "ssb-contacts": "0.0.x",
-    "ssb-friends": "^2.3.0",
-    "ssb-keys": "7.0.12",
-    "ssb-private": "0.1.x",
-    "ssb-query": "0.1.x",
-    "ssb-serve-blobs": "1.0.0"
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "express-graphql": "0.6.11",
+    "graphql": "0.12.3",
+    "graphql-tools": "2.18.0",
+    "pull-stream": "3.6.1",
+    "ssb-party": "0.5.1",
+    "ssb-ref": "2.9.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-plugin-inline-import": "2.0.6",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "nodemon": "1.14.10"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": [
+      "babel-plugin-inline-import",
+      "transform-object-rest-spread"
+    ]
   }
 }

@@ -1,3 +1,35 @@
-This is the react-native-node background process. It has access to Node.js APIs, and executes `scuttlebot` with a few modifications to work correctly on mobile, such as using `leveldown-android-prebuilt` instead of `leveldown`, and patching some dependencies.
+# ssb-graphql
+A GraphQL server for Secure Scuttlebutt (SSB)
 
-See `/tools/build-rnnodeapp` to understand how this gets integrated with the app.
+---
+
+`ssb-graphql` is a collection of [GraphQL](http://graphql.org/) schema, queries, and mutations that make it easier for clients to work with [Scuttlebot](http://scuttlebot.io/). Ask only for what you need, when you need it.
+
+Example request:
+```
+query {
+  profile (key: '@...') {
+    name
+    messages { key }
+    channels { name }
+  }
+}
+```
+
+Example response:
+```
+profile {
+  name: 'Stanley'
+  messages: [
+    { key: '@...' }
+    { key: '@...' }
+    { key: '@...' }
+  ]
+  channels: [
+    { name: 'scuttlebutt' }
+    { name: 'solarpunk' }
+  ]
+}
+```
+
+There is also a GraphiQL client that lets you explore the schema.

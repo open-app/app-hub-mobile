@@ -22,7 +22,7 @@ class App extends Component<{}> {
   }
 
   render() {
-    const { data: { loading, counter}} = this.props
+    const { data: { loading, profile }} = this.props
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -36,7 +36,7 @@ class App extends Component<{}> {
 
         <View>
           {loading && <Text>Loading</Text>}
-          {!loading && <Text>{counter.countStr || null}</Text>}
+          {/* {!loading && <Text>{counter.countStr || null}</Text>} */}
         </View>
       </View>
     );
@@ -44,10 +44,11 @@ class App extends Component<{}> {
 }
 
 export default graphql(gql`
-  subscription {
-    counter {
-      count
-      countStr
+  query Query {
+    profile (key: "iL6NzQoOLFP18pCpprkbY80DMtiG4JFFtVSVUaoGsOQ") {
+      name
+      messages { key }
+      channels { name }
     }
   }
 `)(App);
