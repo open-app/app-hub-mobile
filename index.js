@@ -1,26 +1,25 @@
+require('react-native-ssb-shims')
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import App from './src/App';
 import { ApolloClient } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
-import { split } from 'apollo-link';
+import { split, ApolloLink } from 'apollo-link';
 import { HttpLink } from 'apollo-link-http';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { onError } from 'apollo-link-error';
-
+import { withClientState } from 'apollo-link-state';
+const cache = new InMemoryCache()
 // Handle Apollo errors
 const errorLink = onError(({ networkError }) => {
   if (networkError.statusCode === 401) {
-    console.log(networkError)
+    console.log('Got network error: ', networkError)
   }
 let errorMessage = networkError.statusCode === 401 ? 'Network error 104, handled' : 'link sucess'
-console.log(errorMessage, networkError)
+console.log("Got some cowry error: ", errorMessage, networkError)
 })
-
-// Split subscriptions and normal queries
-
 // Create an http link:
 const httpLink = new HttpLink({
   uri: 'http://localhost:4000/graphql'
@@ -34,6 +33,7 @@ const wsLink = new WebSocketLink({
   }
 });
 
+// Split subscriptions and normal queries
 // using the ability to split links, you can send data to each link
 // depending on what kind of operation is being sent
 const link = split(
@@ -46,11 +46,34 @@ const link = split(
   httpLink,
 );
 
+// App state
+const stateLink = withClientState({
+  cache,
+  resolvers: {
+    Mutation: {
+      updateNetworkStatus: (_, { isConnected }, { cache }) => {
+        const data = {
+          networkStatus: {
+            __typename: 'NetworkStatus',
+            isConnected
+          },
+        };
+        cache.writeData({ data });
+        return null
+      },
+    },
+  }
+});
+
+
 
 // Apollo client
 const client = new ApolloClient({
-  link,
-  cache: new InMemoryCache()
+  link: ApolloLink.from([
+    stateLink,
+    link
+  ]),
+  cache
 })
 
 const Root = () => (

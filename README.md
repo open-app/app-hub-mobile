@@ -19,19 +19,17 @@ brew install coreutils
 
 ## Usage
 
-Make sure you have [react-native]() and [yarn]() installed.
+Doesn't work well on emulators, so make sure you have [react-native]() installed and your device ready.
 
 Clone and install:
 ```
 git clone https://github.com/luandro/p2pboilerplate.git
 cd p2pboilerplate
 npm i
+npm run build
 ```
 
-It's important to use npm to install first.
-
-Plug in your mobile device and start developing:
-`yarn dev`
+Install and build whole application, which will also run `react-native run-android`.
 
 ## Todo
 

@@ -11,7 +11,13 @@ cp -r ./src/rnnodeapp ./;
 # rm ./rnnodeapp/*.js.map;
 
 echo "Installing dependencies...";
-cd ./rnnodeapp && yarn && cd ..;
+cd ./rnnodeapp
+if command -v yarn 2>/dev/null; then
+  yarn;
+else
+    npm i;
+fi
+cd ..
 
 echo "Setting up folder for native bindings...";
 mv ./rnnodeapp/node_modules/leveldown-android-prebuilt/compiled ./rnnodeapp/compiled;
