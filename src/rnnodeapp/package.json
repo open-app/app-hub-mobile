@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "babel src --out-dir lib",
-    "start": "rm -rf lib && npm run build && node index.js"
+    "watch": "babel src --out-dir lib --watch",
+    "start": "concurrently \"npm run watch\" \"nodemon index.js\""
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.42",
@@ -37,7 +38,9 @@
     "@babel/helper-plugin-utils": "^7.0.0-beta.42",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
     "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42"
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.2"
   },
   "babel": {
     "presets": [

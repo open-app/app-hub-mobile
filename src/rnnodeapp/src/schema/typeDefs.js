@@ -8,13 +8,12 @@ const PostMessage =  require('./ssb/message/post/type');
 const User =  require('./ssb/user/type');
 const Query =  require('./query/type');
 const Mutation = require('./mutation/type');
-const Subscription =  require('./subscription/type');
+// const Subscription =  require('./subscription/type');
 
 const Schema = `
   schema {
     query: Query
     mutation: Mutation
-    subscription: Subscription
   }
 `;
 
@@ -30,5 +29,5 @@ export default [
   Query,
   Schema,
   Mutation,
-  Subscription,
+  // Subscription,
 ]
