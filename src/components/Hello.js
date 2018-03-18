@@ -12,12 +12,15 @@ import RNNode from "react-native-node";
 export default class Hello extends Component<{}> {
   state = { messages: [] }
 
-  componentDidMount() {
-    console.log('Component state', this.props)
-  }
-
-  handlePress = () => {
-    console.log(this.props)
+  handlePress() {
+    this.props.mutate({
+      variables: { id: this.props.whoami }
+    })
+      .then(({ data }) => {
+        console.log('got data', data);
+      }).catch((error) => {
+        console.log('there was an error sending the query', error);
+      });
   }
 
   render() {
@@ -29,8 +32,8 @@ export default class Hello extends Component<{}> {
         </Text>
 
         <Button title="Profile" onPress={() => {
-          console.log('pinging!')
-          this.handlePress()
+          console.log(this.props)
+          this.props.refetch()
         }} />
 
         <View>
@@ -43,13 +46,13 @@ export default class Hello extends Component<{}> {
   }
 }
 
-// const profileQuery = gql`
-//   query Query {
-//     history(id: $id) {
-//       content
-//     }
-//   }
-// `
+const submitAbout = gql`
+  mutation submitAbout($repoFullName: String!) {
+    submitAbout(repoFullName: $repoFullName) {
+      createdAt
+    }
+  }
+`
 
 // export default graphql(profileQuery, {
 //   options: (props) => ({

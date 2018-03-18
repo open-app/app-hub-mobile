@@ -13,13 +13,29 @@ import { onError } from 'apollo-link-error';
 import { withClientState } from 'apollo-link-state';
 const cache = new InMemoryCache()
 // Handle Apollo errors
-const errorLink = onError(({ networkError }) => {
-  if (networkError.statusCode === 401) {
-    console.log('Got network error: ', networkError)
+// const errorLink = onError(({ networkError }) => {
+//   if (networkError.statusCode === 401) {
+//     console.log('Got network error: ', networkError)
+//   }
+// let errorMessage = networkError.statusCode === 401 ? 'Network error 104, handled' : 'link sucess'
+// console.log("Got some cowry error: ", errorMessage, networkError)
+// })
+
+const errorLink = onError(({ response, operation, networkError, graphQLErrors }) => {
+  console.log('RESSSSS', response)
+  console.log('OPPPPPP', operation)
+  if (graphQLErrors) {
+    graphQLErrors.map(({ message, locations, path }) =>
+      console.log(
+        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+      ),
+    );
   }
-let errorMessage = networkError.statusCode === 401 ? 'Network error 104, handled' : 'link sucess'
-console.log("Got some cowry error: ", errorMessage, networkError)
-})
+  if (networkError) {
+    console.log(`[Network error]: ${networkError}`)
+  }
+});
+
 // Create an http link:
 const httpLink = new HttpLink({
   uri: 'http://localhost:4000/graphql'
@@ -70,6 +86,7 @@ const stateLink = withClientState({
 // Apollo client
 const client = new ApolloClient({
   link: ApolloLink.from([
+    errorLink,
     stateLink,
     link
   ]),

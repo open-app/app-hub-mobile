@@ -1,6 +1,9 @@
 # OSX
 lib/
-rnnodeapp
+rnnodeapp/
+src/rnnodeapp/.history/
+src/rnnodeapp/lib/
+src/rnnodeapp/node_modules/
 #
 .DS_Store
 .history/
