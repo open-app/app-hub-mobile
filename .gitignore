@@ -1,9 +1,5 @@
 # OSX
 lib/
-rnnodeapp/
-src/rnnodeapp/.history/
-src/rnnodeapp/lib/
-src/rnnodeapp/node_modules/
 #
 .DS_Store
 .history/
@@ -71,6 +67,7 @@ buck-out/
 #
 /lib/
 /rnnodeapp
+/rnnodeapp/lib
 /android/app/src/main/res/raw/rnnodebundle
 /android/app/src/main/assets/worker.bundle*
 

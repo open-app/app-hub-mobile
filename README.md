@@ -2,7 +2,7 @@
 
 An as easy as possible to use boilerplate for creating peer-to-peer [React Native](https://facebook.github.io/react-native/) applications using [Secure Scuttlebot](https://scuttlebot.io/) and [Dat](https://datproject.org) protocols behind a [GraphQL](http://graphql.org/) layer.
 
-Based on [MMMMM](https://github.com/staltz/mmmmm-mobile), [dat-installer](https://github.com/staltz/dat-installer) and [ssb-graphql](https://github.com/stanleyjones/ssb-graphql)
+Based on [MMMMM](https://github.com/staltz/mmmmm-mobile), [dat-installer](https://github.com/staltz/dat-installer) and [ssb-graphql](https://github.com/stanleyjones/ssb-graphql).
 
 
 ## Install dependencies
