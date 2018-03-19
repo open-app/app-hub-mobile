@@ -15,3 +15,18 @@ export const getLinks = ({ source, dest, rel }, sbot) => new Promise((resolve, r
     pull.collect((err, msgs) => { if (err) { reject(err); } resolve(msgs); }),
   );
 });
+
+export const postMessage = ({ text }, sbot) => new Promise((resolve, reject) => {
+  sbot.publish({
+    type: 'post',
+    text
+  }, (err, msg) => {
+    if (err) {
+      console.log(err)
+      reject(err)
+    }
+    console.log('MSG', msg)
+    const { key, value: { content, sequence, timestamp, author } } = msg
+    resolve(msg)
+  })
+})
