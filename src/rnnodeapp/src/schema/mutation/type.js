@@ -1,15 +1,15 @@
-const MessageInput = `
-  input MessageInput {
+const Mutation = `
+  input postInput {
     text: String
   }
-`
-
-const Mutation = `
-  input MessageInput {
-    text: String
+  input aboutInput {
+    id: String
+    name: String
+    description: String
   }
   type Mutation {
-    postMessage(input: MessageInput): PostMessage
+    postMessage(input: postInput): PostMessage
+    aboutMessage(input: aboutInput): AboutMessage
   }
 `
 module.exports = () => [Mutation]
