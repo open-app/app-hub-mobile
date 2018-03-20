@@ -5,52 +5,27 @@ import {
   TextInput,
   Text,
   View,
-  ActivityIndicator
 } from 'react-native'
-import graphFetch from './utils/graphFetch'
-const uri = 'http://localhost:4000/graphql'
-const whoamiQuery = `
-  query Query {
-    whoami
-  }
-`
+import graphFetch from '../utils/graphFetch'
 
-// import Hello from './components/Hello'
-
-export default class App extends Component {
+export default class Profile extends Component {
   state = {
-    whoami: null,
     text: 'Your name',
     name: null
   }
   componentDidMount() {
-    this.getWhoami()
-  }
-
-  getWhoami = () => {
-    graphFetch(uri, whoamiQuery)
-      .then(res => {
-        console.log('who data', res.data)
-        this.setState({
-          whoami: res.data.whoami
-        })
-        this.getProfile()
-      })
-      .catch(err => {
-        console.log('ERRR', err)
-        this.getWhoami()
-      })
+    this.getProfile()
   }
 
   getProfile = () => {
     const profileQuery = `
       query Query {
-        profile(id: "${this.state.whoami}") {
+        profile(id: "${this.props.whoami}") {
           name
         }
       }
     `
-    graphFetch(uri, profileQuery)
+    graphFetch(this.props.uri, profileQuery)
       .then(res => {
         console.log('PROFILE', res)
         const { data: { profile: { name } } } = res
@@ -69,14 +44,14 @@ export default class App extends Component {
     const mutation = `
       mutation Mutation {
         aboutMessage(input: {
-          id: "${this.state.whoami}"
+          id: "${this.props.whoami}"
           name: "${this.state.text}"
         }) {
           name
         }
       }
     `
-    graphFetch(uri, mutation)
+    graphFetch(this.props.uri, mutation)
       .then(res => {
         console.log('mutation data', res)
         this.setState({
@@ -93,25 +68,19 @@ export default class App extends Component {
       return (
         <View style={styles.wrapper}>
           <View style={styles.container}>
-            {this.state.name && <Text style={styles.main}>Welcome {this.state.name}</Text>}
-            {this.state.whoami && 
-              <View>
-                {!this.state.name && <Text style={styles.text}>Public key: {this.state.whoami}</Text>}
-                <TextInput
-                  placeholderTextColor='#000'
-                  style={styles.input}
-                  onChangeText={(text) => this.setState({text})}
-                  value={this.state.text}
-                />
-                <Button
-                  style={styles.button}
-                  title="Change your name"
-                  color="#FF9F1C"
-                  onPress={() => this.publishAbout()}
-                />
-              </View>
-              }
-            {!this.state.whoami && <ActivityIndicator size='large' color='#41EAD4' />}       
+            {!this.state.name && <Text style={styles.text}>Public key: {this.props.whoami}</Text>}
+            <TextInput
+              placeholderTextColor='#000'
+              style={styles.input}
+              onChangeText={(text) => this.setState({ text })}
+              value={this.state.text}
+            />
+            <Button
+              style={styles.button}
+              title="Change your name"
+              color="#FF9F1C"
+              onPress={() => this.publishAbout()}
+            />
           </View>   
         </View>
       )
@@ -139,13 +108,12 @@ const styles = StyleSheet.create({
     paddingBottom: 30
   },
   input: {
-    height: 40,
+    height: 50,
     backgroundColor: '#FDFFFC',
     borderWidth: 1,
-    paddingBottom: 30,
-    zIndex: 1
   },
   button: {
+    marginTop: 30,
     paddingTop: 30,
     color: '#FDFFFC'
   }

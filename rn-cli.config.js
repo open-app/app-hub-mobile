@@ -39,6 +39,6 @@ function blacklist(platform, additionalBlacklist) {
 
 module.exports = {
   getBlacklistRE(platform) {
-    return blacklist(platform);
+    return blacklist([/react-native\/local-cli\/core\/__fixtures__.*/]);
   },
 };
