@@ -7,7 +7,6 @@ import {
   View,
   ActivityIndicator
 } from 'react-native'
-import RNNode from "react-native-node"
 import graphFetch from './utils/graphFetch'
 const uri = 'http://localhost:4000/graphql'
 const whoamiQuery = `
@@ -25,7 +24,6 @@ export default class App extends Component {
     name: null
   }
   componentDidMount() {
-    RNNode.start()
     this.getWhoami()
   }
 

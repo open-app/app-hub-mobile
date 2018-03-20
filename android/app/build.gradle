@@ -71,12 +71,15 @@ import com.android.build.OutputFile
  *   extraPackagerArgs: []
  * ]
  */
-
-project.ext.react = [
-    entryFile: "index.js"
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'MaterialCommunityIcons.ttf' ]
 ]
-
+project.ext.react = [
+    entryFile: "index.android.js"
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 apply from: "../../node_modules/react-native/react.gradle"
+
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -94,8 +97,8 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.p2pboilerplate"
@@ -148,6 +151,9 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-navigation')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-i18n')
     compile project(':react-native-tcp')
     compile project(':react-native-fs')
     compile project(':react-native-os')
