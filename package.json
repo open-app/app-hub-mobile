@@ -15,7 +15,6 @@
     "build": "npm run clean && npm run propagate-replacements && npm run build-rnnodeapp && npm run android && npm run log",
     "node": "cd src/rnnodeapp && npm start",
     "apk": "cd android && ./gradlew assembleRelease",
-    "test": "jest",
     "clean-up-bundler": "watchman watch-del-all && rm -rf $TMPDIR/react-*"
   },
   "dependencies": {
