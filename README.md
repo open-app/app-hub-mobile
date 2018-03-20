@@ -11,6 +11,7 @@ Based on [MMMMM](https://github.com/staltz/mmmmm-mobile), [dat-installer](https:
 - GraphQL Dat :x:
 - Set Dat storage path :x:
 - Pull/Push Dat data :x:
+- Easy app rebranding :x:
 
 ## Install dependencies
 
