@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.42",
     "bufferutil": "3.0.1",
+    "community-apps-ssb-plugin": "^1.0.4",
     "dat-node": "^3.5.8",
     "graphql-yoga": "^1.5.2",
     "leveldown-android-prebuilt": "2.0.3",

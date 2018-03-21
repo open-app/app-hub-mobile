@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import I18n from 'react-native-i18n'
-import { Navigation } from 'react-native-navigation'
 import {
   View,
   Text,
@@ -8,6 +7,10 @@ import {
   StyleSheet,
 } from 'react-native'
 import graphFetch from '../utils/graphFetch'
+import i18n from '../locales'
+import theme from '../utils/theme'
+import runMainApp from './MainApp'
+
 // import css from 'react-native-css'
 
 // const styles = css`
@@ -43,26 +46,14 @@ export default class Loading extends Component {
 
   startMainApp = (whoami) => {
     const { uri } = this.props
-    console.log('Starting appppp!!!!!', uri, whoami)
-    Navigation.startTabBasedApp({
-      tabs: [
-        {
-          label: 'Profile',
-          screen: 'profile', // this is a registered name for a screen
-          icon: require('./icon.png'),
-          title: whoami
-        },
-      ],
-      passProps: { whoami, uri },
-      animationType: 'slide-down'
-    })
+    runMainApp({ whoami, uri })
   }
 
   render() {
     return (
       <View style={styles.wrapper}>
-        <Text style={{ color: 'white' }}>Loading server</Text>
-        <ActivityIndicator size="large" color="white" />
+        <Text style={styles.loadingText}>{i18n.t('loadingServer')}</Text>
+        <ActivityIndicator size="large" color={theme.color3} />
       </View>
     )
   }
@@ -73,11 +64,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: theme.dark,
   },
-  container: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
+  loadingText: {
+    color: theme.light,
+    paddingBottom: 60,
+    fontSize: 16,
+    // textTransform: 'uppercase'
+  },
 })

@@ -7,9 +7,8 @@ import {
   View,
 } from 'react-native'
 import graphFetch from '../utils/graphFetch'
-import theme from '../utils/theme'
 
-export default class Profile extends Component {
+export default class Network extends Component {
   state = {
     text: 'Your name',
     name: null
@@ -66,26 +65,14 @@ export default class Profile extends Component {
   }
 
   render() {
-    const { name, text } = this.state
-    return (
-      <View style={styles.wrapper}>
-        <View style={styles.container}>
-          {!name && <Text style={styles.text}>Public key: {this.props.whoami}</Text>}
-          {name && <Text style={styles.main}>Welcome {name}</Text>}
-          <TextInput
-            placeholderTextColor={theme.dark}
-            style={styles.input}
-            onChangeText={(text) => this.setState({ text })}
-            value={text}
-          />
-          <Button
-            title="Change your name"
-            color={theme.color3}
-            onPress={() => this.publishAbout()}
-          />
-        </View>   
-      </View>
-    )
+      return (
+        <View style={styles.wrapper}>
+          <View style={styles.container}>
+            <Text>Network</Text>
+          </View>   
+        </View>
+      )
+    // }
   }
 }
 
@@ -94,23 +81,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.dark,
+    backgroundColor: '#011627',
   },
   container: {
     maxWidth: '87%',
   },
   main: {
     fontSize: 22,
-    color: theme.light,
+    color: '#F71735',
     paddingBottom: 30
   },
   text: {
-    color: theme.light,
+    color: '#FDFFFC',
     paddingBottom: 30
   },
   input: {
     height: 50,
-    backgroundColor: theme.light,
+    backgroundColor: '#FDFFFC',
     borderWidth: 1,
   },
+  button: {
+    marginTop: 30,
+    paddingTop: 30,
+    color: '#FDFFFC'
+  }
 })
