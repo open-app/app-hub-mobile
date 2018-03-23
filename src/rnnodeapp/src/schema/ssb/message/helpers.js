@@ -22,7 +22,6 @@ export const publishMessage = (content, sbot) => new Promise((resolve, reject) =
       console.log(err)
       reject(err)
     }
-    console.log('MSG', msg)
     // const { key, value: { content, sequence, timestamp, author } } = msg
     resolve(msg)
   })

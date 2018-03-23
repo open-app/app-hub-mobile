@@ -8,6 +8,9 @@ import PostMessage from './ssb/message/post/resolver'
 import Query from './query/resolver'
 import User from './ssb/user/resolver'
 import Mutation from './mutation/resolver'
+import Subscription from './subscription/resolver'
+import Counter from './subscription/counterResolver'
+// import OpenApp from './open-app/resolver'
 
 export default {
   AboutMessage,
@@ -20,4 +23,7 @@ export default {
   Query,
   User,
   Mutation,
+  Counter,
+  Subscription,
+  // OpenApp
 }

@@ -1,5 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import i18n from '../locales'
+import theme from '../utils/theme'
 
 export default (props) => {
   console.log('Running ', props)
@@ -25,6 +26,14 @@ export default (props) => {
       },
     ],
     passProps: props,
-    animationType: 'fade'
+    animationType: 'fade',
+    tabsStyle: {
+      tabBarBackgroundColor: theme.light,
+    },
+    appStyle: {
+      tabBarButtonColor: theme.dark,
+      tabBarSelectedButtonColor: theme.color1,
+      initialTabIndex: 1,
+    },
   })
 }

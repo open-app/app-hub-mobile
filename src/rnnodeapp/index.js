@@ -1,5 +1,5 @@
 const graphqlServer = require('./lib/graphqlServer')
-const ssbClient = require('./lib/ssbClient')
+const ssb = require('./lib/ssb')
   
-ssbClient()
+ssb()
   .then(sbot => graphqlServer(sbot))

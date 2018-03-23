@@ -31,7 +31,7 @@
     "spawn-sync": "^1.0.15",
     "ssb-config": "^2.2.0",
     "ssb-ref": "^2.9.1",
-    "subscriptions-transport-ws": "^0.9.6",
+    "subscriptions-transport-ws": "^0.9.7",
     "thread-sleep": "^2.0.0",
     "utf-8-validate": "^4.0.0"
   },
