@@ -71,13 +71,9 @@ import com.android.build.OutputFile
  *   extraPackagerArgs: []
  * ]
  */
-project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf', 'MaterialCommunityIcons.ttf' ]
-]
 project.ext.react = [
     entryFile: "index.android.js"
 ]
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 apply from: "../../node_modules/react-native/react.gradle"
 
 
@@ -152,7 +148,6 @@ android {
 
 dependencies {
     compile project(':react-native-navigation')
-    compile project(':react-native-vector-icons')
     compile project(':react-native-i18n')
     compile project(':react-native-tcp')
     compile project(':react-native-fs')

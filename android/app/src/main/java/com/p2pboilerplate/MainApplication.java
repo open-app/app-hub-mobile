@@ -3,7 +3,6 @@ package com.p2pboilerplate;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.peel.react.TcpSocketsModule;
 import com.peel.react.rnos.RNOSModule;
@@ -33,7 +32,6 @@ public class MainApplication extends NavigationApplication {
     return Arrays.<ReactPackage>asList(
       new MainReactPackage(),
       new RNI18nPackage(),
-      new VectorIconsPackage(),
       new TcpSocketsModule(),
       new RNOSModule(),
       new RNFSPackage(),
