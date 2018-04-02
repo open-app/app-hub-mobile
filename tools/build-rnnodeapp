@@ -12,10 +12,11 @@ cp -r ./src/rnnodeapp ./;
 
 echo "Installing dependencies...";
 cd ./rnnodeapp
+rm -rf node_modules
 if command -v yarn 2>/dev/null; then
   yarn;
 else
-    npm i;
+  npm i;
 fi
 cd ..
 

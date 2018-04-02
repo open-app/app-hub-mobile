@@ -3,7 +3,6 @@ import i18n from '../locales'
 import theme from '../utils/theme'
 
 export default (props) => {
-  console.log('Running ', props)
   Navigation.startTabBasedApp({
     tabs: [
       {
@@ -33,7 +32,7 @@ export default (props) => {
     appStyle: {
       tabBarButtonColor: theme.dark,
       tabBarSelectedButtonColor: theme.color1,
-      initialTabIndex: 1,
+      initialTabIndex: 2,
     },
   })
 }

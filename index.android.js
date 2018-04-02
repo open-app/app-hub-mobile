@@ -2,8 +2,8 @@ require('react-native-ssb-shims')
 import { Navigation } from 'react-native-navigation'
 import { registerScreens } from './src/screens'
 import RNNode from "react-native-node"
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const uri = 'http://localhost:4000/graphql'
+
 
 RNNode.start()
 registerScreens()

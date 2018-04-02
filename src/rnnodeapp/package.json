@@ -27,7 +27,6 @@
     "ssb-contacts": "0.0.x",
     "ssb-friends": "^2.3.0",
     "ssb-keys": "7.0.12",
-    "ssb-party": "^0.5.1",
     "ssb-private": "0.1.x",
     "ssb-query": "0.1.x",
     "ssb-ref": "^2.9.1",

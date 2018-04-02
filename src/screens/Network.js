@@ -6,73 +6,48 @@ import {
   Text,
   View,
 } from 'react-native'
-import graphFetch from '../utils/graphFetch'
+import { Query, Subscription } from 'react-apollo'
+import gql from 'graphql-tag'
+
+const SUBSCRIPTION = gql`
+  subscription Subscription {
+    gossip {
+      type
+      peer {
+        host
+      }
+    }
+  }
+`
+
+const QUERY = gql`
+  query Query($userId: String!) {
+    profile(id: $userId) {
+      name
+    }
+  }
+`
 
 export default class Network extends Component {
-  state = {
-    text: 'Your name',
-    name: null
+  handlePres = () => {
+    console.log(this.props)
   }
-  componentDidMount() {
-    this.getProfile()
-  }
-
-  getProfile = () => {
-    const profileQuery = `
-      query Query {
-        profile(id: "${this.props.whoami}") {
-          name
-        }
-      }
-    `
-    graphFetch(this.props.uri, profileQuery)
-      .then(res => {
-        console.log('PROFILE', res)
-        const { data: { profile: { name } } } = res
-        if (name) {
-          this.setState({
-            name
-          })
-        } else {
-          
-        }
-      })
-      .catch(err => console.log('error', err))
-  }
-
-  publishAbout = () => {
-    const mutation = `
-      mutation Mutation {
-        aboutMessage(input: {
-          id: "${this.props.whoami}"
-          name: "${this.state.text}"
-        }) {
-          name
-        }
-      }
-    `
-    graphFetch(this.props.uri, mutation)
-      .then(res => {
-        console.log('mutation data', res)
-        this.setState({
-          text: 'Your name',
-          name: this.state.text
-        })
-      })
-      .catch(err => {
-        console.log('ERRR', err)
-      })
-  }
-
   render() {
-      return (
-        <View style={styles.wrapper}>
-          <View style={styles.container}>
-            <Text>Network</Text>
-          </View>   
-        </View>
-      )
-    // }
+    return (
+      <Subscription
+        // query={QUERY}
+        // variables={{ userId: this.props.whoami }}
+        subscription={SUBSCRIPTION}
+        shouldResubscribe={true}
+      >
+        {({ data, loading, error }) => {
+          if (error) return <Text>Error</Text>
+          if (loading || !data) return <Text>Loading</Text>
+          console.log('DATA', data)
+          return <Text style={styles.main} onPress={this.handlePres}>DATA</Text>
+        }}
+      </Subscription>
+    )
   }
 }
 
