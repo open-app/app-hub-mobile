@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import { Subscription } from 'react-apollo'
 import gql from 'graphql-tag'
+import theme from '../utils/theme'
 
 const SUBSCRIPTION = gql`
   subscription Subscription {
@@ -23,17 +24,19 @@ const SUBSCRIPTION = gql`
 export default class Network extends Component {
   render() {
     return (
-      <Subscription
-        subscription={SUBSCRIPTION}
-        shouldResubscribe={true}
-      >
-        {({ data, loading, error }) => {
-          if (error) return <Text>Error</Text>
-          if (loading || !data) return <Text>Loading</Text>
-          if (data && data.gossip.type === 'connected') return <Text>{data.gossip.peer.host}</Text>
-          else return <Text>Not connected to any peers</Text>
-        }}
-      </Subscription>
+      <View style={styles.wrapper}>
+        <Subscription
+          subscription={SUBSCRIPTION}
+          shouldResubscribe={true}
+        >
+          {({ data, loading, error }) => {
+            if (error) return <Text style={styles.text}>Error</Text>
+            if (loading || !data) return <Text style={styles.text}>Loading</Text>
+            if (data && data.gossip.type === 'connected') return <Text style={styles.text}>{data.gossip.peer.host}</Text>
+            else return <Text style={styles.text}>Not connected to any peers</Text>
+          }}
+        </Subscription>
+      </View>
     )
   }
 }
@@ -43,28 +46,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#011627',
+    backgroundColor: theme.dark,
   },
-  container: {
-    maxWidth: '87%',
-  },
-  main: {
-    fontSize: 22,
-    color: '#F71735',
-    paddingBottom: 30
-  },
+
   text: {
-    color: '#FDFFFC',
-    paddingBottom: 30
-  },
-  input: {
-    height: 50,
-    backgroundColor: '#FDFFFC',
-    borderWidth: 1,
-  },
-  button: {
-    marginTop: 30,
-    paddingTop: 30,
-    color: '#FDFFFC'
+    fontSize: 22,
+    color: theme.light,
   }
 })

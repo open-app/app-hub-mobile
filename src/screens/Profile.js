@@ -42,8 +42,8 @@ export default class Profile extends Component {
               if (!error) {
                 return (
                   <View>
-                    {(loading || !data) && <Text style={styles.text}>Public key: {whoami}</Text>}
                     {(data && data.profile && data.profile.name) && <Text style={styles.main}>Welcome {data.profile.name}</Text>}
+                    <Text style={styles.id}>Public key: {whoami}</Text>
                     <Mutation
                       mutation={PUBLISH_ABOUT}
                       update={(cache, { data: publishAbout }) => {
@@ -62,18 +62,20 @@ export default class Profile extends Component {
                             onChangeText={(text) => this.setState({ text })}
                             value={text}
                           />
-                          <Button
-                            title="Change your name"
-                            color={theme.color3}
-                            onPress={() => {
-                              publishAbout({ variables: { userId: whoami, newName: text } })
-                              this.setState({
-                                name: ''
-                              })
-                            }}
-                          />
-                          {loading && <Text style={styles.text}>Loading...</Text>}
-                          {error && <Text style={styles.text}>Error :( Try again</Text>}
+                          <View style={styles.button}>
+                            <Button
+                              title="Change your name"
+                              color={theme.color3}
+                              onPress={() => {
+                                publishAbout({ variables: { userId: whoami, newName: text } })
+                                this.setState({
+                                  name: ''
+                                })
+                              }}
+                            />
+                            {loading && <Text style={styles.text}>Loading...</Text>}
+                            {error && <Text style={styles.text}>Error :( Try again</Text>}
+                          </View>
                         </View>
                       )}
                     </Mutation>
@@ -105,11 +107,20 @@ const styles = StyleSheet.create({
   },
   text: {
     color: theme.light,
-    paddingBottom: 30
+    paddingBottom: 10
+  },
+  id: {
+    color: 'grey',
+    fontSize: 14,
+    paddingBottom: 20,
+
   },
   input: {
     height: 50,
     backgroundColor: theme.light,
     borderWidth: 1,
   },
+  button: {
+    paddingTop: 12,
+  }
 })
