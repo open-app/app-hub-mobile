@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-207.000000, -6.000000)" stroke="#011627" fill-rule="nonzero">
+            <g id="Group" transform="translate(207.000000, 6.000000)">
+                <circle id="Oval" cx="8.21052632" cy="8.21052632" r="7.36842105"></circle>
+                <ellipse id="Oval" cx="34" cy="8.21052632" rx="7.36842105" ry="7.36842105"></ellipse>
+                <ellipse id="Oval" cx="59.7894737" cy="8.21052632" rx="7.36842105" ry="7.36842105"></ellipse>
+                <ellipse id="Oval" cx="8.21052632" cy="34" rx="7.36842105" ry="7.36842105"></ellipse>
+                <circle id="Oval" cx="34" cy="34" r="7.36842105"></circle>
+                <ellipse id="Oval" cx="59.7894737" cy="34" rx="7.36842105" ry="7.36842105"></ellipse>
+                <ellipse id="Oval" cx="8.21052632" cy="59.7894737" rx="7.36842105" ry="7.36842105"></ellipse>
+                <ellipse id="Oval" cx="34" cy="59.7894737" rx="7.36842105" ry="7.36842105"></ellipse>
+                <circle id="Oval" cx="59.7894737" cy="59.7894737" r="7.36842105"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

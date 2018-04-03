@@ -8,19 +8,19 @@ export default (props) => {
       {
         label: i18n.t('applications'),
         screen: 'applications', // this is a registered name for a screen
-        icon: require('./icon.png'),
+        icon: require('../assets/applications.png'),
         navigatorStyle: { navBarHidden: true },
       },
       {
         label: i18n.t('profile'),
         screen: 'profile', // this is a registered name for a screen
-        icon: require('./icon.png'),
+        icon: require('../assets/profile.png'),
         navigatorStyle: { navBarHidden: true },
       },
       {
         label: i18n.t('network'),
         screen: 'network', // this is a registered name for a screen
-        icon: require('./icon.png'),
+        icon: require('../assets/network.png'),
         navigatorStyle: { navBarHidden: true },
       },
     ],
