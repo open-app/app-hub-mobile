@@ -32,7 +32,7 @@ export default (props) => {
     appStyle: {
       tabBarButtonColor: theme.dark,
       tabBarSelectedButtonColor: theme.color1,
-      initialTabIndex: 2,
+      initialTabIndex: 1,
     },
   })
 }

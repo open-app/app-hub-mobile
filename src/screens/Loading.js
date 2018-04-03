@@ -11,13 +11,6 @@ import i18n from '../locales'
 import theme from '../utils/theme'
 import runMainApp from './MainApp'
 
-// import css from 'react-native-css'
-
-// const styles = css`
-//   text {
-//     text-transform: uppercase;
-//   }
-// `
 const whoamiQuery = `
   query Query {
     whoami

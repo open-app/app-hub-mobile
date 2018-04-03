@@ -6,83 +6,82 @@ import {
   Text,
   View,
 } from 'react-native'
-import graphFetch from '../utils/graphFetch'
+import { Query, Mutation } from 'react-apollo'
+import gql from 'graphql-tag'
 import theme from '../utils/theme'
 
+const GET_PROFILE = gql`
+  query Query($userId: String!) {
+    profile(id: $userId) {
+      name
+    }
+  }
+`
+
+const PUBLISH_ABOUT = gql`
+  mutation Mutation($userId: String!, $newName: String!) {
+    aboutMessage(input: { id: $userId, name: $newName }) {
+      name
+    }
+  }
+`
 export default class Profile extends Component {
   state = {
     text: 'Your name',
-    name: null
-  }
-  componentDidMount() {
-    this.getProfile()
-  }
-
-  getProfile = () => {
-    const profileQuery = `
-      query Query {
-        profile(id: "${this.props.whoami}") {
-          name
-        }
-      }
-    `
-    graphFetch(this.props.uri, profileQuery)
-      .then(res => {
-        console.log('PROFILE', res)
-        const { data: { profile: { name } } } = res
-        if (name) {
-          this.setState({
-            name
-          })
-        } else {
-          
-        }
-      })
-      .catch(err => console.log('error', err))
-  }
-
-  publishAbout = () => {
-    const mutation = `
-      mutation Mutation {
-        aboutMessage(input: {
-          id: "${this.props.whoami}"
-          name: "${this.state.text}"
-        }) {
-          name
-        }
-      }
-    `
-    graphFetch(this.props.uri, mutation)
-      .then(res => {
-        console.log('mutation data', res)
-        this.setState({
-          text: 'Your name',
-          name: this.state.text
-        })
-      })
-      .catch(err => {
-        console.log('ERRR', err)
-      })
   }
 
   render() {
-    const { name, text } = this.state
+    const { text } = this.state
+    const { whoami } = this.props
     return (
       <View style={styles.wrapper}>
         <View style={styles.container}>
-          {!name && <Text style={styles.text}>Public key: {this.props.whoami}</Text>}
-          {name && <Text style={styles.main}>Welcome {name}</Text>}
-          <TextInput
-            placeholderTextColor={theme.dark}
-            style={styles.input}
-            onChangeText={(text) => this.setState({ text })}
-            value={text}
-          />
-          <Button
-            title="Change your name"
-            color={theme.color3}
-            onPress={() => this.publishAbout()}
-          />
+          <Query query={GET_PROFILE} variables={{ userId: whoami }}>
+            {({ loading, error, data }) => {
+              if (error) return <Text style={styles.text}>Error</Text>
+              if (!error) {
+                return (
+                  <View>
+                    {(loading || !data) && <Text style={styles.text}>Public key: {whoami}</Text>}
+                    {(data && data.profile && data.profile.name) && <Text style={styles.main}>Welcome {data.profile.name}</Text>}
+                    <Mutation
+                      mutation={PUBLISH_ABOUT}
+                      update={(cache, { data: publishAbout }) => {
+                        cache.writeQuery({
+                          query: GET_PROFILE,
+                          variables: { userId: whoami },
+                          data: { profile: {name : publishAbout.aboutMessage.name, __typename: publishAbout.aboutMessage.__typename } }
+                        });
+                      }}
+                    >
+                      {(publishAbout, { loading, error }) => (
+                        <View>
+                          <TextInput
+                            placeholderTextColor={theme.dark}
+                            style={styles.input}
+                            onChangeText={(text) => this.setState({ text })}
+                            value={text}
+                          />
+                          <Button
+                            title="Change your name"
+                            color={theme.color3}
+                            onPress={() => {
+                              publishAbout({ variables: { userId: whoami, newName: text } })
+                              this.setState({
+                                name: ''
+                              })
+                            }}
+                          />
+                          {loading && <Text style={styles.text}>Loading...</Text>}
+                          {error && <Text style={styles.text}>Error :( Try again</Text>}
+                        </View>
+                      )}
+                    </Mutation>
+                  </View>
+                )
+              }
+            }}
+          </Query>
         </View>   
       </View>
     )

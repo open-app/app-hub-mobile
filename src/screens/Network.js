@@ -6,7 +6,7 @@ import {
   Text,
   View,
 } from 'react-native'
-import { Query, Subscription } from 'react-apollo'
+import { Subscription } from 'react-apollo'
 import gql from 'graphql-tag'
 
 const SUBSCRIPTION = gql`
@@ -20,31 +20,18 @@ const SUBSCRIPTION = gql`
   }
 `
 
-const QUERY = gql`
-  query Query($userId: String!) {
-    profile(id: $userId) {
-      name
-    }
-  }
-`
-
 export default class Network extends Component {
-  handlePres = () => {
-    console.log(this.props)
-  }
   render() {
     return (
       <Subscription
-        // query={QUERY}
-        // variables={{ userId: this.props.whoami }}
         subscription={SUBSCRIPTION}
         shouldResubscribe={true}
       >
         {({ data, loading, error }) => {
           if (error) return <Text>Error</Text>
           if (loading || !data) return <Text>Loading</Text>
-          console.log('DATA', data)
-          return <Text style={styles.main} onPress={this.handlePres}>DATA</Text>
+          if (data && data.gossip.type === 'connected') return <Text>{data.gossip.peer.host}</Text>
+          else return <Text>Not connected to any peers</Text>
         }}
       </Subscription>
     )
