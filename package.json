@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "patch-package",
+    "push": "git push origin master && git push --tags ssb master",
     "build-rnnodeapp": "./tools/build-rnnodeapp",
     "build-worker-android": "./tools/build-worker-android",
     "log": "adb logcat *:S nodejs:V ReactNative:V ReactNativeJS:V",
