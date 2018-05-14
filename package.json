@@ -9,7 +9,7 @@
     "build-nodejs-app": "./tools/build-nodejs-app",
     "clean-up-bundler": "watchman watch-del-all && rm -rf $TMPDIR/react-*",
     "clean-nodejs-mobile": "cd android && ./gradlew clean",
-    "full-clean": "adb uninstall com.apphub && npm run clean-up-bundler && npm run clean-nodejs-mobile",
+    "full-clean": "adb uninstall com.apphub && npm run clean-up-bundler && npm run clean-nodejs-mobile && npm start --reset-cache",
     "test": "jest"
   },
   "dependencies": {

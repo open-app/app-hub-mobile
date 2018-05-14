@@ -1,6 +1,20 @@
 # Open App Application Hub
 
-This is the mobile application serving as entrace to the Open App Ecosystem for communities.
+This is the mobile application serving as entrance to the Open App Ecosystem for communities.
+
+## Usage
+
+`git clone https://github.com/open-app/app-hub-mobile.git`
+
+`npm i`
+
+Open the `android` folder in Android Studio to download necessary dependencies.
+
+`npm run build-nodejs-app`
+
+`react-native run-android`
+
+`npm run log` to log
 
 ## Deep linking URL schema
 [Learn more](https://developer.android.com/training/app-links/deep-linking)

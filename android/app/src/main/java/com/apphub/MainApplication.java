@@ -30,7 +30,12 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
-      new RNNodeJsMobilePackage()
+      new RNNodeJsMobilePackage(),
+      new ApkInstallerPackage(),
+      new RNI18nPackage(),
+      new VectorIconsPackage(),
+      new ReactNativePushNotificationPackage(),
+      new RNFSPackage() 
     );
   }
 
