@@ -10,22 +10,21 @@ This is the mobile application serving as entrace to the Open App Ecosystem for 
   * [dat-node](https://github.com/datproject/dat-node)
   * [Apollo GraphQL](https://www.apollographql.com/)
 * [react-native-navigation](https://github.com/wix/react-native-navigation)
-* [react-native-push-notification](https://github.com/zo0r/react-native-push-notification)
 * [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n)
 
 ### Feature list
 
-- Desktop and CLI versions []
-- Switch between multiple networks []
-- Edit Network Keys, Sign Keys []
-- Easy interface for .ssb/config []
-- Multiple users with emoji password []
-- View and update profile/about []
-- View gossiping/network []
-- View and manage space usage []
-- Explore apps with reddit like UI/UX []
-- Install apps/sbot plugins []
-- Explore app repos/git-ssb UI []
+- Desktop and CLI versions [ ]
+- Switch between multiple networks [ ]
+- Edit Network Keys, Sign Keys [ ]
+- Easy interface for .ssb/config [ ]
+- Multiple users with emoji password [ ]
+- View and update profile/about [ ]
+- View gossiping/network [ ]
+- View and manage space usage [ ]
+- Explore apps with reddit like UI/UX [ ]
+- Install apps/sbot plugins [ ]
+- Explore app repos/git-ssb UI [ ]
 
 ### Inspirations
 
