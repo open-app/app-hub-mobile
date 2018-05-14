@@ -1,16 +1,15 @@
-rootProject.name = 'p2pboilerplate'
-include ':react-native-navigation'
-project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app')
-include ':react-native-i18n'
-project(':react-native-i18n').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-i18n/android')
-include ':react-native-tcp'
-project(':react-native-tcp').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tcp/android')
+rootProject.name = 'AppHub'
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 include ':react-native-fs'
 project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
-include ':react-native-randombytes'
-project(':react-native-randombytes').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-randombytes/android')
-include ':react-native-os'
-project(':react-native-os').projectDir = new File(rootProject.projectDir, '../node_modules/@staltz/react-native-os/android')
-include ':react-native-node'
-project(':react-native-node').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-node/android')
+include ':react-native-apk-installer'
+project(':react-native-apk-installer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-apk-installer/android')
+include ':react-native-i18n'
+project(':react-native-i18n').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-i18n/android')
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app')
+include ':nodejs-mobile-react-native'
+project(':nodejs-mobile-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/nodejs-mobile-react-native/android')
+
 include ':app'

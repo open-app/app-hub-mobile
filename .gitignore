@@ -1,5 +1,4 @@
 # OSX
-lib/
 #
 .DS_Store
 .history/
@@ -30,6 +29,11 @@ build/
 .gradle
 local.properties
 *.iml
+android/.project
+android/app/.classpath
+android/app/.project
+android/app/.settings/org.eclipse.buildship.core.prefs
+android/.settings/org.eclipse.buildship.core.prefs
 
 # End-to-end tests
 #
@@ -66,8 +70,7 @@ buck-out/
 # Generated Code
 #
 /lib/
-/rnnodeapp
-/rnnodeapp/lib
+/nodejs-assets
 /android/app/src/main/res/raw/rnnodebundle
 /android/app/src/main/assets/worker.bundle*
 

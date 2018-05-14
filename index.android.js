@@ -1,16 +1,13 @@
-require('react-native-ssb-shims')
 import { Navigation } from 'react-native-navigation'
 import { registerScreens } from './src/screens'
-import RNNode from "react-native-node"
+import nodejs from 'nodejs-mobile-react-native'
+nodejs.start('index.js')
 const uri = 'http://localhost:4000/graphql'
 
-
-RNNode.start()
 registerScreens()
 Navigation.startSingleScreenApp({
   screen: {
     screen: 'loading', // unique ID registered with Navigation.registerScreen
-    // title: 'Profile', // title of the screen as appears in the nav bar (optional)
     navigatorStyle: { navBarHidden: true }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
     navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
   },

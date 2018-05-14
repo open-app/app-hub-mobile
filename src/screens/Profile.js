@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native'
 import { Query, Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
+import { gql } from 'apollo-boost'
 import theme from '../utils/theme'
 
 const GET_PROFILE = gql`
