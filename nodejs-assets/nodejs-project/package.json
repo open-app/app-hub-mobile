@@ -6,9 +6,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
   "dependencies": {
     "dat-graphql": "0.0.2",
-    "open-app-graphql-server": "0.0.4",
+    "open-app-graphql-server": "0.0.6",
     "ssb-graphql-defaults": "^1.0.1"
+  },
+  "devDependencies": {
+    "patch-package": "^5.1.1"
   }
 }

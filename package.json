@@ -6,10 +6,11 @@
     "prepare": "patch-package",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "log": "adb logcat *:S nodejs:V ReactNative:V ReactNativeJS:V 'NODEJS-MOBILE'",
-    "build-nodejs-app": "./tools/build-nodejs-app",
+    "build-nodejs-app": "cd nodejs-assets/nodejs-project && npm i && cd ../..",
     "clean-up-bundler": "watchman watch-del-all && rm -rf $TMPDIR/react-*",
     "clean-nodejs-mobile": "cd android && ./gradlew clean",
     "full-clean": "adb uninstall com.apphub && npm run clean-up-bundler && npm run clean-nodejs-mobile && npm start --reset-cache",
+    "purification": "rm -rf node_modules/nodejs-mobile-react-native/android/.externalNativeBuild && rm -rf node_modules/nodejs-mobile-react-native/android/build && rm -rf android/build && rm -rf android/app/build",
     "test": "jest"
   },
   "dependencies": {
