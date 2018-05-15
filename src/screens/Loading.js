@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import I18n from 'react-native-i18n'
 import {
   View,
   Text,
@@ -63,6 +62,5 @@ const styles = StyleSheet.create({
     color: theme.light,
     paddingBottom: 60,
     fontSize: 16,
-    // textTransform: 'uppercase'
   },
 })

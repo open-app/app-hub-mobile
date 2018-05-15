@@ -1,56 +1,53 @@
-# P2P Boilerplate
+# Open App Application Hub
 
-An as easy as possible to use boilerplate for creating peer-to-peer [React Native](https://facebook.github.io/react-native/) applications using [Secure Scuttlebot](https://scuttlebot.io/) and [Dat](https://datproject.org) protocols behind a [GraphQL](http://graphql.org/) layer.
-
-Based on [MMMMM](https://github.com/staltz/mmmmm-mobile), [dat-installer](https://github.com/staltz/dat-installer) and [ssb-graphql](https://github.com/stanleyjones/ssb-graphql).
-
-- Scuttlebot Server :white_check_mark:
-- Scuttlebot Client :white_check_mark:
-- GraphQL SSB :white_check_mark:
-- Pull/Push Scuttlebot data :white_check_mark:
-- GraphQL Dat :x:
-- Set Dat storage path :x:
-- Pull/Push Dat data :x:
-- Easy app rebranding :x:
-
-## Install dependencies
-
-Use node `v8.9.x` and npm `v5.6.x`.
-
-**Mac OS note**: You might need `realpath`, install it through coreutils:
-
-```
-brew update
-brew install coreutils
-```
-
+This is the mobile application serving as entrance to the Open App Ecosystem for communities.
 
 ## Usage
 
-Doesn't work well on emulators, so make sure you have [react-native](https://facebook.github.io/react-native/) setup and your device ready.
+`git clone https://github.com/open-app/app-hub-mobile.git`
 
-Clone and install:
+`npm i`
 
-```
-git clone https://github.com/luandro/p2pboilerplate.git
-cd p2pboilerplate
-npm i
-```
+Open the `android` folder in Android Studio to download necessary dependencies.
 
-We also need to run `npm run prepare` in order to patch the necessary packages. We should fork these instead of using the hack.
+`npm run build-nodejs-app`
 
-Now run `npm run build` which takes care of building back-end and front-end, will also run `react-native run-android` to start emulation and logging.
+`react-native run-android`
 
-In case you want to play with the back-end, run `npm run node` which will concurrently run Babel watch and nodemon for the application. You can check the GraphQL playground at [http://localhost:4000/playground](http://localhost:4000/playground).
+`npm run log` to log
 
-## Troubleshooting
+## Deep linking URL schema
+[Learn more](https://developer.android.com/training/app-links/deep-linking)
 
-1. Check Android files for duplicate declarations:
-- `android/settings.gradle`
-- `android/app/build.gradle`
-- `android/app/src/main/java/com/p2pboilerplate/MainApplication.java`
+- `apphub://app/appID`
 
-2. Use `adb logcat *:S nodejs:V ReactNative:V ReactNati
-veJS:V` to log NodeJS applications.
 
-3. Use `adb reverse tcp:8081 tcp:8081` to reconnect to the server
+## Built with
+
+* [nodejs-mobile-react-native](https://github.com/janeasystems/nodejs-mobile-react-native/)
+* [open-app-graphql-server](https://github.com/open-app/open-app-graphql-server)
+  * [scuttlebot](https://github.com/ssbc/scuttlebot)
+  * [dat-node](https://github.com/datproject/dat-node)
+  * [Apollo GraphQL](https://www.apollographql.com/)
+* [react-native-navigation](https://github.com/wix/react-native-navigation)
+* [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n)
+
+### Feature list
+
+- [ ] Desktop and CLI versions
+- [ ] Switch between multiple networks
+- [ ] Edit Network Keys, Sign Keys
+- [ ] Easy interface for .ssb/config
+- [ ] Multiple users with emoji password
+- [ ] View and update profile/about
+- [ ] View gossiping/network
+- [ ] View and manage space usage
+- [ ] Explore apps with reddit like UI/UX
+- [ ] Install apps/sbot plugins
+- [ ] Explore app repos/git-ssb UI
+
+### Inspirations
+
+- https://github.com/soapdog/patchfox
+- https://github.com/jeswin/ssb-helm
+- https://www.npmjs.com/package/ssb-afterparty
