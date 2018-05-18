@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.dark,
+    backgroundColor: theme.light,
   },
   loadingText: {
-    color: theme.light,
+    color: theme.dark,
     paddingBottom: 60,
     fontSize: 16,
   },

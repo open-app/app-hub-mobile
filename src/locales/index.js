@@ -10,7 +10,11 @@ I18n.translations = {
     applications: 'Applications',
     name: 'Name',
     publicKey: 'Public key',
-    loadingServer: 'Loading server'
+    loadingServer: 'Loading server',
+    notificationTitle: 'Conected to the ecosystem',
+    notificationAction: 'Stop server',
+    notificationMessage: 'Touch to open the application hub',
+    
   },
   pt: {
     profile: 'Perfil',
@@ -18,7 +22,10 @@ I18n.translations = {
     applications: 'Aplicativos',
     name: 'Nome',
     publicKey: 'Chave pública',
-    loadingServer: 'Carregando o servidor'
+    loadingServer: 'Carregando o servidor',
+    notificationTitle: 'Conectado ao ecosistema',
+    notificationAction: 'Para servidor',
+    notificationMessage: 'Toque para abrir o aplicativo',
   },
 }
 

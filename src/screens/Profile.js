@@ -95,18 +95,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.dark,
+    backgroundColor: theme.light,
   },
   container: {
     maxWidth: '87%',
   },
   main: {
     fontSize: 22,
-    color: theme.light,
+    color: theme.dark,
     paddingBottom: 30
   },
   text: {
-    color: theme.light,
+    color: theme.dark,
     paddingBottom: 10
   },
   id: {
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     backgroundColor: theme.light,
-    borderWidth: 1,
+    borderWidth: 0,
   },
   button: {
     paddingTop: 12,

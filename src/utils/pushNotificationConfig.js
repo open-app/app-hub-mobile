@@ -1,21 +1,19 @@
 import PushNotification from 'react-native-push-notification'
 import { PushNotificationIOS, DeviceEventEmitter } from 'react-native'
 import RNExitApp from 'react-native-exit-app'
+import i18n from '../locales'
+ 
 
 (function() {
   // Register all the valid actions for notifications here and add the action handler for each action
-  PushNotification.registerNotificationActions([' Ok','Close' ]);
+  PushNotification.registerNotificationActions([ i18n.t('notificationAction') ])
   DeviceEventEmitter.addListener('notificationActionReceived', (action) => {
-    console.log ('Notification action received: ' + action);
-    const info = JSON.parse(action.dataJSON);
-    if (info.action == 'Ok') {
-      // Do work pertaining to Accept action here
-    } else if (info.action == 'Close') {
-      // Do work pertaining to Reject action here
+    console.log ('Notification action received: ' + action)
+    const info = JSON.parse(action.dataJSON)
+    if (info.action == i18n.t('notificationAction')) {
       RNExitApp.exitApp()
     }
-    // Add all the required actions handlers
-  });
+  })
 })()
 
 const configure = PushNotification.configure({
@@ -57,20 +55,20 @@ const localNotification = () => {
     ongoing: true,
     largeIcon: "ic_launcher",
     smallIcon: "ic_notification",
-    bigText: "My big text that will be shown when notification is expanded",
+    // bigText: "My big text that will be shown when notification is expanded",
     // subText: "This is a subText",
     color: "green",
     vibrate: false,
     // vibration: 300,
-    title: "Application Hub",
-    message: "Server running on the background.",
+    title: i18n.t('notificationTitle'),
+    message: i18n.t('notificationMessage'),
     playSound: false,
     // soundName: 'default',
-    actions: '["Ok", "Close"]',
+    actions: `["${i18n.t('notificationAction')}"]`,
   })
  }
 
-const cancelNotification = id => PushNotification.cancelLocalNotifications({id });
+const cancelNotification = id => PushNotification.cancelLocalNotifications({id })
 
 const cancelAllNotifications = () => PushNotification.cancelAllLocalNotifications()
  
