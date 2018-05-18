@@ -2627,7 +2627,7 @@ hoek@4.x.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
 
-hoist-non-react-statics@^2.3.1:
+hoist-non-react-statics@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
 
@@ -4498,12 +4498,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apollo@^2.1.0-beta.3:
-  version "2.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.1.0-beta.3.tgz#f24534409d46f9e3fc1b21ced1553940522be869"
+react-apollo@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.1.4.tgz#a51059ac56f1a7997cad636a5d36398b9c93ff12"
   dependencies:
     fbjs "^0.8.16"
-    hoist-non-react-statics "^2.3.1"
+    hoist-non-react-statics "^2.5.0"
     invariant "^2.2.2"
     lodash "4.17.5"
     prop-types "^15.6.0"
@@ -4554,9 +4554,9 @@ react-native-i18n@^2.0.12:
   dependencies:
     i18n-js "^3.0.3"
 
-react-native-navigation@^1.1.458:
-  version "1.1.458"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.458.tgz#fe0ad5f7948768a82ebe69ed4bfc319c94ff9893"
+react-native-navigation@^1.1.462:
+  version "1.1.462"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.462.tgz#a0db454177ebecd439db5d802d3624ba2cf4eb5e"
   dependencies:
     lodash "4.x.x"
 
@@ -4669,9 +4669,9 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@16.3.1:
-  version "16.3.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
+react@16.3.2:
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
