@@ -26,7 +26,6 @@ export default class Loading extends Component {
     graphFetch(this.props.uri, whoamiQuery)
       .then(res => {
         fetched = true
-        console.log('Reply', res.data.whoami)
         this.startMainApp(res.data.whoami)
       })
       .catch(err => {

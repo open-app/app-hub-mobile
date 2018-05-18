@@ -4537,6 +4537,10 @@ react-native-apk-installer@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/react-native-apk-installer/-/react-native-apk-installer-0.0.2.tgz#48c351e59120e247645e0779aa04264f0c0e127b"
 
+react-native-exit-app@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-exit-app/-/react-native-exit-app-1.0.0.tgz#a2fbb121d902e6967cd8a365fe8453e5c4bc3172"
+
 react-native-fs@^2.9.12:
   version "2.9.12"
   resolved "https://registry.yarnpkg.com/react-native-fs/-/react-native-fs-2.9.12.tgz#88d6c1e8eb26acbebca955e1cbd9c47d2c9452ba"

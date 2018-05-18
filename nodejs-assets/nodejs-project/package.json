@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "dat-graphql": "0.0.2",
-    "open-app-graphql-server": "0.0.6",
+    "open-app-graphql-server": "0.0.7",
     "ssb-graphql-defaults": "^1.0.1"
   },
   "devDependencies": {
