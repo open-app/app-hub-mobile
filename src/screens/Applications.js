@@ -14,34 +14,6 @@ import RNFS from 'react-native-fs'
 import ApkInstaller from 'react-native-apk-installer'
 import { pushNotification } from '../utils/pushNotification';
 import theme from '../utils/theme'
-// import { Navigation } from 'react-native-navigation'
-
-// export default (props) => {
-//   Navigation.startTabBasedApp({
-//     tabs: [
-//       {
-//         label: 'Popular',
-//         screen: 'applications', // this is a registered name for a screen
-//         icon: require('../assets/applications.png'),
-//       },
-//       {
-//         label: 'Hot',
-//         screen: 'profile', // this is a registered name for a screen
-//         icon: require('../assets/profile.png'),
-//       }
-//     ],
-//     passProps: props,
-//     animationType: 'fade',
-//     tabsStyle: {
-//       tabBarBackgroundColor: theme.light,
-//     },
-//     appStyle: {
-//       tabBarButtonColor: theme.dark,
-//       tabBarSelectedButtonColor: theme.color1,
-//       initialTabIndex: 1,
-//     },
-//   })
-// }
 
 export default class Applications extends Component {
   state = {
