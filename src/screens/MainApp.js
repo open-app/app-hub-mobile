@@ -50,6 +50,13 @@ export default (props) => {
         screen: 'profile', // this is a registered name for a screen
         icon: require('../assets/profile.png'),
         navigatorStyle: navigatorStyle(props),
+        navigatorButtons: {
+          leftButtons: [
+            {
+              id: "sideMenu"
+            }
+          ]
+        },      
         topTabs: [
           {
             screenId: 'profile',
@@ -78,12 +85,26 @@ export default (props) => {
         screen: 'messages', // this is a registered name for a screen
         icon: require('../assets/messages.png'),
         navigatorStyle: navigatorStyle(props),
+        navigatorButtons: {
+          leftButtons: [
+            {
+              id: "sideMenu"
+            }
+          ]
+        },
       },
       {
         label: 'Git',
         screen: 'git', // this is a registered name for a screen
         icon: require('../assets/git.png'),
         navigatorStyle: navigatorStyle(props),
+        navigatorButtons: {
+          leftButtons: [
+            {
+              id: "sideMenu"
+            }
+          ]
+        },
         topTabs: [
           {
             screenId: 'network',
@@ -112,6 +133,13 @@ export default (props) => {
         screen: 'network', // this is a registered name for a screen
         icon: require('../assets/network.png'),
         navigatorStyle: navigatorStyle(props),
+        navigatorButtons: {
+          leftButtons: [
+            {
+              id: "sideMenu"
+            }
+          ]
+        },
         topTabs: [
           {
             screenId: 'network',
