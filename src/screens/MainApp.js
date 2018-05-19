@@ -2,11 +2,14 @@ import { Navigation } from 'react-native-navigation'
 import i18n from '../locales'
 import theme from '../utils/theme'
 
-const navigatorStyle = {
-  navBarBackgroundColor: theme.color1,
-  navBarCustomView: 'applicationsNavbar',
-  topBarCollapseOnScroll: true,
-  navBarTextFontSize: 8,
+function navigatorStyle (props) {
+  return {
+    navBarBackgroundColor: theme.color1,
+    navBarCustomView: 'applicationsNavbar',
+    navBarCustomViewInitialProps: props,
+    topBarCollapseOnScroll: true,
+    // navBarTextFontSize: 8,
+  }
 }
 
 export default (props) => {
@@ -16,19 +19,29 @@ export default (props) => {
         label: i18n.t('applications'),
         screen: 'applications', // this is a registered name for a screen
         icon: require('../assets/applications.png'),
-        navigatorStyle,
+        navigatorStyle: navigatorStyle(props),
+        navigatorButtons: {
+          leftButtons: [
+            {
+              id: "sideMenu"
+            }
+          ]
+        },        
         topTabs: [
           {
-            screenId: 'network',
-            title: 'Popular'
+            screenId: 'applications',
+            title: 'Popular',
+            passProps: props,
           },
           {
             screenId: 'profile',
-            title: 'Hot'
+            title: 'Hot',
+            passProps: props,
           },
           {
             screenId: 'network',
-            title: 'New'
+            title: 'New',
+            passProps: props,
           }
         ]
       },
@@ -36,23 +49,27 @@ export default (props) => {
         label: i18n.t('profile'),
         screen: 'profile', // this is a registered name for a screen
         icon: require('../assets/profile.png'),
-        navigatorStyle,
+        navigatorStyle: navigatorStyle(props),
         topTabs: [
           {
-            screenId: 'network',
-            title: 'Bio'
+            screenId: 'profile',
+            title: 'Bio',
+            passProps: props,
           },
           {
             screenId: 'profile',
-            title: 'Gallery'
+            title: 'Gallery',
+            passProps: props,
           },
           {
             screenId: 'network',
-            title: 'Repos'
+            title: 'Repos',
+            passProps: props,
           },
           {
             screenId: 'network',
-            title: 'Network'
+            title: 'Network',
+            passProps: props,
           }
         ]
       },
@@ -60,29 +77,33 @@ export default (props) => {
         label: 'Messages',
         screen: 'messages', // this is a registered name for a screen
         icon: require('../assets/messages.png'),
-        navigatorStyle,
+        navigatorStyle: navigatorStyle(props),
       },
       {
         label: 'Git',
         screen: 'git', // this is a registered name for a screen
         icon: require('../assets/git.png'),
-        navigatorStyle,
+        navigatorStyle: navigatorStyle(props),
         topTabs: [
           {
             screenId: 'network',
-            title: 'Activity'
+            title: 'Activity',
+            passProps: props,
           },
           {
             screenId: 'profile',
-            title: 'Issues'
+            title: 'Issues',
+            passProps: props,
           },
           {
             screenId: 'network',
-            title: 'Pull Requests'
+            title: 'Pull Requests',
+            passProps: props,
           },
           {
             screenId: 'network',
-            title: 'Contributions'
+            title: 'Contributions',
+            passProps: props,
           }
         ]
       },
@@ -90,23 +111,31 @@ export default (props) => {
         label: i18n.t('network'),
         screen: 'network', // this is a registered name for a screen
         icon: require('../assets/network.png'),
-        navigatorStyle,
+        navigatorStyle: navigatorStyle(props),
         topTabs: [
           {
             screenId: 'network',
-            title: 'Secure Scuttlebutt'
+            title: 'Secure Scuttlebutt',
+            passProps: props,
           },
           {
             screenId: 'profile',
-            title: 'DAT'
+            title: 'DAT',
+            passProps: props,
           },
         ]
       },
     ],
     passProps: props,
+    // animationType: Platform.OS === 'ios' ? 'slide-down' : 'fade',
     animationType: 'fade',
     tabsStyle: {
       tabBarBackgroundColor: theme.light,
+    },
+    drawer: {
+      left: {
+        screen: 'drawer'
+      }
     },
     appStyle: {
       tabBarButtonColor: theme.dark,

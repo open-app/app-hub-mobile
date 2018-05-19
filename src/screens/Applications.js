@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import * as Progress from 'react-native-progress'
 import RNFS from 'react-native-fs'
 import ApkInstaller from 'react-native-apk-installer'
-import { pushNotification } from '../utils/pushNotification';
+import { pushNotification } from '../utils/pushNotification'
 import theme from '../utils/theme'
 
 export default class Applications extends Component {
@@ -21,11 +21,11 @@ export default class Applications extends Component {
   }
 
   componentDidMount() {
-    AppState.addEventListener('change', this._handleAppStateChange);
+    AppState.addEventListener('change', this._handleAppStateChange)
   }
 
   componentWillUnmount() {
-    AppState.removeEventListener('change', this._handleAppStateChange);
+    AppState.removeEventListener('change', this._handleAppStateChange)
   }
 
   _handleAppStateChange = (nextAppState) => {
@@ -34,9 +34,9 @@ export default class Applications extends Component {
       pushNotification.cancelAllNotifications()
     } else if (nextAppState === 'background') {
       console.log('Gone to background!')
-      pushNotification.localNotification();
+      pushNotification.localNotification()
     }
-    this.setState({appState: nextAppState});
+    this.setState({appState: nextAppState})
   }
   render() {
     return (
