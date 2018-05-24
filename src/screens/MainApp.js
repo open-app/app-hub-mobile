@@ -26,24 +26,7 @@ export default (props) => {
               id: "sideMenu"
             }
           ]
-        },        
-        topTabs: [
-          {
-            screenId: 'applications',
-            title: 'Popular',
-            passProps: props,
-          },
-          {
-            screenId: 'profile',
-            title: 'Hot',
-            passProps: props,
-          },
-          {
-            screenId: 'network',
-            title: 'New',
-            passProps: props,
-          }
-        ]
+        },
       },
       {
         label: i18n.t('profile'),
@@ -57,76 +40,28 @@ export default (props) => {
             }
           ]
         },      
-        topTabs: [
-          {
-            screenId: 'profile',
-            title: 'Bio',
-            passProps: props,
-          },
-          {
-            screenId: 'profile',
-            title: 'Gallery',
-            passProps: props,
-          },
-          {
-            screenId: 'network',
-            title: 'Repos',
-            passProps: props,
-          },
-          {
-            screenId: 'network',
-            title: 'Network',
-            passProps: props,
-          }
-        ]
-      },
-      {
-        label: 'Messages',
-        screen: 'messages', // this is a registered name for a screen
-        icon: require('../assets/messages.png'),
-        navigatorStyle: navigatorStyle(props),
-        navigatorButtons: {
-          leftButtons: [
-            {
-              id: "sideMenu"
-            }
-          ]
-        },
-      },
-      {
-        label: 'Git',
-        screen: 'git', // this is a registered name for a screen
-        icon: require('../assets/git.png'),
-        navigatorStyle: navigatorStyle(props),
-        navigatorButtons: {
-          leftButtons: [
-            {
-              id: "sideMenu"
-            }
-          ]
-        },
-        topTabs: [
-          {
-            screenId: 'network',
-            title: 'Activity',
-            passProps: props,
-          },
-          {
-            screenId: 'profile',
-            title: 'Issues',
-            passProps: props,
-          },
-          {
-            screenId: 'network',
-            title: 'Pull Requests',
-            passProps: props,
-          },
-          {
-            screenId: 'network',
-            title: 'Contributions',
-            passProps: props,
-          }
-        ]
+        // topTabs: [
+        //   {
+        //     screenId: 'profile',
+        //     title: 'Bio',
+        //     passProps: props,
+        //   },
+        //   {
+        //     screenId: 'profile',
+        //     title: 'Gallery',
+        //     passProps: props,
+        //   },
+        //   {
+        //     screenId: 'network',
+        //     title: 'Repos',
+        //     passProps: props,
+        //   },
+        //   {
+        //     screenId: 'network',
+        //     title: 'Network',
+        //     passProps: props,
+        //   }
+        // ]
       },
       {
         label: i18n.t('network'),

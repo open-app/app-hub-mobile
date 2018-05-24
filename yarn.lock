@@ -4554,7 +4554,7 @@ react-native-i18n@^2.0.12:
   dependencies:
     i18n-js "^3.0.3"
 
-react-native-navigation@^1.1.462:
+react-native-navigation@1.1.462:
   version "1.1.462"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.462.tgz#a0db454177ebecd439db5d802d3624ba2cf4eb5e"
   dependencies:
