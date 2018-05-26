@@ -8,7 +8,6 @@ function navigatorStyle (props) {
     navBarCustomView: 'applicationsNavbar',
     navBarCustomViewInitialProps: props,
     topBarCollapseOnScroll: true,
-    // navBarTextFontSize: 8,
   }
 }
 
@@ -65,7 +64,7 @@ export default (props) => {
       },
       {
         label: i18n.t('network'),
-        screen: 'network', // this is a registered name for a screen
+        screen: 'networkSsb', // this is a registered name for a screen
         icon: require('../assets/network.png'),
         navigatorStyle: navigatorStyle(props),
         navigatorButtons: {
@@ -77,12 +76,12 @@ export default (props) => {
         },
         topTabs: [
           {
-            screenId: 'network',
+            screenId: 'networkSsb',
             title: 'Secure Scuttlebutt',
             passProps: props,
           },
           {
-            screenId: 'profile',
+            screenId: 'networkDat',
             title: 'DAT',
             passProps: props,
           },

@@ -12,8 +12,24 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import * as Progress from 'react-native-progress'
 import RNFS from 'react-native-fs'
 import ApkInstaller from 'react-native-apk-installer'
+import { Query } from 'react-apollo'
+import { gql } from 'apollo-boost'
 import { pushNotification } from '../utils/pushNotification'
 import theme from '../utils/theme'
+import ApplicationItem from '../components/ApplicationItem'
+
+const GET_APPLICATIONS = gql`
+  query Query {
+    getApplications {
+      name
+      author
+      appUrl
+      datHash
+      repository
+      description
+    }
+  }
+`
 
 export default class Applications extends Component {
   state = {
@@ -22,6 +38,7 @@ export default class Applications extends Component {
 
   componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange)
+    RNFS.mkdir(`${RNFS.ExternalStorageDirectoryPath}/AppHub`)
   }
 
   componentWillUnmount() {
@@ -38,18 +55,49 @@ export default class Applications extends Component {
     }
     this.setState({appState: nextAppState})
   }
+  handleInstall = (datHash) => {
+    try {
+      const dest = `${RNFS.ExternalStorageDirectoryPath}/AppHub/${datHash}`
+      const src = `${RNFS.DocumentDirectoryPath}/dat/${datHash}`
+      RNFS.mkdir(dest)
+        .then(() => {
+          RNFS.readFile(`${src}/metadata.json`, 'utf8')
+          .then(contents => {
+            const metadata = JSON.parse(contents)
+            const apkFile = metadata.apk
+            const filePath = `${src}${apkFile}`
+            const finalPath = `${dest}${datHash}.apk`
+            RNFS.copyFile(filePath, finalPath)
+            ApkInstaller.install(finalPath)
+          })
+          .catch(err => console.warn(err))
+        })
+        .catch(err => console.warn(err))
+  }
+  catch(error) {
+      console.warn(error)
+  }
+}
   render() {
     return (
-      <View style={styles.wrapper}>
-        <View style={styles.container}>
-          {/* <Progress.Circle size={30} indeterminate={true} /> */}
-          <ActionButton
-            position="right"
-            buttonColor="rgba(231,76,60,1)"
-            onPress={() => { console.log("hi")}}>
-            <Icon name="md-create" style={styles.actionButtonIcon} />
-          </ActionButton>
-        </View>
+      <View style={styles.container}>
+        <Query
+          style={styles.wrapper}
+          query={GET_APPLICATIONS}
+        >
+          {({ loading, error, data }) => {
+            if (error) return <Text style={styles.text}>Error</Text>
+            if (loading) return <Progress.Circle size={30} indeterminate={true} />
+            if (data) {
+              console.log('DATA', data)
+              return data.getApplications.map((app, key) => {
+                return (
+                  <ApplicationItem key={key} {...app} handleInstall={(filePath) => this.handleInstall(filePath)} />
+                )
+              })
+            }
+          }}  
+        </Query>
       </View>
     )
   }
@@ -57,13 +105,12 @@ export default class Applications extends Component {
 
 const styles = StyleSheet.create({
   wrapper: {
-    // flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: theme.light,
   },
   container: {
-    maxWidth: '87%',
   },
   text: {
     color: theme.dark

@@ -10,9 +10,11 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "dat-graphql": "0.0.2",
-    "open-app-graphql-server": "0.0.7",
-    "ssb-graphql-defaults": "^1.0.1"
+    "apphub-graphql": "0.0.4",
+    "community-apps-ssb-plugin": "0.0.3",
+    "dat-graphql": "0.0.4",
+    "open-app-graphql-server": "0.0.10",
+    "ssb-graphql-defaults": "^1.0.2"
   },
   "devDependencies": {
     "patch-package": "^5.1.1"
