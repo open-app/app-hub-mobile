@@ -6,6 +6,7 @@ import {
   Text,
   View,
   AppState,
+  ScrollView,
 } from 'react-native'
 import ActionButton from 'react-native-action-button'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -89,14 +90,13 @@ export default class Applications extends Component {
             if (error) return <Text style={styles.text}>Error</Text>
             if (loading) return <Progress.Circle size={30} indeterminate={true} />
             if (data) {
-              console.log('DATA', data)
-              return data.getApplications.map((app, key) => {
-                return (
-                  <ApplicationItem key={key} {...app} handleInstall={(filePath) => this.handleInstall(filePath)} />
-                )
-              })
+              return (
+                <ScrollView>
+                  {data.getApplications.map((app, key) => <ApplicationItem key={key} {...app} handleInstall={(filePath) => this.handleInstall(filePath)} />)}
+                </ScrollView>
+              )
             }
-          }}  
+          }}
         </Query>
       </View>
     )

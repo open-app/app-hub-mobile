@@ -31,9 +31,11 @@ export default class ApplicationItem extends Component {
     const { startedDownload, downloaded } = this.state
     return (
       <View style={styles.wrapper}>
-        <Text>{name}</Text>
-        <Text>{description}</Text>
-        <Text>{author}</Text>
+        <View style={styles.container}>
+          <Text style={styles.title}>{name}</Text>
+          <Text style={styles.text}>{description}</Text>
+          <Text>by {author}</Text>
+        </View>
         {!startedDownload && <Download handlePress={this.startDownload} />}
         {startedDownload && <WithDat datHash={datHash} handleInstall={this.handleInstall} />}
       </View>
@@ -57,12 +59,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 1,
-    marginTop: 10,
+    marginTop: 25,
 
   },
-
-  text: {
+  container: {
+    padding: 15,
+  },
+  title: {
     fontSize: 22,
+    color: theme.dark,
+  },
+  text: {
+    fontSize: 16,
     color: theme.dark,
   }
 })

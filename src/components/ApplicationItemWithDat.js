@@ -38,7 +38,7 @@ export default class ApplicationItemWithDat extends Component {
           return (
             <View>
               {done
-                ? <Button title='Install' onPress={handleInstall} />
+                ? <Button title='Install' onPress={handleInstall} color={theme.dark} />
                 : <ActivityIndicator />
               }
               <Text>{peers}</Text>

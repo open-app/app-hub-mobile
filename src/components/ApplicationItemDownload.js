@@ -14,6 +14,7 @@ export default class ApplicationItemDownload extends Component {
       <View>
         <Button
           title={'Download'}
+          color={theme.color1}
           onPress={this.props.handlePress}
         />
       </View>

@@ -65,7 +65,7 @@ export default class Profile extends Component {
                           <View style={styles.button}>
                             <Button
                               title="Change your name"
-                              color={theme.color3}
+                              color={theme.color1}
                               onPress={() => {
                                 publishAbout({ variables: { userId: whoami, newName: text } })
                                 this.setState({
