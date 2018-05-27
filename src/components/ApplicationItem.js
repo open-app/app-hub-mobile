@@ -27,6 +27,7 @@ export default class ApplicationItem extends Component {
   }
 
   render() {
+    console.log('props', this.props)
     const { name, author, repository, description, datHash } = this.props
     const { startedDownload, downloaded } = this.state
     return (
@@ -66,6 +67,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   title: {
+    fontWeight: 'bold',
     fontSize: 22,
     color: theme.dark,
   },

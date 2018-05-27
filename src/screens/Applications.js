@@ -6,7 +6,6 @@ import {
   Text,
   View,
   AppState,
-  ScrollView,
 } from 'react-native'
 import ActionButton from 'react-native-action-button'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -17,7 +16,7 @@ import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
 import { pushNotification } from '../utils/pushNotification'
 import theme from '../utils/theme'
-import ApplicationItem from '../components/ApplicationItem'
+import ApplicationList from '../components/ApplicationList'
 
 const GET_APPLICATIONS = gql`
   query Query {
@@ -74,27 +73,46 @@ export default class Applications extends Component {
           .catch(err => console.warn(err))
         })
         .catch(err => console.warn(err))
+    }
+    catch(error) {
+        console.warn(error)
+    }
   }
-  catch(error) {
-      console.warn(error)
-  }
-}
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.wrapper}>
         <Query
           style={styles.wrapper}
           query={GET_APPLICATIONS}
         >
-          {({ loading, error, data }) => {
+          {({ loading, error, data, refetch, startPolling, stopPolling }) => {
             if (error) return <Text style={styles.text}>Error</Text>
-            if (loading) return <Progress.Circle size={30} indeterminate={true} />
-            if (data) {
+            if (loading) {
               return (
-                <ScrollView>
-                  {data.getApplications.map((app, key) => <ApplicationItem key={key} {...app} handleInstall={(filePath) => this.handleInstall(filePath)} />)}
-                </ScrollView>
+                <View style={styles.container}>
+                  <Progress.Circle size={30} indeterminate={true} />
+                </View>
               )
+            }
+            if (data) {
+              if (data.getApplications.length > 0) {
+                stopPolling()
+                return <ApplicationList
+                  data={data.getApplications}
+                  handleInstall={this.handleInstall}
+                  refetch={refetch}
+                  refreshing={loading}
+                />
+              } else {
+                startPolling(500)
+                return (
+                  <View style={styles.container}>
+                    <Text style={styles.text}>No data yet, make sure there's another device running ssb on your local network.</Text>
+                    <Progress.Circle size={30} indeterminate={true} style={{ paddingTop: 30 }} />
+                  </View>
+                )
+              }
             }
           }}
         </Query>
@@ -111,9 +129,15 @@ const styles = StyleSheet.create({
     backgroundColor: theme.light,
   },
   container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '90%',
   },
   text: {
-    color: theme.dark
+    color: theme.dark,
+    textAlign: 'center',
+
   },
   actionButtonIcon: {
     fontSize: 20,
