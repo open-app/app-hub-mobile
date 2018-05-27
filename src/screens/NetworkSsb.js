@@ -18,6 +18,7 @@ const SUBSCRIPTION = gql`
         host
         key
         source
+        duration
       }
     }
   }
@@ -33,11 +34,12 @@ export default class Network extends Component {
         >
           {({ data, loading, error }) => {
             if (data && data.gossip) {
-              const { source, key } = data.gossip.peer
+              console.log('CONNECTED', data.gossip.peer)
+              const { source, key, host } = data.gossip.peer
               if (source === 'local') {
                 return <Text>Local: {key}</Text>
               } else if (source === 'pub') {
-                return <Text>Pub: {key}</Text>
+                return <Text>Pub: {host}</Text>
               }
             } 
             if (error) return <Text style={styles.text}>Error</Text>

@@ -1,5 +1,5 @@
 import PushNotification from 'react-native-push-notification'
-import { PushNotificationIOS, DeviceEventEmitter } from 'react-native'
+import { Platform, PushNotificationIOS, DeviceEventEmitter, BackHandler } from 'react-native'
 import RNExitApp from 'react-native-exit-app'
 import i18n from '../locales'
  
@@ -11,7 +11,8 @@ import i18n from '../locales'
     console.log ('Notification action received: ' + action)
     const info = JSON.parse(action.dataJSON)
     if (info.action == i18n.t('notificationAction')) {
-      RNExitApp.exitApp()
+      if (Platform.OS === 'android') BackHandler.exitApp()
+      else RNExitApp.exitApp()
     }
   })
 })()

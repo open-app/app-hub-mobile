@@ -90,7 +90,7 @@ export default class Applications extends Component {
             if (error) return <Text style={styles.text}>Error</Text>
             if (loading) {
               return (
-                <View style={styles.container}>
+                <View style={styles.textContainer}>
                   <Progress.Circle size={30} indeterminate={true} />
                 </View>
               )
@@ -98,16 +98,20 @@ export default class Applications extends Component {
             if (data) {
               if (data.getApplications.length > 0) {
                 stopPolling()
-                return <ApplicationList
-                  data={data.getApplications}
-                  handleInstall={this.handleInstall}
-                  refetch={refetch}
-                  refreshing={loading}
-                />
+                return (
+                  <View style={styles.appContainer}>
+                      <ApplicationList
+                        data={data.getApplications}
+                        handleInstall={this.handleInstall}
+                        refetch={refetch}
+                        refreshing={loading}
+                      />
+                  </View>
+                )
               } else {
                 startPolling(500)
                 return (
-                  <View style={styles.container}>
+                  <View style={styles.textContainer}>
                     <Text style={styles.text}>No data yet, make sure there's another device running ssb on your local network.</Text>
                     <Progress.Circle size={30} indeterminate={true} style={{ paddingTop: 30 }} />
                   </View>
@@ -128,7 +132,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: theme.light,
   },
-  container: {
+  appContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
