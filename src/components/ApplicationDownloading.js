@@ -5,6 +5,7 @@ import {
   TextInput,
   Text,
   View,
+  Linking,
   ActivityIndicator,
 } from 'react-native'
 import { Subscription } from 'react-apollo'
@@ -19,33 +20,38 @@ subscription Subscriptions($datHash: String!) {
 }
 `
 
-export default class ApplicationItemWithDat extends Component {
+class Finished extends Component {
+  componentDidMount() {
+    this.props.finishDownload()
+  }
   render() {
-    const { handleInstall, datHash } = this.props
+    return <View />
+  }
+}
+
+export default class ApplicationDownloading extends Component {
+  render() {
+    const { finishDownload, datHash, appurl } = this.props
     return (
       <Subscription
       subscription={DOWNLOAD_DAT}
       shouldResubscribe={true}
-      variables={{ datHash: this.props.datHash }}
+      variables={{ datHash }}
     >
       {({ data, loading, error }) => {
-        console.log('DATA', data)
-        console.log('loading', loading)
         if (loading) return <ActivityIndicator />
         if (error) console.warn(error)
         if (data) {
           const { downloadDat: { done, peers } } = data
+          if (done) return <Finished finishDownload={finishDownload} />
           return (
             <View>
-              {done
-                ? <Button title='Install' onPress={handleInstall} color={theme.dark} />
-                : <ActivityIndicator />
-              }
-              <Text>{peers}</Text>
+              <ActivityIndicator />
+              <Text>{peers} peers</Text>
             </View>
           )
         }
-        return <Text>What else?</Text>
+        return <Text>???</Text>
       }}
     </Subscription>
     )

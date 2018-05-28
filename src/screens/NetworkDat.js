@@ -26,7 +26,7 @@ export default class Network extends Component {
           query={QUERY}
         >
           {({ data, loading, error }) => {
-            console.log('DATA', data)
+            console.log('Dats', data)
             if (error) return <Text style={styles.text}>Error</Text>
             if (loading || !data) return <Text style={styles.text}>Loading</Text>
             if (data.getDats[0]) return data.getDats.map(i => <Text key={i.name}>{i.name}</Text>)

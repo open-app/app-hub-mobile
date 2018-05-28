@@ -12,7 +12,7 @@ import ApplicationItem from '../components/ApplicationItem'
 
 export default class ApplicationList extends PureComponent {
   render() {
-    const { handleInstall, refetch, refreshing, data} = this.props
+    const { handleInstall, refetch, refreshing, data, dats, datRefetch } = this.props
     return (
       <FlatList
         data={data}
@@ -21,7 +21,8 @@ export default class ApplicationList extends PureComponent {
         refreshing={refreshing}
         renderItem={item => <ApplicationItem
           {...item.item}
-          handleInstall={() => this.props.handleInstall(item.datHash)}
+          dats={dats}
+          handleInstall={() => handleInstall(item.item.datHash)}
         />}
       />
     );

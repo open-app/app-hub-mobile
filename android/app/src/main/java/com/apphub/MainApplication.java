@@ -36,7 +36,8 @@ public class MainApplication extends NavigationApplication {
       new RNI18nPackage(),
       new VectorIconsPackage(),
       new ReactNativePushNotificationPackage(),
-      new RNFSPackage() 
+      new RNFSPackage(),
+      new PackageInfoPackage()
     );
   }
 
