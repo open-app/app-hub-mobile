@@ -11,7 +11,7 @@
     "clean-nodejs-mobile": "cd android && ./gradlew clean",
     "full-clean": "adb uninstall com.apphub && npm run clean-up-bundler && npm run clean-nodejs-mobile && npm start --reset-cache",
     "purification": "rm -rf node_modules/nodejs-mobile-react-native/android/.externalNativeBuild && rm -rf node_modules/nodejs-mobile-react-native/android/build && rm -rf android/build && rm -rf android/app/build",
-    "release": "cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/app-release.apk ../../AppHub.apk && cd ..",
+    "release": "cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/app-release.apk app/build/outputs/apk/AppHub.apk && open app/build/outputs/apk/",
     "test": "jest"
   },
   "dependencies": {
