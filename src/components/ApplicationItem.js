@@ -30,6 +30,11 @@ export default class ApplicationItem extends Component {
   }
 
   componentDidUpdate() {
+    // console.log('ReactNativeAPK', ReactNativeAPK)
+    // ReactNativeAPK.getApps(apps => {
+    //   console.log(apps)
+    // })
+    
     if (this.state.finishedDownload) {
       this.getPackageInfo()
     }
@@ -54,7 +59,7 @@ export default class ApplicationItem extends Component {
               const iconFilePath = `${assetsPath}/${info.package}.png`
               RNFS.readFile(iconFilePath, 'base64')
                 .then(blob => {
-                  var base64Icon = `data:image/png;base64,${blob}`
+                  const base64Icon = `data:image/pngbase64,${blob}`
                   this.setState({
                     packageInfo: {
                       ...info,

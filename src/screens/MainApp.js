@@ -8,6 +8,7 @@ function navigatorStyle (props) {
     navBarCustomView: 'applicationsNavbar',
     navBarCustomViewInitialProps: props,
     topBarCollapseOnScroll: true,
+    navBarButtonColor: theme.dark
   }
 }
 
