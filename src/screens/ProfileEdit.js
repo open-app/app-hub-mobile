@@ -63,7 +63,7 @@ export default class ProfileEdit extends Component {
           <View style={styles.wrapper}>
              {imageBlob && <Image
                 style={{ width: 75, height: 75, resizeMode: Image.resizeMode.contain }}
-                source={{uri: `data:image/pngbase64,${JSON.parse(imageBlob)}`}}
+                source={{uri: `data:image/png;base64,${JSON.parse(imageBlob)}`}}
               />}
               {!imageBlob && <View style={styles.CircleShapeView} />}
             <TextInput
