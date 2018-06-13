@@ -14,7 +14,7 @@
     "community-apps-ssb-plugin": "0.0.3",
     "dat-graphql": "0.0.4",
     "open-app-graphql-server": "0.0.10",
-    "ssb-graphql-defaults": "^1.0.3"
+    "ssb-graphql-defaults": "^1.0.4"
   },
   "devDependencies": {
     "patch-package": "^5.1.1"

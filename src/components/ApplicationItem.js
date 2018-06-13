@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import {
-  Button,
   StyleSheet,
-  TextInput,
   Text,
   View,
   NativeModules,
   Linking,
+  ActivityIndicator,
 } from 'react-native'
 import RNFS from 'react-native-fs'
 import theme from '../utils/theme'
 import getApkPath from '../utils/getApkPath'
+import ProfileQuery from './ProfileQuery'
 import Download from './ApplicationDownload'
 import Downloading from './ApplicationDownloading'
 import Downloaded from './ApplicationDownloaded'
@@ -90,29 +90,38 @@ export default class ApplicationItem extends Component {
   }
 
   render() {
-    // console.log(this.state.packageInfo)
     const { name, author, repository, description, datHash, dats } = this.props
-    const hasDat = () => (dats.filter(dat => dat.name === datHash).length > 0)
+    const hasDat = () => {
+      if (dats) return dats.filter(dat => dat.name === datHash).length > 0
+      else return null
+    }
     const { startedDownload, finishedDownload, installed, packageInfo } = this.state
     return (
-      <View style={styles.wrapper}>
-        <View style={styles.container}>
-          <View style={styles.actions}>
-            {(!startedDownload && !hasDat()) && <Download handlePress={this.startDownload} />}
-            {(startedDownload) && <Downloading datHash={datHash} finishDownload={this.finishDownload} />}
-            {(finishedDownload || hasDat()) &&  <Downloaded
-              handleInstall={this.handleInstall}
-              handleOpen={this.handleOpen}
-              installed={installed}
-              {...packageInfo}
-              />}
-          </View>
-          <View styles={styles.info}>
-            <Text style={styles.title}>{name}</Text>
-            <Text style={styles.text}>posted by {author}</Text>
-          </View>
-        </View>
-      </View>
+      <ProfileQuery userId={author}>
+         {({ loadingProfile, profile }) => {
+           return (
+            <View style={styles.wrapper}>
+              <View style={styles.container}>
+                <View style={styles.actions}>
+                  {(!startedDownload && !hasDat()) && <Download handlePress={this.startDownload} />}
+                  {(startedDownload) && <Downloading datHash={datHash} finishDownload={this.finishDownload} />}
+                  {(finishedDownload || hasDat()) &&  <Downloaded
+                    handleInstall={this.handleInstall}
+                    handleOpen={this.handleOpen}
+                    installed={installed}
+                    {...packageInfo}
+                  />}
+                </View>
+                <View styles={styles.info}>
+                  <Text style={styles.title}>{name}</Text>
+                  {loadingProfile && <ActivityIndicator />}
+                  {profile && <Text style={styles.text}>posted by {profile.name}</Text>}
+                </View>
+              </View>
+            </View> 
+           )
+         }}
+      </ProfileQuery>
     )
   }
 }

@@ -12,10 +12,10 @@ import ApplicationItem from '../components/ApplicationItem'
 
 export default class ApplicationList extends PureComponent {
   render() {
-    const { handleInstall, refetch, refreshing, data, dats, datRefetch } = this.props
+    const { handleInstall, refetch, refreshing, applications, dats } = this.props
     return (
       <FlatList
-        data={data}
+        data={applications}
         keyExtractor={(item, key) => item.name}
         onRefresh={refetch}
         refreshing={refreshing}

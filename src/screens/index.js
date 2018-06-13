@@ -3,7 +3,7 @@ import Loading from './Loading'
 import Profile from './Profile'
 import ProfileEdit from './ProfileEdit'
 import Applications from './Applications'
-import ApplicationsNavbar from '../components/ApplicationsNavbar'
+import MainNavbar from '../components/MainNavbar'
 import NetworkSsb from './NetworkSsb'
 import NetworkDat from './NetworkDat'
 import Drawer from './Drawer'
@@ -17,6 +17,6 @@ export function registerScreens() {
   Navigation.registerComponent('networkSsb', () => ApolloWrapper(NetworkSsb))
   Navigation.registerComponent('networkDat', () => ApolloWrapper(NetworkDat))
   Navigation.registerComponent('applications', () => ApolloWrapper(Applications))
-  Navigation.registerComponent('applicationsNavbar', () => ApplicationsNavbar)
+  Navigation.registerComponent('mainNavbar', () => MainNavbar)
   Navigation.registerComponent('drawer', () => Drawer)
 }
