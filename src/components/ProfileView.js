@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import theme from '../utils/theme'
 
-export default ({ imageBlob, name, description, self, navigator, handlePress }) => (
+export default ({ imageBlob, name, description, self, navigator, handlePress, refetch }) => (
   <View style={styles.wrapper}>
     <View style={styles.container}>
       <View style={styles.infoContainer}>

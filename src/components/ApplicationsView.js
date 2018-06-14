@@ -72,9 +72,7 @@ export default class ApplicationsView extends Component {
   }
 
   render () {
-    // console.log('PROBLEMATIC PROPS', this.props)
     const {
-      loadingDats,
       loadingApplications,
       getDats,
       getApplications,

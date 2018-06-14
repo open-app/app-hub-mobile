@@ -10,8 +10,8 @@ const QUERY = gql`
 
 export default ({ children }) => (
   <Query query={QUERY}>
-    {({ loading: loadingWhoami, data: { whoami } }) =>
-      children({ loadingWhoami, whoami })
+    {({ loading: loadingWhoami, data: { whoami }, error: errorWhoami }) =>
+      children({ loadingWhoami, whoami, errorWhoami })
     }
   </Query>
 )

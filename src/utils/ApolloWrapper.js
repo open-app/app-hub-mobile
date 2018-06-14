@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { AsyncStorage, ActivityIndicator } from 'react-native'
+import { AsyncStorage } from 'react-native'
 import { CachePersistor } from 'apollo-cache-persist'
 import { ApolloProvider} from 'react-apollo'
 import { ApolloClient } from 'apollo-boost'
 import { WebSocketLink } from 'apollo-link-ws'
-import { split } from 'apollo-link'
 import { HttpLink } from 'apollo-boost'
 import { getMainDefinition } from 'apollo-utilities'
 import { InMemoryCache } from 'apollo-boost'
 import { RetryLink } from 'apollo-link-retry'
-const SCHEMA_VERSION = '1' // Must be a string.
+import Loading from '../components/Loading'
+
+const SCHEMA_VERSION = '87' // Must be a string.
 const SCHEMA_VERSION_KEY = 'apphub-cache'
 
 const defaultOptions = {
@@ -33,12 +34,18 @@ async function getApolloClient() {
     storage: AsyncStorage,
     trigger: 'background',
   })
-  const currentVersion = await AsyncStorage.getItem(SCHEMA_VERSION_KEY)
-  if (currentVersion === SCHEMA_VERSION) {
-    await persistor.restore()
-  } else {
-    await persistor.purge()
-    await AsyncStorage.setItem(SCHEMA_VERSION_KEY, SCHEMA_VERSION)
+  try {
+    const currentVersion = await AsyncStorage.getItem(SCHEMA_VERSION_KEY)
+    if (currentVersion === SCHEMA_VERSION) {
+      console.log('Restoring cache')
+      await persistor.restore()
+    } else {
+      console.log('Creating cache')
+      await persistor.purge()
+      await AsyncStorage.setItem(SCHEMA_VERSION_KEY, SCHEMA_VERSION)
+    }
+  } catch (error) {
+    console.log('ERROR on cache', error)
   }
   const wsLink = new WebSocketLink({
     uri: `ws://localhost:4000/subscriptions`,
@@ -50,7 +57,17 @@ async function getApolloClient() {
     uri: 'http://localhost:4000/graphql'
   })
   
-  const link = new RetryLink().split(
+  const link = new RetryLink({
+    delay: {
+      initial: 500,
+      max: Infinity,
+      jitter: true
+    },
+    attempts: {
+      max: Infinity,
+      retryIf: (error, _operation) => error
+    }
+  }).split(
     ({ query }) => {
       const { kind, operation } = getMainDefinition(query)
       return kind === 'OperationDefinition' && operation === 'subscription'
@@ -62,6 +79,27 @@ async function getApolloClient() {
     link,
     cache,
     defaultOptions,
+    clientState: {
+      // defaults,
+      // resolvers: {
+      //   Mutation: {
+      //     toggleTodo: (_, variables, { cache, getCacheKey }) => {
+      //       const id = getCacheKey({ __typename: 'TodoItem', id: variables.id })
+      //       const fragment = gql`
+      //         fragment completeTodo on TodoItem {
+      //           completed
+      //         }
+      //       `;
+      //       const todo = cache.readFragment({ fragment, id });
+      //       const data = { ...todo, completed: !todo.completed };
+      //       cache.writeData({ id, data });
+      //       return null;
+      //     },
+      //   },
+      // },
+      // typeDefs
+    }
+  
   })
   return client
 }
@@ -91,7 +129,7 @@ export default function ApolloWrapper(CMP) {
           </ApolloProvider>
         )
       } else {
-        return <ActivityIndicator />
+        return <Loading />
       }
     }
   }

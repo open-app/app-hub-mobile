@@ -15,7 +15,9 @@ export default class Applications extends Component {
       <DatsQuery>
         { datData => (
           <ApplicationsQuery>
-              { appsData => <ApplicationsView {...datData} {...appsData} />}
+              { appsData => {
+                return <ApplicationsView {...datData} {...appsData} />
+              }}
           </ApplicationsQuery>
         )}
       </DatsQuery>

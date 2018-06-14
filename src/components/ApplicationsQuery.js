@@ -16,9 +16,9 @@ const QUERY = gql`
 `
 
 export default ({ children }) => (
-  <Query query={QUERY}>
-    {({ loading: loadingApplications, data: { getApplications }, refetch, startPolling, stopPolling }) =>
-      children({ loadingApplications, getApplications, refetch, startPolling, stopPolling })
+  <Query query={QUERY} fetchPolicy={'cache-and-network'} errorPolicy={'all'}>
+    {({ loading: loadingApplications, data: { getApplications = {} }, error: errorApplications, refetch, startPolling, stopPolling }) =>
+      children({ loadingApplications, getApplications, errorApplications, refetch, startPolling, stopPolling })
     }
   </Query>
 )

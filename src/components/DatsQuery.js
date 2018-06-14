@@ -11,9 +11,9 @@ const QUERY = gql`
 `
 
 export default ({ children }) => (
-  <Query query={QUERY}>
-    {({ loading: loadingDats, data: { getDats } }) =>
-      children({ loadingDats, getDats })
+  <Query query={QUERY} fetchPolicy={'cache-and-network'} errorPolicy={'all'}>
+    {({ loading: loadingDats, data: { getDats = {} }, error: errorDats }) =>
+      children({ loadingDats, getDats, errorDats })
     }
   </Query>
 )

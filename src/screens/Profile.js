@@ -16,10 +16,10 @@ import ProfileView from '../components/ProfileView'
 import theme from '../utils/theme'
 
 export default class Profile extends Component {
-  handlePress = (profile, whoami) => this.props.navigator.push({
+  handlePress = (profile, whoami, refetchProfile) => this.props.navigator.push({
     screen: 'profileEdit',
     title: 'Go back',
-    passProps: {...profile, whoami},
+    passProps: {profile, whoami, refetchProfile},
     animated: true,
     animationType: 'slide-horizontal',
     backButtonTitle: 'go back',
@@ -31,17 +31,16 @@ export default class Profile extends Component {
     if (!userId) {
       return (
         <WhoamiQuery>
-          {({ whoami }) => {
-            console.log('whoami', whoami)
-            if (whoami) return (
+          {({ whoami, errorWhoami }) => {
+            if (whoami && !errorWhoami) return (
               <ProfileQuery userId={whoami}>
-                {({ profile }) => {
+                {({ profile, errorProfile, refetchProfile }) => {
                   console.log('profile', profile)
-                  if (profile) return <ProfileView
+                  if (profile && !errorProfile) return <ProfileView
                     self
                     {...profile}
                     navigator={navigator}
-                    handlePress={() => this.handlePress(profile, whoami)}
+                    handlePress={() => this.handlePress(profile, whoami, refetchProfile )}
                   />
                   else return <Loading />
                 }}
