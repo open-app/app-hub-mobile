@@ -34,9 +34,14 @@ export default class ApplicationsView extends Component {
     if (this.state.appState.match(/inactive|background/) && nextAppState === 'active') {
       console.log('App has come to the foreground!')
       pushNotification.cancelAllNotifications()
-    } else if (nextAppState === 'background') {
+    }
+    if (nextAppState === 'background') {
       console.log('Gone to background!')
       pushNotification.localNotification()
+    }
+    if (nextAppState === 'inactive') {
+      console.log('Gone inactive!')
+      // pushNotification.localNotification()
     }
     this.setState({appState: nextAppState})
   }
@@ -108,14 +113,14 @@ export default class ApplicationsView extends Component {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     backgroundColor: '#f5f5f5',
   },
   appContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   textContainer: {
     flex: 1,

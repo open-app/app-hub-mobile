@@ -7,20 +7,18 @@ import {
   Image,
 } from 'react-native'
 import theme from '../utils/theme'
+import Blob from './Blob'
 
-export default ({ imageBlob, name, description, self, navigator, handlePress, refetch }) => (
+export default ({ image, name, description, self, navigator, handlePress, whoami }) => (
   <View style={styles.wrapper}>
     <View style={styles.container}>
       <View style={styles.infoContainer}>
-        <View style={styles.topInfo}>  
-          {imageBlob && <Image
-            style={{ width: 75, height: 75, resizeMode: Image.resizeMode.contain }}
-            source={{uri: `data:image/png;base64,${JSON.parse(imageBlob)}`}}
-          />}
-          {!imageBlob && <View style={styles.CircleShapeView} />}
+        <View style={styles.topInfo}>
+          {image && <Blob hash={image} size={75} />}
+          {!image && <View style={styles.CircleShapeView} />}
           <View style={styles.title}>
             {name && <Text style={styles.name}>{name}</Text>}
-            {/* <Text style={styles.id}>Public key: {whoami}</Text> */}
+            <Text style={name ? styles.id : styles.name}>{whoami}</Text>
           </View>
         </View>
         <View style={styles.description}>
@@ -103,7 +101,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.color3,
   },
   button: {
-    width: '100%',
+    minWidth: 300,
     padding: 30,
     alignSelf: 'flex-end',
   }

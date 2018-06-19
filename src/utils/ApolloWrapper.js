@@ -10,7 +10,7 @@ import { InMemoryCache } from 'apollo-boost'
 import { RetryLink } from 'apollo-link-retry'
 import Loading from '../components/Loading'
 
-const SCHEMA_VERSION = '87' // Must be a string.
+const SCHEMA_VERSION = '77' // Must be a string.
 const SCHEMA_VERSION_KEY = 'apphub-cache'
 
 const defaultOptions = {

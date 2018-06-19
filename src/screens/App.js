@@ -62,31 +62,31 @@ export default () => Navigation.startTabBasedApp({
       //   }
       // ]
     },
-    // {
-    //   label: i18n.t('network'),
-    //   screen: 'networkSsb',
-    //   icon: require('../assets/network.png'),
-    //   navigatorStyle: navigatorStyle({}),
-    //   navigatorButtons: {
-    //     leftButtons: [
-    //       {
-    //         id: "sideMenu"
-    //       }
-    //     ]
-    //   },
-    //   topTabs: [
-    //     {
-    //       screenId: 'networkSsb',
-    //       title: 'Secure Scuttlebutt',
-    //       passProps: {},
-    //     },
-    //     {
-    //       screenId: 'networkDat',
-    //       title: 'DAT',
-    //       passProps: {},
-    //     },
-    //   ]
-    // },
+    {
+      label: i18n.t('network'),
+      screen: 'networkSsb',
+      icon: require('../assets/network.png'),
+      navigatorStyle: navigatorStyle({}),
+      navigatorButtons: {
+        leftButtons: [
+          {
+            id: "sideMenu"
+          }
+        ]
+      },
+      topTabs: [
+        {
+          screenId: 'networkSsb',
+          title: 'Secure Scuttlebutt',
+          passProps: {},
+        },
+        // {
+        //   screenId: 'networkDat',
+        //   title: 'DAT',
+        //   passProps: {},
+        // },
+      ]
+    },
   ],
   // passProps: whoami,
   // animationType: Platform.OS === 'ios' ? 'slide-down' : 'fade',

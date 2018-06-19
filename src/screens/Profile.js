@@ -10,16 +10,16 @@ import {
 } from 'react-native'
 import Loading from '../components/Loading'
 import WhoamiQuery from '../components/WhoamiQuery'
-import ProfileQuery from '../components/ProfileQuery'
+import AboutQuery from '../components/AboutQuery'
 import ProfileView from '../components/ProfileView'
 
 import theme from '../utils/theme'
 
 export default class Profile extends Component {
-  handlePress = (profile, whoami, refetchProfile) => this.props.navigator.push({
+  handlePress = (about, whoami, refetchAbout) => this.props.navigator.push({
     screen: 'profileEdit',
     title: 'Go back',
-    passProps: {profile, whoami, refetchProfile},
+    passProps: {about, whoami, refetchAbout},
     animated: true,
     animationType: 'slide-horizontal',
     backButtonTitle: 'go back',
@@ -33,18 +33,18 @@ export default class Profile extends Component {
         <WhoamiQuery>
           {({ whoami, errorWhoami }) => {
             if (whoami && !errorWhoami) return (
-              <ProfileQuery userId={whoami}>
-                {({ profile, errorProfile, refetchProfile }) => {
-                  console.log('profile', profile)
-                  if (profile && !errorProfile) return <ProfileView
+              <AboutQuery userId={whoami}>
+                {({ about, errorAbout, refetchAbout }) => {
+                  if (about && !errorAbout) return <ProfileView
                     self
-                    {...profile}
+                    {...about}
                     navigator={navigator}
-                    handlePress={() => this.handlePress(profile, whoami, refetchProfile )}
+                    whoami={whoami}
+                    handlePress={() => this.handlePress(about, whoami, refetchAbout )}
                   />
                   else return <Loading />
                 }}
-              </ProfileQuery>
+              </AboutQuery>
             )
             else return <Loading />
           }}
@@ -52,15 +52,15 @@ export default class Profile extends Component {
       )
     } else {
       return (
-        <ProfileQuery userId={userId}>
-          {({ profile }) => {
-            if (profile) return <ProfileView
-              {...profile}
+        <AboutQuery userId={userId}>
+          {({ about }) => {
+            if (about) return <ProfileView
+              {...about}
               navigator={navigator}
             />
             else return <Loading />
           }}
-        </ProfileQuery>
+        </AboutQuery>
       )
     }
   }

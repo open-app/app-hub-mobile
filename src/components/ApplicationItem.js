@@ -10,7 +10,7 @@ import {
 import RNFS from 'react-native-fs'
 import theme from '../utils/theme'
 import getApkPath from '../utils/getApkPath'
-import ProfileQuery from './ProfileQuery'
+import AboutQuery from './AboutQuery'
 import Download from './ApplicationDownload'
 import Downloading from './ApplicationDownloading'
 import Downloaded from './ApplicationDownloaded'
@@ -93,12 +93,12 @@ export default class ApplicationItem extends Component {
     const { name, author, repository, description, datHash, dats } = this.props
     const hasDat = () => {
       if (dats) return dats.filter(dat => dat.name === datHash).length > 0
-      else return null
+      else return <View />
     }
     const { startedDownload, finishedDownload, installed, packageInfo } = this.state
     return (
-      <ProfileQuery userId={author}>
-         {({ loadingProfile, profile }) => {
+      <AboutQuery userId={author}>
+         {({ loadingAbout, about }) => {
            return (
             <View style={styles.wrapper}>
               <View style={styles.container}>
@@ -114,14 +114,14 @@ export default class ApplicationItem extends Component {
                 </View>
                 <View styles={styles.info}>
                   <Text style={styles.title}>{name}</Text>
-                  {loadingProfile && <ActivityIndicator />}
-                  {profile && <Text style={styles.text}>posted by {profile.name}</Text>}
+                  {loadingAbout && <ActivityIndicator />}
+                  {about && <Text style={styles.text}>posted by {about.name}</Text>}
                 </View>
               </View>
             </View> 
            )
          }}
-      </ProfileQuery>
+      </AboutQuery>
     )
   }
 }
@@ -129,12 +129,12 @@ export default class ApplicationItem extends Component {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     width: '100%',
     height: 130,
     backgroundColor: theme.light,
-    elevation: 10,
+    // elevation: 10,
     borderBottomWidth: 0.5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },

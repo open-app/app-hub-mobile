@@ -32,7 +32,6 @@ export default class ProfileEditView extends Component {
   render () {
     const { nameInput, descriptionInput } = this.state
     const { publishAbout, loadingPublishAbout, errorPublishAbout, imageBlob } = this.props
-    console.log('EDIT PROPS', this.props)
     return (
       <View style={styles.wrapper}>
         {imageBlob && <Image
