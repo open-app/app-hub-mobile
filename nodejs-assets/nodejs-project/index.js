@@ -7,8 +7,6 @@ const path = require('path')
 console.log('Starting GraphQL Server')
 console.log('homedir ', os.homedir())
 const writablePath = path.join(__dirname, '..')
-const ssbPath = path.join(writablePath, '.ssb')
-const datPath = path.join(writablePath, 'dat')
 
 server([
   ssbDefaults,

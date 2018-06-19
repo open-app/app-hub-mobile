@@ -2,7 +2,7 @@
   "name": "nodejs-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -11,12 +11,17 @@
   },
   "dependencies": {
     "apphub-graphql": "0.0.4",
+    "bindings-noderify-nodejs-mobile": "^10.3.0",
+    "bufferutil": "^3.0.5",
     "community-apps-ssb-plugin": "0.0.3",
     "dat-graphql": "0.0.4",
-    "open-app-graphql-server": "0.0.10",
-    "ssb-graphql-defaults": "^1.0.16"
+    "open-app-graphql-server": "0.0.12",
+    "spawn-sync": "^2.0.0",
+    "ssb-graphql-defaults": "^1.0.17",
+    "utf-8-validate": "^4.0.2"
   },
   "devDependencies": {
+    "noderify": "^3.0.2",
     "patch-package": "^5.1.1"
   }
 }
