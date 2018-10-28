@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "apphub-graphql": "0.0.4",
+    "bindings-noderify-nodejs-mobile": "^10.3.0",
     "community-apps-ssb-plugin": "0.0.3",
     "dat-graphql": "0.0.4",
-    "open-app-graphql-server": "0.0.10",
-    "ssb-graphql-defaults": "^1.0.16"
+    "open-app-graphql-server": "^1.0.0",
+    "ssb-graphql-defaults": "^2.0.0",
+    "utp-native-no-prebuild": "^1.7.3-4",
+    "xtend": "^4.0.1"
   },
   "devDependencies": {
+    "noderify": "^3.0.2",
     "patch-package": "^5.1.1"
   }
 }
